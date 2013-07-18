@@ -8,4 +8,4 @@ which geonode > /dev/null &&
 add-apt-repository ppa:geonode/testing
 apt-get update
 apt-get install -y geonode
-geonode-updateip 192.168.33.10
+geonode-updateip www.riskinfo.lk
