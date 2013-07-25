@@ -5,3 +5,4 @@
 *.egg-info
 *.sublime*
 .DS_Store
+settings_secret.py
