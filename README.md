@@ -14,5 +14,5 @@ For development
 
 The basic box will be downloaded automatically and will be provisioned with GeoNode (see the bash script)
 
-	vagrant ssh
+	vagrant ssh [dev|production]
 	geonode createsuperuser

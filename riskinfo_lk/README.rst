@@ -1,17 +1,15 @@
 Riskinfo_Lk
 ========================
 
-You should write some docs, it's good for the soul.
-
-Installation
-------------
+Installation for development set-up
+-----------------------------
 
 Create a new virtualenv for riskinfo_lk, install GeoNode and setup your project::
 
-    $ mkvirtualenv my_geonode
+    $ mkvirtualenv riskinfo_lk
     $ pip install Django
-    $ django-admin.py startproject my_geonode --template=https://github.com/GeoNode/geonode-project/archive/master.zip -epy,rst 
-    $ pip install -e my_geonode
+    $ django-admin.py startproject riskin_lk --template=https://github.com/GeoNode/geonode-project/archive/master.zip -epy,rst 
+    $ pip install -e riskinfo_lk
 
 To install the latest from GeoNode's master branch use the following command::
 

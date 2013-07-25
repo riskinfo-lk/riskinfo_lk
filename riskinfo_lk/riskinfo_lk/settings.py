@@ -4,6 +4,9 @@
 import os
 import geonode
 
+# Load the settings that are sensitive and not commited to the public repository
+from settings_secret import *
+
 #
 # General Django development settings
 #
@@ -361,24 +364,23 @@ SITEURL = "http://localhost:8000/"
 GEOSERVER_BASE_URL = "http://localhost:8080/geoserver/"
 
 # CSW settings
-CATALOGUE = {
-    'default': {
-        # The underlying CSW implementation
-        # default is pycsw in local mode (tied directly to GeoNode Django DB)
-        'ENGINE': 'geonode.catalogue.backends.pycsw_local',
-        # pycsw in non-local mode
-        #'ENGINE': 'geonode.catalogue.backends.pycsw_http',
-        # GeoNetwork opensource
-        #'ENGINE': 'geonode.catalogue.backends.geonetwork',
-        # deegree and others
-        #'ENGINE': 'geonode.catalogue.backends.generic',
+CATALOGUE['default'].update({
+    # The underlying CSW implementation
+    # default is pycsw in local mode (tied directly to GeoNode Django DB)
+    'ENGINE': 'geonode.catalogue.backends.pycsw_local',
+    # pycsw in non-local mode
+    #'ENGINE': 'geonode.catalogue.backends.pycsw_http',
+    # GeoNetwork opensource
+    #'ENGINE': 'geonode.catalogue.backends.geonetwork',
+    # deegree and others
+    #'ENGINE': 'geonode.catalogue.backends.generic',
 
-        # The FULLY QUALIFIED base url to the CSW instance for this GeoNode
-        'URL': '%scatalogue/csw' % SITEURL,
-        #'URL': 'http://localhost:8080/geonetwork/srv/en/csw',
-        #'URL': 'http://localhost:8080/deegree-csw-demo-3.0.4/services',
+    # The FULLY QUALIFIED base url to the CSW instance for this GeoNode
+    'URL': '%scatalogue/csw' % SITEURL,
+    #'URL': 'http://localhost:8080/geonetwork/srv/en/csw',
+    #'URL': 'http://localhost:8080/deegree-csw-demo-3.0.4/services',
     }
-}
+)
 
 # pycsw settings
 PYCSW = {
@@ -523,9 +525,6 @@ THEME_ACCOUNT_CONTACT_EMAIL = 'admin@example.com'
 METADATA_DOWNLOAD_ALLOWS=True
 
 CACHE_TIME=0
-
-# Load the settings that are sensitive and not commited to the public repository
-from settings_secret import *
 
 # Load more settings from a file called local_settings.py if it exists
 try:
