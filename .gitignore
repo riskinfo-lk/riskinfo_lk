@@ -1,8 +1,9 @@
 /.vagrant
 /build
-/downloaded
-/geoserver
+/riskinfo_lk/downloaded
+/riskinfo_lk/geoserver
 *.egg-info
 *.sublime*
 .DS_Store
 settings_secret.py
+*.pyc

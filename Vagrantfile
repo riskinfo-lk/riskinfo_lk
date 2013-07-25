@@ -13,10 +13,10 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define :dev do |dev|
-  	production.vm.network :private_network, ip: "192.168.50.4"
+  	dev.vm.network :private_network, ip: "192.168.50.4"
     # Need to be tested
-    # production.vm.provision :shell, :path => "provision_geonode_dev.sh"
-  	production.vm.provider :virtualbox do |vb|
+    # dev.vm.provision :shell, :path => "provision_geonode_dev.sh"
+  	dev.vm.provider :virtualbox do |vb|
        vb.customize [ "modifyvm", :id, "--name", "RiskInfo2 - dev ","--memory", 4096 ]
   	end
   end
