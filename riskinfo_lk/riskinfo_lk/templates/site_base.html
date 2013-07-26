@@ -1,4 +1,31 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block extra_head %}
       <link href="{{ STATIC_URL }}css/site_base.css" rel="stylesheet"/>
+{% endblock %}
+{% block footer %}
+<footer class="footer">
+  <div class="row">
+      <div class="span12" id="footerbox">
+        <div class="span3">
+           {% trans "Powered by" %} <a href="http://geonode.org">{% trans "GeoNode" %} {{VERSION}}</a>
+            <br> <span>{% trans 'Need help' %} <a href="http://geonode.github.com/workshops/user">{% trans 'Getting Started?' %}</a></span>
+            <br> <a href="{% url "developer" %}">{% trans "For Developers" %}</a>
+        </div>
+        <div class="span8">
+          <p style="float:left">Partners</p>
+          <div style="border-left:1px solid #fff; height:60px; float:left; margin-left:12px; margin-right:5px"></div>
+          <a href="http://www.gfdrr.org/">
+            <img src="{{ STATIC_URL }}img/gfdrr_logo.png">
+          </a>
+          <a href="http://www.worldbank.org/">
+            <img src="{{ STATIC_URL }}img/WB_logo.png">
+          </a>
+          <a href="http://www.undp.lk/default.aspx">
+            <img src="{{ STATIC_URL }}img/UNDP_logo.png">
+          </a>
+        </div>
+      </div>  
+  </div>
+</footer>
 {% endblock %}
