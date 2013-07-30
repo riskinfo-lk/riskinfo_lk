@@ -1,0 +1,31 @@
+/* body {
+    background: #17375e;
+ }
+*/
+footer.footer {
+	height: 100px;
+	background: #17375e;
+}
+
+footer.footer img {
+    margin-left: 12px;
+  }
+
+footer .footercontent {
+	width:90%;
+	margin: 0 auto;
+	border-top: 1px solid white;
+	padding-top: 10px;
+}
+
+footer.footer .separator {
+	border-left:1px solid #fff;
+	height:60px; 
+	float:left; 
+	margin-left:12px; 
+	margin-right:10px;
+}
+
+footer.footer a {
+	color: #31AEEE;
+}
