@@ -2,6 +2,10 @@
     background: #17375e;
  }
 
+ .explore {
+    padding-bottom: 100px;
+ }
+
 .navbar .navbar-inner {
 	background: #17375e;
     -webkit-box-shadow: none;
@@ -15,7 +19,7 @@
 }
 
 .content-wrap {
-    margin-top: 5px;
+    margin-top: 6px;
 }
 
 .hero-unit {
@@ -122,9 +126,10 @@ background-color: #fcd5b5;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   text-align: right;
-  min-height: 146px;
+  min-height: 147px;
   margin-top: 5px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .minibox > img {
