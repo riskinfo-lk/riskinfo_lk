@@ -6,7 +6,7 @@ def read(*rnames):
 
 setup(
     name="riskinfo_lk",
-    version="0.1",
+    version="2b1",
     author="",
     author_email="",
     description="riskinfo_lk, based on GeoNode",
@@ -18,9 +18,8 @@ setup(
     ],
     license="BSD",
     keywords="riskinfo_lk geonode django",
-    url='https://github.com/riskinfo_lk/riskinfo_lk',
+    url='https://github.com/vdeparday/riskinfo_lk2',
     packages=['riskinfo_lk',],
-    install_requires=["geonode==2.0b30"],
     include_package_data=True,
     zip_safe=False,
 )
