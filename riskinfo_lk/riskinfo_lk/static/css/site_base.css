@@ -20,6 +20,7 @@
 
 .language {
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .content-wrap {
@@ -130,7 +131,7 @@ background-color: #fcd5b5;
 
 .mapsbox {
   background-color: #e46c0a;
-  min-height: 174px;
+  min-height: 172px;
   padding-left: 15px;
   padding-right: 15px;
   -webkit-box-sizing: border-box;
@@ -143,7 +144,7 @@ background-color: #fcd5b5;
   background-color: #558ed5;
   padding-left: 15px;
   padding-right: 15px;
-  min-height: 174px;
+  min-height: 172px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -210,3 +211,22 @@ footer.footer .separator {
 footer.footer a {
 	color: #31AEEE;
 }
+
+#language {
+  background-color: transparent;
+  border-style: none;
+  cursor: pointer;
+  color: #41aaba;
+  text-decoration: none;
+  font-family:Lato, sans-serif;
+}
+
+#language:hover {
+  color: #2d7681;
+  text-decoration: underline;
+}
+
+.languages {
+  display: inline;
+}
+

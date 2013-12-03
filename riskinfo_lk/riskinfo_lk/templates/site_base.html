@@ -87,12 +87,34 @@
                 </ul>
             </div>
           </div> 
-          <div class="pull-left">
+<!--           <div class="pull-left">
             Languages:&nbsp;
-            <a class="language">English</a>
-            <a class="language">සිංහල</a>
-            <a class="language">தமிழ்</a>
-          </div>
+            <a class="language" data-language="en">English</a>
+            <a class="language" data-language="si">සිංහල</a>
+            <a class="language" data-language="ta">தமிழ்</a>
+          </div> -->
+                          {% if csrf_token != "NOTPROVIDED" %}
+          {% get_current_language as LANGUAGE %}
+        
+  <div class="pull-right">
+    <form method="post" action="/i18n/setlang/" class="languages">
+    {% csrf_token %}
+    <input type="hidden" name="language" value="en"/>
+    <input id="language" type="submit" value="English"/>
+    </form>
+    <form method="post" action="/i18n/setlang/" class="languages">
+    {% csrf_token %}
+    <input type="hidden" name="language" value="si"/>
+    <input id="language" type="submit" value="සිංහල"/>
+    </form>
+    <form method="post" action="/i18n/setlang/" class="languages">
+    {% csrf_token %}
+    <input type="hidden" name="language" value="ta"/>
+    <input id="language" type="submit" value="தமிழ்"/>
+  </form>
+  </div>
+
+    {% endif %}
         </div>
        </div>
        <div class="row nav-box">
@@ -159,6 +181,22 @@
             <img src="{{ STATIC_URL }}img/UNDP_logo.png">
           </a>
         </div>
+<!--         <div class="pull-right">
+        {% if csrf_token != "NOTPROVIDED" %}
+          {% get_current_language as LANGUAGE %}
+          <form class="form-inline" action="/i18n/setlang/" method="post">
+          {% csrf_token %}
+            <label>{% trans "Language" %}</label>
+            <select class="input span2" name="language" onchange="javascript:form.submit()">
+              {% for lang in LANGUAGES %}
+              <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
+                {{ lang.1 }}
+              </option>
+              {% endfor %}
+            </select>
+          </form>
+        {% endif %}
+        </div> -->
       </div>
   </div>
   </div>
