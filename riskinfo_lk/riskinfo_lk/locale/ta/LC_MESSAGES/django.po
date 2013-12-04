@@ -1,0 +1,247 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-04 11:47+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/base.html:48 templates/site_base.html:39
+msgid "Profile"
+msgstr ""
+
+#: templates/base.html:50 templates/site_base.html:41
+msgid "Admin"
+msgstr ""
+
+#: templates/base.html:53 templates/site_base.html:44
+msgid "Announcements"
+msgstr ""
+
+#: templates/base.html:56 templates/site_base.html:47
+msgid "GeoServer"
+msgstr ""
+
+#: templates/base.html:58 templates/site_base.html:49
+msgid "Recent Activity"
+msgstr ""
+
+#: templates/base.html:60 templates/site_base.html:51
+msgid "Log out"
+msgstr ""
+
+#: templates/base.html:65
+msgid "Notifications"
+msgstr ""
+
+#: templates/base.html:66
+msgid "Messages"
+msgstr ""
+
+#: templates/base.html:67 templates/site_base.html:56
+msgid "Upload"
+msgstr ""
+
+#: templates/base.html:68 templates/site_base.html:57
+msgid "Help"
+msgstr ""
+
+#: templates/base.html:72 templates/base.html.py:85
+#: templates/site_base.html:61 templates/site_base.html.py:74
+msgid "Sign in"
+msgstr ""
+
+#: templates/base.html:77 templates/site_base.html:66
+msgid "Username"
+msgstr ""
+
+#: templates/base.html:79 templates/site_base.html:68
+msgid "Password"
+msgstr ""
+
+#: templates/base.html:83 templates/site_base.html:72
+msgid "Remember Me"
+msgstr ""
+
+#: templates/base.html:91 templates/site_base.html:80
+msgid "or"
+msgstr ""
+
+#: templates/base.html:92 templates/site_base.html:81
+msgid "Register"
+msgstr ""
+
+#: templates/base.html:113 templates/site_base.html:127
+msgid "Home"
+msgstr ""
+
+#: templates/base.html:116 templates/site_base.html:130
+msgid "Layers"
+msgstr ""
+
+#: templates/base.html:119 templates/site_base.html:133
+msgid "Maps"
+msgstr ""
+
+#: templates/base.html:124 templates/site_base.html:138
+msgid "Documents"
+msgstr ""
+
+#: templates/base.html:128 templates/site_base.html:142
+msgid "People"
+msgstr ""
+
+#: templates/base.html:131 templates/site_base.html:145
+#: templates/site_index.html:55 templates/site_index.html.py:87
+msgid "Search"
+msgstr ""
+
+#: templates/base.html:185 templates/site_base.html:170
+msgid "Powered by"
+msgstr ""
+
+#: templates/base.html:185 templates/site_base.html:170
+msgid "GeoNode"
+msgstr ""
+
+#: templates/base.html:185
+msgid "version"
+msgstr ""
+
+#: templates/base.html:186 templates/site_base.html:172
+msgid "Developers"
+msgstr ""
+
+#: templates/base.html:187
+msgid "About"
+msgstr ""
+
+#: templates/base.html:194 templates/site_base.html:195
+msgid "Language"
+msgstr ""
+
+#: templates/index.html:9
+msgid "Welcome!"
+msgstr ""
+
+#: templates/index.html:17 templates/site_index.html:8
+msgid "Welcome"
+msgstr ""
+
+#: templates/index.html:21
+msgid ""
+"\n"
+"            GeoNode is an open source platform for sharing geospatial data "
+"and maps.  If you have any questions about the software or service, join our "
+"<a href=\"https://groups.google.com/d/forum/geonode-users\">mailing list</"
+"a>.\n"
+"          "
+msgstr ""
+
+#: templates/index.html:25 templates/site_base.html:171
+msgid "Need help"
+msgstr ""
+
+#: templates/index.html:25
+msgid "Getting Started?"
+msgstr ""
+
+#: templates/index.html:29
+msgid "Explore Layers"
+msgstr ""
+
+#: templates/index.html:32
+msgid "Explore Maps"
+msgstr ""
+
+#: templates/index.html:42
+msgid "Latest Layers"
+msgstr ""
+
+#: templates/index.html:52
+msgid "Contribute"
+msgstr ""
+
+#: templates/index.html:54
+msgid ""
+"\n"
+"              GeoNode enables you to upload, manage, and browse data layers. "
+"Search for data that is valuable to you, or upload your own data. \n"
+"            "
+msgstr ""
+
+#: templates/index.html:57
+msgid "Upload Layers"
+msgstr ""
+
+#: templates/index.html:58
+msgid ""
+"\n"
+"              GeoNode enables you to compose and share maps. Create a map "
+"with our cartography tool, or explore maps shared by others. \n"
+"            "
+msgstr ""
+
+#: templates/index.html:61
+msgid "Create a Map"
+msgstr ""
+
+#: templates/index.html:67
+msgid "Latest Maps"
+msgstr ""
+
+#: templates/site_base.html:171
+msgid "getting started?"
+msgstr ""
+
+#: templates/site_base.html:172
+msgid "For"
+msgstr ""
+
+#: templates/site_index.html:21
+msgid ""
+"\n"
+"        Welcome to the Sri Lanka Disaster Risk Information Platform "
+"(RiskInfo). The purpose of RiskInfo is to make disaster risk information "
+"available to all the stakeholders and the public in order to facilitate "
+"disaster risk management. The initiative is led by the Disaster Management "
+"Center (DMC) in partnership with UNDP, GDFRR and the World Bank. The data is "
+"provided by the technical agencies. The data sharing platform is built using "
+"the open source software GeoNode that is designed to enable collaborative "
+"use of geospatial data and maps. To enquire about the website and further "
+"details: <span class='contact_info'> riskinfo@dmc.gov.lk </span>\n"
+"          "
+msgstr ""
+
+#: templates/site_index.html:40
+msgid "MAPS"
+msgstr ""
+
+#: templates/site_index.html:43
+msgid ""
+" \n"
+"                  RiskInfo lets you compose and share maps.  <strong>Create</"
+"strong> a map with our cartography tool, or <strong>explore</strong> maps "
+"shared by others.\n"
+"                  "
+msgstr ""
+
+#: templates/site_index.html:70
+msgid "Create map"
+msgstr ""
+
+#: templates/site_index.html:78
+msgid "DATA"
+msgstr ""
