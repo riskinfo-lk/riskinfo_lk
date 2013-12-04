@@ -3,19 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-04 11:47+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2013-12-04 11:46+0000\n"
+"PO-Revision-Date: 2013-12-04 16:35+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6\n"
 
 #: templates/base.html:48 templates/site_base.html:39
 msgid "Profile"
@@ -103,7 +103,7 @@ msgid "People"
 msgstr ""
 
 #: templates/base.html:131 templates/site_base.html:145
-#: templates/site_index.html:55 templates/site_index.html.py:87
+#: templates/site_index.html:51 templates/site_index.html.py:83
 msgid "Search"
 msgstr ""
 
@@ -165,15 +165,15 @@ msgstr ""
 msgid "Explore Maps"
 msgstr ""
 
-#: templates/index.html:42
+#: templates/index.html:42 templates/site_index.html:107
 msgid "Latest Layers"
 msgstr ""
 
-#: templates/index.html:52
+#: templates/index.html:52 templates/site_index.html:118
 msgid "Contribute"
 msgstr ""
 
-#: templates/index.html:54
+#: templates/index.html:54 templates/site_index.html:120
 msgid ""
 "\n"
 "              GeoNode enables you to upload, manage, and browse data layers. "
@@ -181,11 +181,11 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/index.html:57
+#: templates/index.html:57 templates/site_index.html:123
 msgid "Upload Layers"
 msgstr ""
 
-#: templates/index.html:58
+#: templates/index.html:58 templates/site_index.html:124
 msgid ""
 "\n"
 "              GeoNode enables you to compose and share maps. Create a map "
@@ -193,11 +193,11 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/index.html:61
+#: templates/index.html:61 templates/site_index.html:127
 msgid "Create a Map"
 msgstr ""
 
-#: templates/index.html:67
+#: templates/index.html:67 templates/site_index.html:133
 msgid "Latest Maps"
 msgstr ""
 
@@ -211,36 +211,75 @@ msgstr ""
 
 #: templates/site_index.html:21
 msgid ""
-"\n"
-"        Welcome to the Sri Lanka Disaster Risk Information Platform "
-"(RiskInfo). The purpose of RiskInfo is to make disaster risk information "
-"available to all the stakeholders and the public in order to facilitate "
-"disaster risk management. The initiative is led by the Disaster Management "
-"Center (DMC) in partnership with UNDP, GDFRR and the World Bank. The data is "
-"provided by the technical agencies. The data sharing platform is built using "
-"the open source software GeoNode that is designed to enable collaborative "
-"use of geospatial data and maps. To enquire about the website and further "
-"details: <span class='contact_info'> riskinfo@dmc.gov.lk </span>\n"
-"          "
+" Welcome to the Sri Lanka Disaster Risk Information Platform (RiskInfo). The "
+"purpose of RiskInfo is to make disaster risk information available to all "
+"the stakeholders and the public in order to facilitate disaster risk "
+"management. The initiative is led by the Disaster Management Center (DMC) in "
+"partnership with UNDP, GDFRR and the World Bank. The data is provided by the "
+"technical agencies. The data sharing platform is built using the open source "
+"software GeoNode that is designed to enable collaborative use of geospatial "
+"data and maps. To enquire about the website and further details: <strong> "
+"riskinfo@dmc.gov.lk </strong >"
+msgstr ""
+"ශ්‍රී ලංකා ආපදා අවදානම් තොරතුරු පද්ධතිය (Risk Info) වෙත සාදරයෙන් පිළිගනිමු. රාජ්‍ය, රාජ්‍ය "
+"නොවන ආයතන සහ සාමාන්‍ය පුරවැසියන් වෙත ආපදා අවදානම් තොරතුරු ලබාදීම මෙම පද්ධතිය ස්ථාපනය "
+"කිරීමේ අරමුණ වෙයි.මෙම කාර්යය ආපදා කළමනාකරණ මධ්‍යස්ථානයේ මූලිකත්වයෙන්, ලෝක බැංකුවට අනුබද්ධිත "
+"GFDRR, හා UNDP ආයතන වල සහයෝගිතාවය මත සකස් කරන ලදි.සිතියම් සකස් කිරීම, තාක්ෂණික ආයතන සහ "
+"ආපදා කළමනාකරණ මධ්‍යස්ථානය මඟින් සිදුකර ඇත. මෙම දත්ත පද්ධතිය විවෘත හා නිදහස් මෘදුකාංගයක් "
+"(FOSS) වන ජියෝනෝඩ් (GeoNode) මඟින් නිර්මාණය කර ඇති අතර එමඟින් අවකාශීය දත්ත හා තොරතුරු "
+"හුවමාරු කිරීමේ හැකියාව වර්ධනය කර ඇත.Risk Info මඟින් ඔබට සිතියම් සකස් කිරීම හා අන්තර්ජාලය "
+"හරහා බෙදාහැරීම කලහැක. වැඩිදුර තොරතුරු <strong> riskinfo@dmc.gov.lk </strong> මඟින් "
+"විමසන්න."
+
+#: templates/site_index.html:29
+msgid "Search RiskInfo:"
 msgstr ""
 
-#: templates/site_index.html:40
+#: templates/site_index.html:38
 msgid "MAPS"
 msgstr ""
 
-#: templates/site_index.html:43
+#: templates/site_index.html:41
 msgid ""
-" \n"
-"                  RiskInfo lets you compose and share maps.  <strong>Create</"
-"strong> a map with our cartography tool, or <strong>explore</strong> maps "
-"shared by others.\n"
-"                  "
+"RiskInfo lets you compose and share maps.  <strong>Create</strong> a map "
+"with our cartography tool, or <strong>explore</strong> maps shared by others."
 msgstr ""
 
-#: templates/site_index.html:70
+#: templates/site_index.html:58
+msgid "Hazard Maps"
+msgstr ""
+
+#: templates/site_index.html:59
+msgid "Administrative Boundaries"
+msgstr ""
+
+#: templates/site_index.html:62
+msgid "Explore all maps"
+msgstr ""
+
+#: templates/site_index.html:63
+msgid "Create a new map"
+msgstr ""
+
+#: templates/site_index.html:66
 msgid "Create map"
 msgstr ""
 
-#: templates/site_index.html:78
+#: templates/site_index.html:74
 msgid "DATA"
+msgstr ""
+
+#: templates/site_index.html:76
+msgid ""
+" RiskInfo lets you upload, manage, and browse data. <strong>Search</strong> "
+"for data that is valuable to you, or <strong>upload</strong> your own data.</"
+"p>"
+msgstr ""
+
+#: templates/site_index.html:89
+msgid "Hazard Data"
+msgstr ""
+
+#: templates/site_index.html:90
+msgid "Exposure Data"
 msgstr ""

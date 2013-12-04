@@ -20,6 +20,11 @@ EXTRA_LANG_INFO = {
     },
 }
 
+LOCALE_PATHS = (
+    "/usr/local/lib/python2.7/dist-packages/geonode/locale",
+    "/vagrant/riskinfo_lk2/riskinfo_lk/riskinfo_lk/locale",
+    )
+
 #Monkey patch to add custom languages not provided by Django
 import django.conf.locale
 LANG_INFO = dict(django.conf.locale.LANG_INFO.items() + EXTRA_LANG_INFO.items())
