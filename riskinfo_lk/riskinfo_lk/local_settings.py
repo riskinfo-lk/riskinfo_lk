@@ -4,7 +4,7 @@ DEBUG = TEMPLATE_DEBUG = True
 
 DEBUG_STATIC = False
 
-#SITENAME = 'GeoNode'
+SITENAME = "RiskInfo"
 
 LANGUAGES = (
     ('en', 'English'),
@@ -20,7 +20,7 @@ EXTRA_LANG_INFO = {
     },
 }
 
-# Monkey patch to add custom languages not provided by Django
+#Monkey patch to add custom languages not provided by Django
 import django.conf.locale
 LANG_INFO = dict(django.conf.locale.LANG_INFO.items() + EXTRA_LANG_INFO.items())
 django.conf.locale.LANG_INFO = LANG_INFO

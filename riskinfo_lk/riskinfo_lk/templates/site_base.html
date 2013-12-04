@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n avatar_tags %}
+{% block title %} RiskInfo {% endblock %}
 {% block extra_head %}
       <link href="{{ STATIC_URL }}css/site_base.css" rel="stylesheet"/>
 {% endblock %}
@@ -86,6 +87,28 @@
                 {% endif %}
                 </ul>
             </div>
+                                      {% if csrf_token != "NOTPROVIDED" %}
+          {% get_current_language as LANGUAGE %}
+                
+          <div class="nav pull-right">
+            <form method="post" action="/i18n/setlang/" class="languages">
+            {% csrf_token %}
+            <input type="hidden" name="language" value="en"/>
+            <input class="language" type="submit" value="English"/>
+            </form>
+            <form method="post" action="/i18n/setlang/" class="languages">
+            {% csrf_token %}
+            <input type="hidden" name="language" value="si"/>
+            <input class="language" type="submit" value="සිංහල"/>
+            </form>
+            <form method="post" action="/i18n/setlang/" class="languages">
+            {% csrf_token %}
+            <input type="hidden" name="language" value="ta"/>
+            <input class="language" type="submit" value="தமிழ்"/>
+          </form>
+          </div>
+
+           {% endif %}
           </div> 
 <!--           <div class="pull-left">
             Languages:&nbsp;
@@ -93,28 +116,7 @@
             <a class="language" data-language="si">සිංහල</a>
             <a class="language" data-language="ta">தமிழ்</a>
           </div> -->
-                          {% if csrf_token != "NOTPROVIDED" %}
-          {% get_current_language as LANGUAGE %}
-        
-  <div class="pull-right">
-    <form method="post" action="/i18n/setlang/" class="languages">
-    {% csrf_token %}
-    <input type="hidden" name="language" value="en"/>
-    <input id="language" type="submit" value="English"/>
-    </form>
-    <form method="post" action="/i18n/setlang/" class="languages">
-    {% csrf_token %}
-    <input type="hidden" name="language" value="si"/>
-    <input id="language" type="submit" value="සිංහල"/>
-    </form>
-    <form method="post" action="/i18n/setlang/" class="languages">
-    {% csrf_token %}
-    <input type="hidden" name="language" value="ta"/>
-    <input id="language" type="submit" value="தமிழ்"/>
-  </form>
-  </div>
 
-    {% endif %}
         </div>
        </div>
        <div class="row nav-box">
@@ -163,11 +165,14 @@
   <div class="footercontent">
   <div class="container">
     <div class="row">
+      <div class="span4">
         <div class="pull-left">
            {% trans "Powered by" %} {% trans "GeoNode" %} <a href="http://geonode.org">{{VERSION}}</a>
             <br> <span>{% trans 'Need help' %} <a href="http://geonode.github.com/workshops/user">{% trans 'getting started?' %}</a></span>
             <br> {% trans "For" %} <a href="{% url "developer" %}">{% trans "Developers" %}</a>
         </div>
+      </div>
+      <div class="span8">
         <div class="pull-right">
           <p style="float:left">Partners</p>
           <div class="separator"></div>
@@ -181,6 +186,7 @@
             <img src="{{ STATIC_URL }}img/UNDP_logo.png">
           </a>
         </div>
+      </div>
 <!--         <div class="pull-right">
         {% if csrf_token != "NOTPROVIDED" %}
           {% get_current_language as LANGUAGE %}

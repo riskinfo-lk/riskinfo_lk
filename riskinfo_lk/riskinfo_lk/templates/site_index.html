@@ -5,6 +5,7 @@
 {% load pagination_tags %}
 {% load staticfiles %}
 {% load url from future %}
+{% block title %} {% trans "Welcome" %} - RiskInfo {% endblock %}
 {% comment %}
 This is where you can override the hero area block. You can simply modify the content below or replace it wholesale to meet your own needs. 
 {% endcomment %}
@@ -18,7 +19,7 @@ This is where you can override the hero area block. You can simply modify the co
          <img src="{{ STATIC_URL }}/img/welcome_map_image.jpg">
           <p class="welcometext">
           {% blocktrans %}
-        Welcome to the Sri Lanka Disaster Risk Information Platform (RiskInfo). The purpose of RiskInfo is to make disaster risk information available to all the stakeholders and the public in order to facilitate disaster risk reduction and recovery efforts. The initiative is led by the Disaster Management Center (DMC) in partnership with UNDP, NGOs and GDFRR Labs. The data sharing platform is built using the open source software GeoNode that is designed to enable collaborative use of geospatial data and maps. To get in touch and get in account to upload data: riskinfo@dmc.gov.lk
+        Welcome to the Sri Lanka Disaster Risk Information Platform (RiskInfo). The purpose of RiskInfo is to make disaster risk information available to all the stakeholders and the public in order to facilitate disaster risk management. The initiative is led by the Disaster Management Center (DMC) in partnership with UNDP, GDFRR and the World Bank. The data is provided by the technical agencies. The data sharing platform is built using the open source software GeoNode that is designed to enable collaborative use of geospatial data and maps. To enquire about the website and further details: <span class='contact_info'> riskinfo@dmc.gov.lk </span>
           {% endblocktrans %} 
           </p>
       </div>
@@ -102,6 +103,9 @@ This is where you can override the hero area block. You can simply modify the co
     </div>
   </div>
 </div>
+  {% block mainbody %}
+    {{ block.super }}
+  {% endblock %}
 {% endblock %}
 {% endblock %}
 {% block extra_script %}
