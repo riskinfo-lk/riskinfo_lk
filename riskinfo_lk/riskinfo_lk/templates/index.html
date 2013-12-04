@@ -38,14 +38,12 @@
   {% block mainbody %}
   <div class="row">
     <div class="span8">
-      <div class="well">
       <section class="widget list paginate-contents">
         <h2>{% trans "Latest Layers" %}</h2>
         <div class="paginate paginate-auto" id="search-content">
           {% include 'search/search_content.html' %}
         </div>
       </section>
-    </div>
     </div>
     <aside class="span4">
       {% if request.user.is_authenticated %}
