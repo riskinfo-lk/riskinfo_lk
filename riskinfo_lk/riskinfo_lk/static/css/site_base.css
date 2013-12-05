@@ -106,8 +106,7 @@ background-color: #fcd5b5;
   height: 54px;
   margin-bottom: 5px;
   padding: 6px;
-/*  padding-left: 15px;
-  padding-right: 15px;*/
+  text-align: center;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -119,13 +118,13 @@ background-color: #fcd5b5;
 
 .searchbox-title {
     display:inline-block;
-    margin-left: 30px;
 }
 
 
 .searchbox-input {
-    margin-left: 40px;
+    margin-left: 20px;
     height: 30px;
+    text-align: left;
 }
 
 .boxtitle {
@@ -137,6 +136,11 @@ background-color: #fcd5b5;
 .boxtext {
   text-align:justify;
   clear: right;
+}
+
+.boxtext a {
+  text-decoration: underline;
+  color: black;
 }
 
 .boximage {
@@ -163,7 +167,7 @@ background-color: #fcd5b5;
 
 .mapsbox {
   background-color: #e46c0a;
-  min-height: 172px;
+  min-height: 189px;
   padding-left: 15px;
   padding-right: 15px;
   -webkit-box-sizing: border-box;
@@ -176,7 +180,7 @@ background-color: #fcd5b5;
   background-color: #558ed5;
   padding-left: 15px;
   padding-right: 15px;
-  min-height: 172px;
+  min-height: 189px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -253,10 +257,6 @@ footer.footer a {
 section.widget h2 {
 background: #a7e4ee;
 color: #353535;
-}
-
-.x-viewport, .x-viewport body {
-  margin-top: 13px;
 }
 
 .navbar .nav.pull-right {

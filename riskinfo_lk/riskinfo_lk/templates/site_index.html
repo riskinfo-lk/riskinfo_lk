@@ -17,7 +17,7 @@ This is where you can override the hero area block. You can simply modify the co
          <h4>{% trans "Welcome" %}</h4>
          <div class="image-container">
            <img src="{{ STATIC_URL }}/img/welcome_map_image.jpg">
-           <a href="http://www.ngdc.noaa.gov/hazard/tsu_travel_time_events.shtml" class="image-source">{% trans "Tsunami Time Travel Map - Source NOAA" %}</a> 
+           <a href="http://www.ngdc.noaa.gov/hazard/tsu_travel_time_events.shtml" class="image-source">{% trans "2004 Tsunami Time Travel Map - Source NOAA" %}</a> 
          </div>
           <p class="welcometext">
           {% blocktrans %} Welcome to the Sri Lanka Disaster Risk Information Platform (RiskInfo). The purpose of RiskInfo is to make disaster risk information available to all the stakeholders and the public in order to facilitate disaster risk management. The initiative is led by the Disaster Management Center (DMC) in partnership with UNDP, GDFRR and the World Bank. The data is provided by the technical agencies. The data sharing platform is built using the open source software GeoNode that is designed to enable collaborative use of geospatial data and maps. To enquire about the website and further details: <strong> riskinfo@dmc.gov.lk </strong >{% endblocktrans %} 
@@ -75,7 +75,7 @@ This is where you can override the hero area block. You can simply modify the co
               <div class="span4 databox">
                 <h4 class="boxtitle"> {% trans "DATA" %} </h4>
                 <img class="boximage" src="{{ STATIC_URL }}/img/Data_icon.png">
-                <p class="boxtext">{% blocktrans %} RiskInfo lets you upload, manage, and browse data. <strong>Search</strong> for data that is valuable to you, or <strong>upload</strong> your own data.</p>{% endblocktrans %}
+                <p class="boxtext">{% blocktrans %} RiskInfo lets you upload, manage, and browse data. <strong>Search</strong> for data that is valuable to you, or <a href="upload"><strong>upload</strong></a> your own data.</p>{% endblocktrans %}
          <!--                      <form class="input-append  pull-right" action="{% url "search" %}" method="GET">
                       {# csrf_token #}
                       <input id="search" type="text" name="q"/> -->
