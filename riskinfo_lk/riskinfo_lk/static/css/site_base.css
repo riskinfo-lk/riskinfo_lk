@@ -136,6 +136,7 @@ background-color: #fcd5b5;
 .boxtext {
   text-align:justify;
   clear: right;
+  margin-top: 98px;
 }
 
 .boxtext a {
