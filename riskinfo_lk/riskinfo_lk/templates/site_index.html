@@ -5,7 +5,6 @@
 {% load pagination_tags %}
 {% load staticfiles %}
 {% load url from future %}
-{% block title %} {% trans "Welcome" %} - RiskInfo {% endblock %}
 {% comment %}
 This is where you can override the hero area block. You can simply modify the content below or replace it wholesale to meet your own needs. 
 {% endcomment %}
@@ -15,9 +14,12 @@ This is where you can override the hero area block. You can simply modify the co
   <div class="hero-unit">
     <div class="hero-unit-content">
       <div class="span4 welcomebox">
-         <h4>Welcome</h4>
-         <img src="{{ STATIC_URL }}/img/welcome_map_image.jpg">
-          <p class="welcometext {% ifequal LANGUAGE_CODE 'si' %}sinhala{% endifequal %}">
+         <h4>{% trans "Welcome" %}</h4>
+         <div class="image-container">
+           <img src="{{ STATIC_URL }}/img/welcome_map_image.jpg">
+           <a href="http://www.ngdc.noaa.gov/hazard/tsu_travel_time_events.shtml" class="image-source">{% trans "Tsunami Time Travel Map - Source NOAA" %}</a> 
+         </div>
+          <p class="welcometext">
           {% blocktrans %} Welcome to the Sri Lanka Disaster Risk Information Platform (RiskInfo). The purpose of RiskInfo is to make disaster risk information available to all the stakeholders and the public in order to facilitate disaster risk management. The initiative is led by the Disaster Management Center (DMC) in partnership with UNDP, GDFRR and the World Bank. The data is provided by the technical agencies. The data sharing platform is built using the open source software GeoNode that is designed to enable collaborative use of geospatial data and maps. To enquire about the website and further details: <strong> riskinfo@dmc.gov.lk </strong >{% endblocktrans %} 
           </p>
       </div>
@@ -59,8 +61,8 @@ This is where you can override the hero area block. You can simply modify the co
               <div class="span2 orange-dark minibox clickableBox"> <img src="{{ STATIC_URL }}img/minibox/AdminMap.jpg"><a href="http://www.riskinfo.lk/maps/2"> {% trans "Administrative Boundaries" %}  </a></div>
             </div>
             <div class="row">
-              <div class="span2 orange-dark minibox clickableBox"><img src="{{ STATIC_URL }}img/minibox/ExploreMap.jpg"><a href="{% url "maps_browse" %}"> {% trans "Explore all maps" %} </a> </div>
-              <div class="span2 orange-light minibox"> <img src="{{ STATIC_URL }}img/minibox/CreateMap.jpg">{% trans "Create a new map" %}
+              <div class="span2 orange-dark minibox clickableBox"><img src="{{ STATIC_URL }}img/minibox/ExploreMap.jpg"><a href="{% url "maps_browse" %}"> {% trans "Explore All Maps" %} </a> </div>
+              <div class="span2 orange-light minibox"> <img src="{{ STATIC_URL }}img/minibox/CreateMap.jpg"><span>{% trans "Create a new map" %}</span>
       <!--           <form action="" method="POST" class="boxform">
                   {% csrf_token %}
                   <button class="miniboxbutton btn small primary" type="submit" id="submit_search">{% trans "Create map" %}</button>

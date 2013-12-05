@@ -3,6 +3,10 @@
 {% block title %} RiskInfo {% endblock %}
 {% block extra_head %}
       <link href="{{ STATIC_URL }}css/site_base.css" rel="stylesheet"/>
+      {% ifequal LANGUAGE_CODE 'si' %}
+      <link href="{{ STATIC_URL }}css/sinhala.css" rel="stylesheet"/>
+      {% endifequal %}
+
 {% endblock %}
 {% block header %}
 <div class="navbar navbar-fixed-top">

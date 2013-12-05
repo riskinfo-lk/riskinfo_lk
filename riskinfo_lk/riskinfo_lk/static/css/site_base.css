@@ -74,13 +74,31 @@ background-color: #fcd5b5;
   min-height: 533px;
 }
 
+.image-container{
+  position: relative;
+}
+
+.image-source{
+  font-size: 9px;
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+  position: absolute;
+  bottom: -16px;
+  right: 2px;
+}
+
 .welcomebox img {
   max-width: 100%
 }
 
 .welcometext {
-  margin-top:10px;
+  margin-top:20px;
   text-align:justify;
+}
+
+.welcometext.sinhala {
+  font-size: 11px;
 }
 
 .searchbox {
@@ -241,8 +259,11 @@ color: #353535;
   margin-top: 13px;
 }
 
-.welcometext.sinhala {
-  font-size: 11px;
+#paneltbar {
+    margin-top: 300px;
 }
 
+.navbar .nav.pull-right {
+white-space: nowrap;
+  }
 

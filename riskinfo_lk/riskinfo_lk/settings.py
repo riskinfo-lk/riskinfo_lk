@@ -46,6 +46,15 @@ TEMPLATE_DIRS = (
 ROOT_URLCONF = 'riskinfo_lk.urls'
 
 # Load more settings from a file called local_settings.py if it exists
+
+LOCKDOWN_GEONODE = True
+
+# Add additional paths (as regular expressions) that don't require authentication.
+AUTH_EXEMPT_URLS = ()
+
+if LOCKDOWN_GEONODE:
+    MIDDLEWARE_CLASSES = MIDDLEWARE_CLASSES + ('geonode.security.middleware.LoginRequiredMiddleware',)
+
 try:
     from local_settings import *
 except ImportError:

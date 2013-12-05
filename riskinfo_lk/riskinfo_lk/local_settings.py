@@ -29,5 +29,3 @@ LOCALE_PATHS = (
 import django.conf.locale
 LANG_INFO = dict(django.conf.locale.LANG_INFO.items() + EXTRA_LANG_INFO.items())
 django.conf.locale.LANG_INFO = LANG_INFO
-
-LOCKDOWN_GEONODE = True
