@@ -30,11 +30,11 @@
 }
 
 .mapsbox {
-  min-height: 172px;
+  min-height: 192px;
 }
 
 .databox {
-  min-height: 172px;
+  min-height: 192px;
 }
 
 .main-actions a.btn-large {
@@ -43,5 +43,9 @@
 
 .btn-group>.btn-large {
   font-size: 14px;
+}
+
+.boxtext {
+  font-size: 12px;
 }
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-09 11:48+0530\n"
+"POT-Creation-Date: 2013-12-09 08:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: ta\n"
+"X-Source-Language: en\n"
 
 #: templates/site_base.html:43
 msgid "Profile"
@@ -76,28 +78,28 @@ msgstr ""
 
 #: templates/site_base.html:131
 msgid "Home"
-msgstr ""
+msgstr "முகப்பு"
 
 #: templates/site_base.html:134
 msgid "Layers"
-msgstr ""
+msgstr "படிகள்"
 
 #: templates/site_base.html:137
 msgid "Maps"
-msgstr ""
+msgstr "வரைபடங்கள்"
 
 #: templates/site_base.html:142
 msgid "Documents"
-msgstr ""
+msgstr "ஆவணங்கள்"
 
 #: templates/site_base.html:146
 msgid "People"
-msgstr ""
+msgstr "மக்கள்"
 
 #: templates/site_base.html:149 templates/site_index.html:53
 #: templates/site_index.html.py:81
 msgid "Search"
-msgstr ""
+msgstr "தேடல்"
 
 #: templates/site_base.html:174
 msgid "Powered by"
@@ -123,13 +125,17 @@ msgstr ""
 msgid "Developers"
 msgstr ""
 
+#: templates/site_base.html:181
+msgid "Partners"
+msgstr "பங்களிப்பாளர்கள்"
+
 #: templates/site_base.html:199
 msgid "Language"
 msgstr ""
 
 #: templates/site_index.html:17
 msgid "Welcome"
-msgstr ""
+msgstr "வரவேற்கின்Nறhம்"
 
 #: templates/site_index.html:20
 msgid "2004 Tsunami Time Travel Map - Source NOAA"
@@ -147,55 +153,80 @@ msgid ""
 "data and maps. To enquire about the website and further details: <strong> "
 "riskinfo@dmc.gov.lk </strong >"
 msgstr ""
+"இலங்கை அனர்த்த அபாய தகவல் தளத்திற்கு (ரிஸ்க்இன்போ) உங்களை வரவேற்கின்Nறhம். "
+"அனர்த்த அபாய முகாமைத்துவத்தை வசதியளிப்புச் செய்வதற்கான அனர்த்த அபாய தகவல்களை "
+"பங்களிப்பாளர்களுக்கும் பொதுமக்களுக்கும் வழங்குவதே ‘ரிஸ்க்இன்போ’ இன் "
+"நோக்கமாகும். இவ் ஆரம்பிப்பு யூ.என்.டி.பி. ஜி.டி.எப்.ஆர்.ஆர் மற்றும் உலக "
+"வங்கி என்பவற்றின் ஒத்துழைப்புடன் அனர்த்த முகாமைத்துவ நிலையத்தினால் "
+"செயற்படுத்தப்படுகின்றது. இதற்கான தகவல்கள் தொழிநுட்ப நிறுவனங்களால் "
+"வழங்கப்படுகின்றன. புவியியல் தரTகள் மற்றும் வரைபடங்களை ஒன்றிணைத்துப் "
+"பயன்படுத்துவதற்காக வடிவமைக்கப்பட்ட ‘ஜியோனோட்’ திறந்த மென்பொருளை "
+"பயன்படுத்தியே தகவல் பரிமாற்றத் தளம் அமைக்கப்பட்டுள்ளது. இணையத்தளம் பற்றி "
+"அறிந்துகொள்வதற்கும் மேலதிக தகவல்களுக்கும் <strong> riskinfo@dmc.gov.lk "
+"</strong >இனை தொடர்புகொள்ளுங்கள். "
 
 #: templates/site_index.html:31
 msgid "Search RiskInfo:"
-msgstr ""
+msgstr "தேடல் RiskInfo:"
 
 #: templates/site_index.html:40
 msgid "MAPS"
-msgstr ""
+msgstr "வரைபடங்கள்"
 
 #: templates/site_index.html:43
 msgid ""
 "RiskInfo lets you compose and share maps.  <strong>Create</strong> a map "
 "with our cartography tool, or <strong>explore</strong> maps shared by others."
 msgstr ""
+"வரைபடங்களை உருவாக்கி அவற்றை பகிந்துகொள்வதற்கு 'ரிஸ்க்இன்போ' உங்களுக்கு "
+"உதவியளிக்கும். எமது வரைபட கருவிகளை பயன்படுத்தி வரைபடங்களை உருவாக்குங்கள் "
+"அல்லது ஏனையவர் பகிந்துகொண்ட வரைவடங்களை ஆராAங்கள்."
 
 #: templates/site_index.html:60
 msgid "Hazard Maps"
-msgstr ""
+msgstr "இடர் வரைபடங்கள்"
 
 #: templates/site_index.html:61
 msgid "Administrative Boundaries"
-msgstr ""
+msgstr "நிர்வாக எல்லை"
 
 #: templates/site_index.html:64
 msgid "Explore All Maps"
-msgstr ""
+msgstr "சகல வரைபடங்களை ஆராய்தல்"
 
 #: templates/site_index.html:65
 msgid "Create a new map"
-msgstr ""
+msgstr "புதிய வரைபடங்களை உருவாக்குதல்"
 
 #: templates/site_index.html:72
 msgid "DATA"
-msgstr ""
+msgstr "தரTகள் "
 
 #: templates/site_index.html:74
 msgid ""
 " RiskInfo lets you upload, manage, and browse data. <strong>Search</strong> "
-"for data that is valuable to you, or <a href=\"upload\"><strong>upload</"
-"strong></a> your own data.</p>"
+"for data that is valuable to you, or <a "
+"href=\"upload\"><strong>upload</strong></a> your own data.</p>"
 msgstr ""
+"தரTகளை உட்செலுத்துவதற்கும் முகாமை செய்வதற்கும் தேடுவதற்கும் 'ரிஸ்க்இன்போ' "
+"வாயப்பளிக்கும். உங்களுக்குப் பெருமதியான தரTகளை தேடுங்கள் அல்லது உங்கள் "
+"தரTகளை உட்செலுத்துங்கள்."
 
 #: templates/site_index.html:87
 msgid "Hazard Data"
-msgstr ""
+msgstr "இடர் தரTகள் "
 
 #: templates/site_index.html:88
 msgid "Exposure Data"
-msgstr ""
+msgstr "வெளிப்படும் தரTகள்"
+
+#: templates/site_index.html:91
+msgid "Base data"
+msgstr "அடிப்படை தரTகள்"
+
+#: templates/site_index.html:92
+msgid "Explore Data"
+msgstr "தரTகளை ஆராய்தல்"
 
 #: templates/site_index.html:105
 msgid "Latest Layers"

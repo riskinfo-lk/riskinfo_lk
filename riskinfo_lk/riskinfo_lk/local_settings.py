@@ -11,6 +11,7 @@ SITENAME = "RiskInfo"
 LANGUAGES = (
     ('en', 'English'),
     ('si', 'Sinhala'),
+    ('ta', 'Tamil'),
 )
 
 EXTRA_LANG_INFO = {
@@ -19,6 +20,12 @@ EXTRA_LANG_INFO = {
         'code': 'si',
         'name': 'Sinhala',
         'name_local': u'සිංහල', #unicode codepoints here
+    },
+    'ta': {
+        'bidi': False,
+        'code': 'ta',
+        'name': 'Tamil',
+        'name_local': u'Tamil', #unicode codepoints here
     },
 }
 
@@ -34,6 +41,10 @@ LOCALE_PATHS = (
     "/home/dmc/geonode_production/geonode/locale",
     "/home/dmc/riskinfo_lk2/riskinfo_lk/riskinfo_lk/locale",
     )
+# LOCALE_PATHS = (
+#     "/usr/local/lib/python2.7/dist-packages/geonode/locale",
+#     "/vagrant/riskinfo_lk2/riskinfo_lk/riskinfo_lk/locale",
+# )
 
 #Monkey patch to add custom languages not provided by Django
 import django.conf.locale
