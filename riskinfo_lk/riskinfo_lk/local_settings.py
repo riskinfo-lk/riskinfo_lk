@@ -22,9 +22,17 @@ EXTRA_LANG_INFO = {
     },
 }
 
+# Activate the Documents application
+DOCUMENTS_APP = True
+ALLOWED_DOCUMENT_TYPES = [
+    'doc', 'docx','gif', 'jpg', 'jpeg', 'ods', 'odt', 'pdf', 'png', 'ppt', 
+    'rar', 'tif', 'tiff', 'txt', 'xls', 'xlsx', 'xml', 'zip', 
+]
+MAX_DOCUMENT_SIZE = 20 # MB
+
 LOCALE_PATHS = (
-    "/usr/local/lib/python2.7/dist-packages/geonode/locale",
-    "/vagrant/riskinfo_lk2/riskinfo_lk/riskinfo_lk/locale",
+    "/home/dmc/geonode_production/geonode/locale",
+    "/home/dmc/riskinfo_lk2/riskinfo_lk/riskinfo_lk/locale",
     )
 
 #Monkey patch to add custom languages not provided by Django

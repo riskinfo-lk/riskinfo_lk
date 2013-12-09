@@ -58,7 +58,7 @@ This is where you can override the hero area block. You can simply modify the co
             <div class="row">
               <!-- Looking for a way not to hardcode the URL-->
               <div class="span2 orange-light minibox clickableBox"> <img src="{{ STATIC_URL }}img/minibox/TsunamiMap.jpg"> <a href="{% url "maps_browse" %}">{% trans "Hazard Maps" %}</a></div>
-              <div class="span2 orange-dark minibox clickableBox"> <img src="{{ STATIC_URL }}img/minibox/AdminMap.jpg"><a href="http://www.riskinfo.lk/maps/2"> {% trans "Administrative Boundaries" %}  </a></div>
+              <div class="span2 orange-dark minibox clickableBox"> <img src="{{ STATIC_URL }}img/minibox/AdminMap.jpg"><a href="http://www.riskinfo.lk/maps/45"> {% trans "Administrative Boundaries" %}  </a></div>
             </div>
             <div class="row">
               <div class="span2 orange-dark minibox clickableBox"><img src="{{ STATIC_URL }}img/minibox/ExploreMap.jpg"><a href="{% url "maps_browse" %}"> {% trans "Explore All Maps" %} </a> </div>
@@ -88,8 +88,8 @@ This is where you can override the hero area block. You can simply modify the co
               <div class="span2 blue-dark minibox clickableBox"><img src="{{ STATIC_URL }}img/minibox/ExploreData.jpg"> <a href="{% url "search" %}?q=exposure">{% trans "Exposure Data" %}</a></div>
             </div>
             <div class="row">
-              <div class="span2 blue-dark minibox clickableBox"> <img src="{{ STATIC_URL }}img/minibox/BaseData.jpg"><a href="{% url "search" %}?q=base"> Base data </a></div>
-              <div class="span2 blue-light minibox clickableBox"><img src="{{ STATIC_URL }}img/minibox/AllData.jpg"> <a href="{% url "search" %}"> Explore Data </a> </div>
+              <div class="span2 blue-dark minibox clickableBox"> <img src="{{ STATIC_URL }}img/minibox/BaseData.jpg"><a href="{% url "search" %}?q=base">{% trans "Base data" %} </a></div>
+              <div class="span2 blue-light minibox clickableBox"><img src="{{ STATIC_URL }}img/minibox/AllData.jpg"> <a href="{% url "search" %}">{% trans "Explore Data" %} </a> </div>
             </div> 
           </div>
         </div>

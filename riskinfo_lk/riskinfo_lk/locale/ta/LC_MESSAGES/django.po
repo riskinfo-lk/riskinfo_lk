@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-04 11:46+0000\n"
+"POT-Creation-Date: 2013-12-09 11:48+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,199 +18,124 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: templates/base.html:48 templates/site_base.html:39
+#: templates/site_base.html:43
 msgid "Profile"
 msgstr ""
 
-#: templates/base.html:50 templates/site_base.html:41
+#: templates/site_base.html:45
 msgid "Admin"
 msgstr ""
 
-#: templates/base.html:53 templates/site_base.html:44
+#: templates/site_base.html:48
 msgid "Announcements"
 msgstr ""
 
-#: templates/base.html:56 templates/site_base.html:47
+#: templates/site_base.html:51
 msgid "GeoServer"
 msgstr ""
 
-#: templates/base.html:58 templates/site_base.html:49
+#: templates/site_base.html:53
 msgid "Recent Activity"
 msgstr ""
 
-#: templates/base.html:60 templates/site_base.html:51
+#: templates/site_base.html:55
 msgid "Log out"
 msgstr ""
 
-#: templates/base.html:65
-msgid "Notifications"
-msgstr ""
-
-#: templates/base.html:66
-msgid "Messages"
-msgstr ""
-
-#: templates/base.html:67 templates/site_base.html:56
+#: templates/site_base.html:60
 msgid "Upload"
 msgstr ""
 
-#: templates/base.html:68 templates/site_base.html:57
+#: templates/site_base.html:61
 msgid "Help"
 msgstr ""
 
-#: templates/base.html:72 templates/base.html.py:85
-#: templates/site_base.html:61 templates/site_base.html.py:74
+#: templates/site_base.html:65 templates/site_base.html.py:78
 msgid "Sign in"
 msgstr ""
 
-#: templates/base.html:77 templates/site_base.html:66
+#: templates/site_base.html:70
 msgid "Username"
 msgstr ""
 
-#: templates/base.html:79 templates/site_base.html:68
+#: templates/site_base.html:72
 msgid "Password"
 msgstr ""
 
-#: templates/base.html:83 templates/site_base.html:72
+#: templates/site_base.html:76
 msgid "Remember Me"
 msgstr ""
 
-#: templates/base.html:91 templates/site_base.html:80
+#: templates/site_base.html:84
 msgid "or"
 msgstr ""
 
-#: templates/base.html:92 templates/site_base.html:81
+#: templates/site_base.html:85
 msgid "Register"
 msgstr ""
 
-#: templates/base.html:113 templates/site_base.html:127
+#: templates/site_base.html:131
 msgid "Home"
 msgstr ""
 
-#: templates/base.html:116 templates/site_base.html:130
+#: templates/site_base.html:134
 msgid "Layers"
 msgstr ""
 
-#: templates/base.html:119 templates/site_base.html:133
+#: templates/site_base.html:137
 msgid "Maps"
 msgstr ""
 
-#: templates/base.html:124 templates/site_base.html:138
+#: templates/site_base.html:142
 msgid "Documents"
 msgstr ""
 
-#: templates/base.html:128 templates/site_base.html:142
+#: templates/site_base.html:146
 msgid "People"
 msgstr ""
 
-#: templates/base.html:131 templates/site_base.html:145
-#: templates/site_index.html:51 templates/site_index.html.py:83
+#: templates/site_base.html:149 templates/site_index.html:53
+#: templates/site_index.html.py:81
 msgid "Search"
 msgstr ""
 
-#: templates/base.html:185 templates/site_base.html:170
+#: templates/site_base.html:174
 msgid "Powered by"
 msgstr ""
 
-#: templates/base.html:185 templates/site_base.html:170
+#: templates/site_base.html:174
 msgid "GeoNode"
 msgstr ""
 
-#: templates/base.html:185
-msgid "version"
-msgstr ""
-
-#: templates/base.html:186 templates/site_base.html:172
-msgid "Developers"
-msgstr ""
-
-#: templates/base.html:187
-msgid "About"
-msgstr ""
-
-#: templates/base.html:194 templates/site_base.html:195
-msgid "Language"
-msgstr ""
-
-#: templates/index.html:9
-msgid "Welcome!"
-msgstr ""
-
-#: templates/index.html:17 templates/site_index.html:8
-msgid "Welcome"
-msgstr ""
-
-#: templates/index.html:21
-msgid ""
-"\n"
-"            GeoNode is an open source platform for sharing geospatial data "
-"and maps.  If you have any questions about the software or service, join our "
-"<a href=\"https://groups.google.com/d/forum/geonode-users\">mailing list</"
-"a>.\n"
-"          "
-msgstr ""
-
-#: templates/index.html:25 templates/site_base.html:171
+#: templates/site_base.html:175
 msgid "Need help"
 msgstr ""
 
-#: templates/index.html:25
-msgid "Getting Started?"
-msgstr ""
-
-#: templates/index.html:29
-msgid "Explore Layers"
-msgstr ""
-
-#: templates/index.html:32
-msgid "Explore Maps"
-msgstr ""
-
-#: templates/index.html:42 templates/site_index.html:107
-msgid "Latest Layers"
-msgstr ""
-
-#: templates/index.html:52 templates/site_index.html:118
-msgid "Contribute"
-msgstr ""
-
-#: templates/index.html:54 templates/site_index.html:120
-msgid ""
-"\n"
-"              GeoNode enables you to upload, manage, and browse data layers. "
-"Search for data that is valuable to you, or upload your own data. \n"
-"            "
-msgstr ""
-
-#: templates/index.html:57 templates/site_index.html:123
-msgid "Upload Layers"
-msgstr ""
-
-#: templates/index.html:58 templates/site_index.html:124
-msgid ""
-"\n"
-"              GeoNode enables you to compose and share maps. Create a map "
-"with our cartography tool, or explore maps shared by others. \n"
-"            "
-msgstr ""
-
-#: templates/index.html:61 templates/site_index.html:127
-msgid "Create a Map"
-msgstr ""
-
-#: templates/index.html:67 templates/site_index.html:133
-msgid "Latest Maps"
-msgstr ""
-
-#: templates/site_base.html:171
+#: templates/site_base.html:175
 msgid "getting started?"
 msgstr ""
 
-#: templates/site_base.html:172
+#: templates/site_base.html:176
 msgid "For"
 msgstr ""
 
-#: templates/site_index.html:21
+#: templates/site_base.html:176
+msgid "Developers"
+msgstr ""
+
+#: templates/site_base.html:199
+msgid "Language"
+msgstr ""
+
+#: templates/site_index.html:17
+msgid "Welcome"
+msgstr ""
+
+#: templates/site_index.html:20
+msgid "2004 Tsunami Time Travel Map - Source NOAA"
+msgstr ""
+
+#: templates/site_index.html:23
 msgid ""
 " Welcome to the Sri Lanka Disaster Risk Information Platform (RiskInfo). The "
 "purpose of RiskInfo is to make disaster risk information available to all "
@@ -223,55 +148,91 @@ msgid ""
 "riskinfo@dmc.gov.lk </strong >"
 msgstr ""
 
-#: templates/site_index.html:29
+#: templates/site_index.html:31
 msgid "Search RiskInfo:"
 msgstr ""
 
-#: templates/site_index.html:38
+#: templates/site_index.html:40
 msgid "MAPS"
 msgstr ""
 
-#: templates/site_index.html:41
+#: templates/site_index.html:43
 msgid ""
 "RiskInfo lets you compose and share maps.  <strong>Create</strong> a map "
 "with our cartography tool, or <strong>explore</strong> maps shared by others."
 msgstr ""
 
-#: templates/site_index.html:58
+#: templates/site_index.html:60
 msgid "Hazard Maps"
 msgstr ""
 
-#: templates/site_index.html:59
+#: templates/site_index.html:61
 msgid "Administrative Boundaries"
 msgstr ""
 
-#: templates/site_index.html:62
-msgid "Explore all maps"
+#: templates/site_index.html:64
+msgid "Explore All Maps"
 msgstr ""
 
-#: templates/site_index.html:63
+#: templates/site_index.html:65
 msgid "Create a new map"
 msgstr ""
 
-#: templates/site_index.html:66
-msgid "Create map"
-msgstr ""
-
-#: templates/site_index.html:74
+#: templates/site_index.html:72
 msgid "DATA"
 msgstr ""
 
-#: templates/site_index.html:76
+#: templates/site_index.html:74
 msgid ""
 " RiskInfo lets you upload, manage, and browse data. <strong>Search</strong> "
-"for data that is valuable to you, or <strong>upload</strong> your own data.</"
-"p>"
+"for data that is valuable to you, or <a href=\"upload\"><strong>upload</"
+"strong></a> your own data.</p>"
 msgstr ""
 
-#: templates/site_index.html:89
+#: templates/site_index.html:87
 msgid "Hazard Data"
 msgstr ""
 
-#: templates/site_index.html:90
+#: templates/site_index.html:88
 msgid "Exposure Data"
+msgstr ""
+
+#: templates/site_index.html:105
+msgid "Latest Layers"
+msgstr ""
+
+#: templates/site_index.html:116
+msgid "Contribute"
+msgstr ""
+
+#: templates/site_index.html:118
+msgid ""
+"\n"
+"              GeoNode enables you to upload, manage, and browse data layers. "
+"Search for data that is valuable to you, or upload your own data. \n"
+"            "
+msgstr ""
+
+#: templates/site_index.html:121
+msgid "Upload Layers"
+msgstr ""
+
+#: templates/site_index.html:122
+msgid ""
+"\n"
+"              GeoNode enables you to compose and share maps. Create a map "
+"with our cartography tool, or explore maps shared by others. \n"
+"            "
+msgstr ""
+
+#: templates/site_index.html:125
+msgid "Create a Map"
+msgstr ""
+
+#: templates/site_index.html:131
+msgid "Latest Maps"
+msgstr ""
+
+#: templates/maps/map_view.html:5
+msgid "GeoExplorer"
 msgstr ""
