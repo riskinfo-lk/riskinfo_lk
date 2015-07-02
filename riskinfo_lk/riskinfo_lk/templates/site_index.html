@@ -1,153 +1,15 @@
 {% extends 'index.html' %}
 {% load i18n %}
-{% load maps_tags %}
-{% load layers_tags %}
-{% load pagination_tags %}
-{% load staticfiles %}
-{% load url from future %}
 {% comment %}
 This is where you can override the hero area block. You can simply modify the content below or replace it wholesale to meet your own needs. 
 {% endcomment %}
-{% block body_outer %}
-<div class="row">
   {% block hero %}
-  <div class="hero-unit">
-    <div class="hero-unit-content">
-      <div class="span4 welcomebox">
-         <h4>{% trans "Welcome" %}</h4>
-         <div class="image-container">
-           <img src="{{ STATIC_URL }}/img/welcome_map_image.jpg">
-           <a href="http://www.ngdc.noaa.gov/hazard/tsu_travel_time_events.shtml" class="image-source">{% trans "2004 Tsunami Time Travel Map - Source NOAA" %}</a> 
-         </div>
-          <p class="welcometext">
-          {% blocktrans %} Welcome to the Sri Lanka Disaster Risk Information Platform (RiskInfo). The purpose of RiskInfo is to make disaster risk information available to all the stakeholders and the public in order to facilitate disaster risk management. The initiative is led by the Disaster Management Center (DMC) in partnership with UNDP, GDFRR and the World Bank. The data is provided by the technical agencies. The data sharing platform is built using the open source software GeoNode that is designed to enable collaborative use of geospatial data and maps. To enquire about the website and further details: <strong> riskinfo@dmc.gov.lk </strong >{% endblocktrans %} 
-          </p>
-      </div>
-      <div class="span8">
-        <div class="row">
-          <div class="span8 searchbox">
-              <form class="form-inline" action="{% url "search" %}" method="GET">
-              {# csrf_token #}
-               <h3 class="searchbox-title">{% trans "Search RiskInfo:" %} </h3>
-              <input id="search" class="input-append searchbox-input" type="text" name="q"/>
-              </form>
-          </div>
-        </div>
-        <div class="row"> 
-          <div class="span4 mapsspan">
-            <div class="row">
-              <div class="span4 mapsbox"> 
-                <h4 class="boxtitle"> {% trans "MAPS" %} </h4>
-                <img class="boximage" src="{{ STATIC_URL }}/img/Map_icon.png">
-                <p class="boxtext"> 
-                  {% blocktrans %}RiskInfo lets you compose and share maps.  <strong>Create</strong> a map with our cartography tool, or <strong>explore</strong> maps shared by others.{% endblocktrans %}
-                </p>
-                <div>
-      <!--             <form class="input-append boxform" action="{% url "search" %}" method="GET">
-                      {# csrf_token #}
-                      <input id="search" type="text" name="q"/>
-                  </form> -->
-      <!--             <form action="{% url "maps_browse" %}" method="POST" class="boxform">
-                    {% csrf_token %}
-                     <input class="input-medium" type="text" class="boxinput" id="search_query_maps" name="q" />
-                     <button class="boxbutton btn small primary" type="submit" id="submit_search_maps">{% trans "Search" %}</button>
-                  </form> -->
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <!-- Looking for a way not to hardcode the URL-->
-              <div class="span2 orange-light minibox clickableBox"> <img src="{{ STATIC_URL }}img/minibox/TsunamiMap.jpg"> <a href="{% url "maps_browse" %}">{% trans "Hazard Maps" %}</a></div>
-              <div class="span2 orange-dark minibox clickableBox"> <img src="{{ STATIC_URL }}img/minibox/AdminMap.jpg"><a href="http://www.riskinfo.lk/maps/45"> {% trans "Administrative Boundaries" %}  </a></div>
-            </div>
-            <div class="row">
-              <div class="span2 orange-dark minibox clickableBox"><img src="{{ STATIC_URL }}img/minibox/ExploreMap.jpg"><a href="{% url "maps_browse" %}"> {% trans "Explore All Maps" %} </a> </div>
-              <div class="span2 orange-light minibox"> <img src="{{ STATIC_URL }}img/minibox/CreateMap.jpg"><a href="{% url "new_map" %}">{% trans "Create a new map" %}</a>
-              </div>
-            </div>
-          </div>
-          <div class="span4 dataspan">
-             <div class="row">
-              <div class="span4 databox">
-                <h4 class="boxtitle"> {% trans "DATA" %} </h4>
-                <img class="boximage" src="{{ STATIC_URL }}/img/Data_icon.png">
-                <p class="boxtext">{% blocktrans %} RiskInfo lets you upload, manage, and browse data. <strong>Search</strong> for data that is valuable to you, or <a href="upload"><strong>upload</strong></a> your own data.</p>{% endblocktrans %}
-         <!--                      <form class="input-append  pull-right" action="{% url "search" %}" method="GET">
-                      {# csrf_token #}
-                      <input id="search" type="text" name="q"/> -->
-      <!--           <form action="{% url "search" %}" method="POST" class="boxform">
-              {% csrf_token %}
-               <input class="input-medium" type="text" class="boxinput" id="search_query" name="q" />
-               <button class="boxbutton btn small primary" type="submit" id="submit_search">{% trans "Search" %}</button> -->
-            </form>
-              </div>
-            </div>
-            <div class="row">
-              <!-- Looking for a way not to hardcode the URL-->
-              <div class="span2 blue-light minibox clickableBox"><img src="{{ STATIC_URL }}img/minibox/HazardData.png"><a href="{% url "search" %}?q=hazard"> {% trans "Hazard Data" %} </a></div>
-              <div class="span2 blue-dark minibox clickableBox"><img src="{{ STATIC_URL }}img/minibox/ExposureData.png"> <a href="{% url "search" %}?q=exposure">{% trans "Exposure Data" %}</a></div>
-            </div>
-            <div class="row">
-              <div class="span2 blue-dark minibox clickableBox"> <img src="{{ STATIC_URL }}img/minibox/BaseData.jpg"><a href="{% url "search" %}?q=base">{% trans "Base data" %} </a></div>
-              <div class="span2 blue-light minibox clickableBox"><img src="{{ STATIC_URL }}img/minibox/AllData.jpg"> <a href="{% url "search" %}">{% trans "Explore Data" %} </a> </div>
-            </div> 
-          </div>
-        </div>
-      </div>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>{% trans "Welcome" %}</h1>
+      <p>{% blocktrans %}GeoNode is an open source platform for sharing geospatial data and maps.{% endblocktrans %}</p>
+      <p>{% blocktrans %}If you have any questions about the software or service, join our <a href="https://groups.google.com/d/forum/geonode-users">mailing list</a>.{% endblocktrans %}</p>
+      <span>{% trans 'Need help?' %} <a href="http://docs.geonode.org/en/latest/tutorials/users/quickstart/index.html">{% trans 'Getting Started' %}</a></span>
     </div>
-  </div>
-</div>
-  {% block mainbody %}
-    <div class="row">
-    <div class="span8">
-      <div class="well">
-      <section class="widget list paginate-contents">
-        <h2>{% trans "Latest Layers" %}</h2>
-        <div class="paginate paginate-auto" id="search-content">
-          {% include 'search/search_content.html' %}
-        </div>
-      </section>
-    </div>
-    </div>
-    <aside class="span4">
-      {% if request.user.is_authenticated %}
-        <div class="well">
-          <section>
-            <h2>{% trans "Contribute" %}</h2>
-            <p class="main-actions">
-            {% blocktrans %}
-              GeoNode enables you to upload, manage, and browse data layers. Search for data that is valuable to you, or upload your own data. 
-            {% endblocktrans %}
-              <a href="{% url "data_upload" %}" class="btn btn-large">{% trans 'Upload Layers' %}</a>
-            {% blocktrans %}
-              GeoNode enables you to compose and share maps. Create a map with our cartography tool, or explore maps shared by others. 
-            {% endblocktrans %}
-              <a href="{% url "new_map" %}" class="btn btn-large">{% trans 'Create a Map' %}</a>
-            </p>
-          </section>
-        </div>
-      {% endif %}
-      <div class="well">
-        <h2>{% trans "Latest Maps" %}</h2>
-        <section class="article-list latest-maps">
-          {% featured_maps as featured_maps %}
-          {% for map in featured_maps %}
-            {% include "maps/_map_list_item.html" %}
-          {% endfor %}
-        </section>
-      </div>
-    </aside>
   </div>
   {% endblock %}
-{% endblock %}
-{% endblock %}
-{% block extra_script %}
- {{ block.super }}
-  <script type="text/javascript">
-    $(".clickableBox").click(function(){
-         window.location=$(this).find("a").attr("href"); 
-         return false;
-    });
-  </script>
-
-{% endblock extra_script %}

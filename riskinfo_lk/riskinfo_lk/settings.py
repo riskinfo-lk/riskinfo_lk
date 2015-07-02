@@ -47,7 +47,7 @@ ROOT_URLCONF = 'riskinfo_lk.urls'
 
 # Load more settings from a file called local_settings.py if it exists
 
-LOCKDOWN_GEONODE = True
+LOCKDOWN_GEONODE = False 
 
 # Add additional paths (as regular expressions) that don't require authentication.
 AUTH_EXEMPT_URLS = ()
