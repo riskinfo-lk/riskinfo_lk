@@ -11,14 +11,14 @@ sudo pip install virtualenvwrapper
 #source ~/.bashrc
 source /usr/local/bin/virtualenvwrapper.sh
 mkvirtualenv riskinfo_lk
-sudo pip install Django
-django-admin.py startproject riskinfo_lk --template=https://github.com/GeoNode/geonode-project/archive/master.zip -epy,rst
+#sudo pip install Django
+#django-admin.py startproject riskinfo_lk --template=https://github.com/GeoNode/geonode-project/archive/master.zip -epy,rst
 
-sudo apt-get install python-dev python-lxml gdal-bin
-sudo apt-get install openjdk-7-jdk
-sudo apt-get install build-essential libxml2-dev libxslt-dev
+#sudo apt-get install python-dev python-lxml gdal-bin
+#sudo apt-get install openjdk-7-jdk
+#sudo apt-get install build-essential libxml2-dev libxslt-dev
 
-cd riskinfo_lk
+#cd riskinfo_lk
 
-paver setup # install geonode and downloads geoserver
+#paver setup # install geonode and downloads geoserver
 #paver start -b 0.0.0.0:8000
