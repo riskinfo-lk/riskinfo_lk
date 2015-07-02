@@ -9,14 +9,16 @@ export CPLUS_INCLUDE_PATH=/usr/include/gdal
 export C_INCLUDE_PATH=/usr/include/gdal
 
 sudo pip install virtualenvwrapper
-sudo pip install GDAL==1.10.0
 source /usr/local/bin/virtualenvwrapper.sh
 
 mkvirtualenv riskinfo_lk
 
+pip install GDAL==1.10.0
+
 git clone https://github.com/riskinfo-lk/riskinfo_lk2.git
 cd riskinfo_lk2/riskinfo_lk/ 
 
-pip install geonode==2.4b25 
+pip install -e git://github.com/genode/geonode.git#egg=geonode
+
 paver setup # install geonode and downloads geoserver
 paver start -b 0.0.0.0:8000
