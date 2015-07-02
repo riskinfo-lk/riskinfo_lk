@@ -3,6 +3,8 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "trusty64server"
   config.vm.box_url = "https://oss-binaries.phusionpassenger.com/vagrant/boxes/latest/ubuntu-14.04-amd64-vbox.box"
+  config.ssh.username = 'vagrant'
+
 
   config.vm.define :production do |production|
   	production.vm.network :public_network, :bridge => 'eth0', :auto_config => false
