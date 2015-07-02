@@ -6,14 +6,17 @@ Vagrant.configure("2") do |config|
 
   config.vm.define :production do |production|
   	production.vm.network :public_network, :bridge => 'eth0', :auto_config => false
+    config.vm.network "forwarded_port", guest: 80, host: 8000
     production.vm.provision :shell, :path => "provision_geonode.sh"
     production.vm.provider :virtualbox do |vb|
-        vb.customize [ "modifyvm", :id, "--name", "RiskInfo2","--memory", 8192 ]
+        vb.customize [ "modifyvm", :id, "--name", "RiskInfo2","--memory", 4096 ]
   	end
   end
 
   config.vm.define :dev do |dev|
-  	dev.vm.network :private_network, ip: "192.168.50.4"
+  	dev.vm.network :public_network, :bridge => 'eth0', :auto_config => false
+    config.vm.network "forwarded_port", guest: 8000, host: 8000
+    config.vm.network "forwarded_port", guest: 8080, host: 8080
     dev.vm.provision :shell, :path => "provision_geonode_dev.sh"
   	dev.vm.provider :virtualbox do |vb|
        vb.customize [ "modifyvm", :id, "--name", "RiskInfo2 - dev ","--memory", 4096 ]

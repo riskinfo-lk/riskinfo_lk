@@ -4,11 +4,11 @@ which virtualenv > /dev/null &&
 { echo "Already provisioned"; exit 0; }
 
 sudo apt-get update
-sudo apt-get install python python-pip git
+sudo apt-get -y install build-essential libxml2-dev libxslt-dev
+sudo apt-get -y install python-dev python-lxml gdal-bin
+sudo apt-get -y install openjdk-7-jdk
+sudo apt-get -y install python python-pip git
 sudo pip install virtualenvwrapper
-#sudo apt-get install python-dev python-lxml gdal-bin
-#sudo apt-get install openjdk-7-jdk
-#sudo apt-get install build-essential libxml2-dev libxslt-dev
 
 #echo 'export WORKON_HOME=$HOME/.virtualenvs' >> ~/.bashrc 
 #echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
