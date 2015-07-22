@@ -1,8 +1,8 @@
 - hosts: production 
-  remote_user: root 
+  remote_user: ubuntu 
   vars:
     app_name: riskinfo_lk
     github_user: riskinfo-lk
-    server_name: 54.144.144.171 
+    server_name: 52.11.55.122 
   roles:
      - { role: ortelius.geonode }
