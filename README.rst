@@ -22,9 +22,9 @@ Setup your GeoNode for usage. Download a geoserver.war to use and start the deve
 Setting up the vagrant box
 --------------------------
 
-	$ git clone https://github.com/riskinfo-lk/riskinfo_lk.git
+To configure a local development virtual machine, you will need to have virtualbox and vagrant installed.
 
-Change the ip in the VagrantFile to a valid ip on the local network 
+.. note:: You may need to change the IP configuration in the VagrantFile to a valid ip on the local network
 
 For development::
 
