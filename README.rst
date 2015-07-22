@@ -24,7 +24,7 @@ Setting up the vagrant box
 
 To configure a local development virtual machine, you will need to have virtualbox and vagrant installed.
 
-    .. note:: You may need to change the IP configuration in the VagrantFile to a valid ip on the local network
+Note: You may need to change the IP configuration in the VagrantFile to a valid ip on the local network
 
 For development::
 
@@ -46,7 +46,7 @@ In order to install for production on a remote machine, you will need to install
 
     $ sudo pip install ansible
 
-    .. note:: It is advisable to install ansible system wide using sudo
+Note: It is advisable to install ansible system wide using sudo
 
 Next you will need to install the ansible role for geonode::
 
