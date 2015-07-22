@@ -1,5 +1,5 @@
-Riskinfo_Lk
-========================
+Riskinfo.lk GeoNode
+===================
 
 Installation for development set-up
 -----------------------------------
