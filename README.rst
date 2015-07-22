@@ -1,12 +1,13 @@
 Riskinfo.lk GeoNode
 ===================
 
-Installation for development set-up
------------------------------------
+Installation for development
+----------------------------
 
 Create a new virtualenv for riskinfo_lk, install GeoNode and setup your project::
 
     $ mkvirtualenv riskinfo_lk
+    $ pip install geonode
 
 To install the latest from GeoNode's master branch use the following command::
 
@@ -17,10 +18,10 @@ Setup your GeoNode for usage. Download a geoserver.war to use and start the deve
     $ git clone https://github.com/riskinfo-lk/riskinfo_lk.git 
     $ cd riskinfo_lk
     $ paver setup # downloads geoserver
-    $ paver start 
+    $ paver start
 
-Setting up the vagrant box
---------------------------
+Setting up a vagrant box
+------------------------
 
 To configure a local development virtual machine, you will need to have virtualbox and vagrant installed.
 
@@ -48,7 +49,7 @@ In order to install for production on a remote machine, you will need to install
 
 Note: It is advisable to install ansible system wide using sudo
 
-Next you will need to install the ansible role for geonode::
+Next, you will need to install the ansible role for geonode::
 
     $ ansible-galaxy install ortelius.geonode
 
