@@ -15,10 +15,10 @@ mkvirtualenv riskinfo_lk
 
 pip install GDAL==1.10.0
 
-git clone https://github.com/riskinfo-lk/riskinfo_lk2.git
-cd riskinfo_lk2/riskinfo_lk/ 
+git clone https://github.com/riskinfo-lk/riskinfo_lk.git
+cd riskinfo_lk/
 
-pip install -e git://github.com/geonode/geonode.git@2.4b25#egg=geonode
+pip install -e . 
 
 paver setup # install geonode and downloads geoserver
 paver start_geoserver

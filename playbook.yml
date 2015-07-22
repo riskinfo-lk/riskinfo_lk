@@ -1,0 +1,8 @@
+- hosts: webservers
+  remote_user: ubuntu
+  vars:
+    app_name: riskinfo_lk
+    github_user: riskinfo-lk
+    server_name: 54.157.155.35 
+  roles:
+     - { role: ortelius.geonode }
