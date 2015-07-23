@@ -1,0 +1,144 @@
+-{% extends "site_base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% load base_tags %}
+
+{% block title %} {% trans "Welcome!" %} - {{ block.super }} {% endblock %}
+
+{% block extra_head %}
+<link href="{% static "lab/mapglyphs/mapglyphs.css" %}" rel="stylesheet">
+{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block middle %}
+   {{ block.super }}
+  {% block hero %}
+  <div class="jumbotron">
+    <div class="container">
+      <img src ="{% static "img/RiskInfo_Logo.png" %}">
+      <p>Open data to further your understanding of disaster risk</p>
+
+    </div>
+  </div>
+  {% endblock %}
+
+  {% block mainbody %}
+  <div class="hazard-box">
+  <div class="container">
+    <div class="row home-facets">
+      <div>
+        <h1>Hazard Data</h1>
+        <p>RiskInfo lets you upload, manage, and browse data. Search for data that is valuable to you, or upload your own data.</p>
+    {# with facet_type='home' #}
+     {# facets as facets #}
+
+        <div class="col-md-3">
+          <div><a href="/search/" class="btn btn-default" role="button">
+            <img src="{% static "geonode/img/hazard-icon-earthquake.png" %}"></img>
+            <h3>Earthquake</h3>
+            <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a></div>
+        </div>
+        <div class="col-md-3">
+          <div><a href="/search/" class="btn btn-default" role="button">
+            <img src="{% static "geonode/img/hazard-icon-drought.png" %}"></img>
+            <h3>Drought</h3>
+            <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a></div>
+        </div>
+        <div class="col-md-3">
+          <div><a href="/search/" class="btn btn-default" role="button">
+            <img src="{% static "geonode/img/hazard-icon-flood.png" %}"></img>
+            <h3>Flood</h3>
+            <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a></div>
+        </div>
+        <div class="col-md-3">
+          <div><a href="/search/" class="btn btn-default" role="button">
+            <img src="{% static "geonode/img/hazard-icon-tsunami.png" %}"></img>
+            <h3>Tsunami</h3>
+            <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
+          </div>
+        </div>
+        <div class="col-md-2 col-md-offset-2">
+          <div><a href="/search/" class="btn btn-default" role="button">
+            <img src="{% static "geonode/img/hazard-icon-storm-surge.png" %}"></img>
+            <h3>Storm Surge</h3>
+            <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
+          </div>
+        </div>
+        <div class="col-md-2 col-md-offset-1">
+          <div><a href="/search/" class="btn btn-default" role="button">
+            <img src="{% static "geonode/img/hazard-icon-strong-wind.png" %}"></img>
+            <h3>Strong Wind</h3>
+            <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
+          </div>
+        </div>
+        <div class="col-md-2 col-md-offset-1">
+          <div><a href="/search/" class="btn btn-default" role="button">
+            <img src="{% static "geonode/img/hazard-icon-volcanic-ash.png" %}"></img>
+            <h3>Volcanic Ashes</h3>
+            <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
+          </div>
+      </div>
+      {# endwith #}
+    </div>
+  </div>
+</div>
+
+    <div class="post-disaster-box">
+      <div class="container">
+        <div class="row home-facets">
+          <div class="col-md-12">
+          <h1>Maps</h1>
+          <p> RiskInfo lets you compose and share maps. Create a map with our cartography tool, or explore maps shared by others. </p> 
+          <div class="col-md-4">
+            <div><a href="/search/?title__icontains=nepal" class="btn btn-default" role="button">
+            <h3>Hazard Maps</h3>
+           </a></div>
+          </div>
+          <div class="col-md-4">
+            <div><a href="/search/?title__icontains=haiyan" class="btn btn-default" role="button">
+            <h3>Administrative Boundaries</h3>
+           </a></div>
+          </div>
+          <div class="col-md-4">
+            <div><a href="/search/?title__icontains=malawi" class="btn btn-default" role="button">
+            <h3>Explore All Maps</h3>
+            </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+  {% verbatim %}
+  <div ng-app="featured">
+    <div ng-repeat="item in featured">
+      <!--{{ item.title }}-->
+    </div>
+  </div>
+  {% endverbatim %}
+  {% endblock %}
+
+{% endblock %}
+
+{% block extra_script %}
+{% if DEBUG_STATIC %}
+<script src="{{ STATIC_URL }}lib/js/angular.js"></script>
+{% endif %}
+  <script type="text/javascript">
+    FEATURED_URL = '{% url 'api_dispatch_list' api_name='api' resource_name='featured' %}'
+    'use strict';
+    (function(){
+      var module = angular.module('featured', []);
+      module.run(function($http, $rootScope){
+        $http.get(FEATURED_URL).success(function(data){
+          $rootScope.featured = data.objects;
+        });
+      });
+    })();
+  </script>
+
+{% endblock extra_script %}
