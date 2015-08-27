@@ -17,7 +17,7 @@
   <div class="jumbotron">
     <div class="container">
       <img src ="{% static "img/RiskInfo_Logo.png" %}">
-      <h4>Welcome to the Sri Lanka Disaster Risk Information Platform (RiskInfo). The purpose of RiskInfo is to make disaster risk information available to all the stakeholders and the public in order to facilitate disaster risk management. The initiative is led by the Disaster Management Center (DMC) in partnership with UNDP, GDFRR and the World Bank. The data is provided by the technical agencies. The data sharing platform is built using the open source software GeoNode that is designed to enable collaborative use of geospatial data and maps. </h4>
+      <h4 > <font color= "White">Welcome to the Sri Lanka Disaster Risk Information Platform (RiskInfo). The purpose of RiskInfo is to make disaster risk information available to all the stakeholders and the public in order to facilitate disaster risk management. The initiative is led by the Disaster Management Center (DMC) in partnership with UNDP, GDFRR and the World Bank. The data is provided by the technical agencies. The data sharing platform is built using the open source software GeoNode that is designed to enable collaborative use of geospatial data and maps.</font></h4>
     </div>
   </div>
   {% endblock %}
@@ -34,46 +34,46 @@
 
         <div class="col-md-3">
           <div><a href="/search/" class="btn btn-default" role="button">
-            <img src="{% static "img/minibox/HazardData.png" %}"></img>
+            <img src="{% static "img/minibox1/earthquake.png" %}"></img>
             <h3>Earthquake</h3>
             <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a></div>
         </div>
         <div class="col-md-3">
           <div><a href="/search/" class="btn btn-default" role="button">
-            <img src="{% static "img/minibox/TsunamiMap.jpg" %}"></img>
+            <img src="{% static "img/minibox1/drought.png" %}"></img>
             <h3>Drought</h3>
             <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a></div>
         </div>
         <div class="col-md-3">
           <div><a href="/search/" class="btn btn-default" role="button">
-            <img src="{% static "img/minibox/ExposureData.png" %}"></img>
+            <img src="{% static "img/minibox1/flood.png" %}"></img>
             <h3>Flood</h3>
             <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a></div>
         </div>
         <div class="col-md-3">
           <div><a href="/search/" class="btn btn-default" role="button">
-            <img src="{% static "img/minibox/AdminMap.png" %}"></img>
+            <img src="{% static "img/minibox1/tsunami.png" %}"></img>
             <h3>Tsunami</h3>
             <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
           </div>
         </div>
         <div class="col-md-2 col-md-offset-2">
           <div><a href="/search/" class="btn btn-default" role="button">
-            <img src="{% static "img/minibox/HazardData.png" %}"></img>
+            <img src="{% static "img/minibox1/strom2.png" %}"></img>
             <h3>Storm Surge</h3>
             <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
           </div>
         </div>
         <div class="col-md-2 col-md-offset-1">
           <div><a href="/search/" class="btn btn-default" role="button">
-            <img src="{% static "img/minibox/TsunamiMap.jpg" %}"></img>
+            <img src="{% static "img/minibox1/strom1.png" %}"></img>
             <h3>Strong Wind</h3>
             <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
           </div>
         </div>
         <div class="col-md-2 col-md-offset-1">
           <div><a href="/search/" class="btn btn-default" role="button">
-            <img src="{% static "img/minibox/ExposureData.png" %}"></img>
+            <img src="{% static "img/minibox1/volcano.png" %}"></img>
             <h3>Volcanic Ashes</h3>
             <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
           </div>
@@ -108,6 +108,33 @@
       </div>
     </div>
   </div>
+
+  <div class="post-disaster-box">
+      <div class="container">
+        <div class="row home-facets">
+          <div class="col-md-12">
+          <h1>Base Data</h1>
+          <p>  </p> 
+          <div class="col-md-4">
+            <div><a href="/search/?title__icontains=nepal" class="btn btn-default" role="button">
+            <h3>Population Map</h3>
+           </a></div>
+          </div>
+          <div class="col-md-4">
+            <div><a href="/search/?title__icontains=haiyan" class="btn btn-default" role="button">
+            <h3>Buildings Map</h3>
+           </a></div>
+          </div>
+          <div class="col-md-4">
+            <div><a href="/search/?title__icontains=malawi" class="btn btn-default" role="button">
+            <h3>Administrative Boundries</h3>
+            </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
 </div>
