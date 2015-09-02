@@ -146,7 +146,7 @@
       <div class="container">
         <div class="row home-facets">
           <div class="col-md-12">
-            <h3>Feedback? Contact us at <a href="mailto:riskinfo@dmc.gov.lk">riskinfo@dmc.gov.lk</a></h3>
+            <h3>{% trans "Feedback? Contact us at" %} <a href="mailto:riskinfo@dmc.gov.lk">riskinfo@dmc.gov.lk</a></h3>
             <div class="social">
               <ul>
                 <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
@@ -157,13 +157,29 @@
             </div>
 
             <hr>
-            <h4>Partners</h4>
+            <h4>{% trans "Partners" %}</h4>
             <img src="{% static "img/gfdrr_logo_large.png" %}">
             <img src="{% static "img/Gov_Logo.png" %}">
             <img src="{% static "img/UNDP_logo.png" %}">
             <img src="{% static "img/WB_logo.png" %}">
         </div>
       </div>
+          <div class="col-md-4">
+            <label class="hidden">{% trans "Language" %}</label>
+            {% if csrf_token != "NOTPROVIDED" %}
+            {% get_current_language as LANGUAGE %}
+            <form class="form-inline" action="/i18n/setlang/" method="post">
+            {% csrf_token %}
+              <select class="col-md-6 pull-right" name="language" onchange="javascript:form.submit()">
+                {% for lang in LANGUAGES %}
+                <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
+                  {{ lang.1 }}
+                </option>
+                {% endfor %}
+              </select>
+            </form>
+            {% endif %}
+          </div>
 
   </footer>
     {% endblock footer %}

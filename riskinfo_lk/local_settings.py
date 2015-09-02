@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+import os
+import settings
+
 DEBUG = TEMPLATE_DEBUG = True
 
 DEBUG_STATIC = False
@@ -8,11 +11,14 @@ REGISTRATION_OPEN = False
 
 SITENAME = "RiskInfo"
 
+
 LANGUAGES = (
     ('en', 'English'),
     ('si', 'Sinhala'),
     ('ta', 'Tamil'),
 )
+
+LANGUAGE_CODE = 'si'
 
 EXTRA_LANG_INFO = {
     'si': {
@@ -29,6 +35,14 @@ EXTRA_LANG_INFO = {
     },
 }
 
+# Location of translation files
+LOCALE_PATHS = (
+    os.path.join(settings.GEONODE_ROOT,"locale"),
+    os.path.join(settings.LOCAL_ROOT,"locale"),
+)
+
+print LOCALE_PATHS
+
 # Activate the Documents application
 DOCUMENTS_APP = True
 ALLOWED_DOCUMENT_TYPES = [
@@ -37,16 +51,7 @@ ALLOWED_DOCUMENT_TYPES = [
 ]
 MAX_DOCUMENT_SIZE = 20 # MB
 
-LOCALE_PATHS = (
-    "/home/dmc/geonode_production/geonode/locale",
-    "/home/dmc/riskinfo_lk2/riskinfo_lk/riskinfo_lk/locale",
-    )
-# LOCALE_PATHS = (
-#     "/usr/local/lib/python2.7/dist-packages/geonode/locale",
-#     "/vagrant/riskinfo_lk2/riskinfo_lk/riskinfo_lk/locale",
-# )
-
 #Monkey patch to add custom languages not provided by Django
-import django.conf.locale
-LANG_INFO = dict(django.conf.locale.LANG_INFO.items() + EXTRA_LANG_INFO.items())
-django.conf.locale.LANG_INFO = LANG_INFO
+#import django.conf.locale
+#LANG_INFO = dict(django.conf.locale.LANG_INFO.items() + EXTRA_LANG_INFO.items())
+#django.conf.locale.LANG_INFO = LANG_INFO

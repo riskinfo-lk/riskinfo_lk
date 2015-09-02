@@ -20,6 +20,7 @@
 
 # Django settings for the GeoNode project.
 import os
+import geonode
 from geonode.settings import *
 #
 # General Django development settings
@@ -28,6 +29,9 @@ SITEURL = "www.riskinfo.lk"
 # Defines the directory that contains the settings file as the LOCAL_ROOT
 # It is used for relative settings elsewhere.
 LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
+GEONODE_ROOT = os.path.abspath(os.path.dirname(geonode.__file__))
+
+print GEONODE_ROOT
 
 WSGI_APPLICATION = "riskinfo_lk.wsgi.application"
 

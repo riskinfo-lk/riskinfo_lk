@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-09 08:29+0000\n"
+"POT-Creation-Date: 2015-09-02 13:11-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,253 +17,209 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Language: ta\n"
-"X-Source-Language: en\n"
 
-#: templates/site_base.html:43
-msgid "Profile"
+#: templates/base.html:62
+msgid "Layers"
 msgstr ""
 
-#: templates/site_base.html:45
-msgid "Admin"
+#: templates/base.html:65
+msgid "Maps"
 msgstr ""
 
-#: templates/site_base.html:48
-msgid "Announcements"
+#: templates/base.html:68
+msgid "Documents"
 msgstr ""
 
-#: templates/site_base.html:51
-msgid "GeoServer"
+#: templates/base.html:73
+msgid "People"
 msgstr ""
 
-#: templates/site_base.html:53
-msgid "Recent Activity"
+#: templates/base.html:76
+msgid "Groups"
 msgstr ""
 
-#: templates/site_base.html:55
-msgid "Log out"
-msgstr ""
-
-#: templates/site_base.html:60
-msgid "Upload"
-msgstr ""
-
-#: templates/site_base.html:61
-msgid "Help"
-msgstr ""
-
-#: templates/site_base.html:65 templates/site_base.html.py:78
-msgid "Sign in"
-msgstr ""
-
-#: templates/site_base.html:70
-msgid "Username"
-msgstr ""
-
-#: templates/site_base.html:72
-msgid "Password"
-msgstr ""
-
-#: templates/site_base.html:76
-msgid "Remember Me"
-msgstr ""
-
-#: templates/site_base.html:84
-msgid "or"
-msgstr ""
-
-#: templates/site_base.html:85
+#: templates/base.html:96
 msgid "Register"
 msgstr ""
 
-#: templates/site_base.html:131
-msgid "Home"
-msgstr "முகப்பு"
-
-#: templates/site_base.html:134
-msgid "Layers"
-msgstr "படிகள்"
-
-#: templates/site_base.html:137
-msgid "Maps"
-msgstr "வரைபடங்கள்"
-
-#: templates/site_base.html:142
-msgid "Documents"
-msgstr "ஆவணங்கள்"
-
-#: templates/site_base.html:146
-msgid "People"
-msgstr "மக்கள்"
-
-#: templates/site_base.html:149 templates/site_index.html:53
-#: templates/site_index.html.py:81
-msgid "Search"
-msgstr "தேடல்"
-
-#: templates/site_base.html:174
-msgid "Powered by"
+#: templates/base.html:107 templates/base.html.py:195 templates/base.html:213
+msgid "Sign in"
 msgstr ""
 
-#: templates/site_base.html:174
-msgid "GeoNode"
+#: templates/base.html:149
+msgid "Feedback? Contact us at"
 msgstr ""
 
-#: templates/site_base.html:175
-msgid "Need help"
-msgstr ""
-
-#: templates/site_base.html:175
-msgid "getting started?"
-msgstr ""
-
-#: templates/site_base.html:176
-msgid "For"
-msgstr ""
-
-#: templates/site_base.html:176
-msgid "Developers"
-msgstr ""
-
-#: templates/site_base.html:181
+#: templates/base.html:160
 msgid "Partners"
-msgstr "பங்களிப்பாளர்கள்"
+msgstr ""
 
-#: templates/site_base.html:199
+#: templates/base.html:168
 msgid "Language"
 msgstr ""
 
-#: templates/site_index.html:17
-msgid "Welcome"
-msgstr "வரவேற்கின்Nறhம்"
-
-#: templates/site_index.html:20
-msgid "2004 Tsunami Time Travel Map - Source NOAA"
+#: templates/base.html:201 templates/base.html.py:202
+msgid "Username"
 msgstr ""
 
-#: templates/site_index.html:23
+#: templates/base.html:205
+msgid "Password"
+msgstr ""
+
+#: templates/base.html:209
+msgid "Remember Me"
+msgstr ""
+
+#: templates/base.html:225
+msgid "Menu"
+msgstr ""
+
+#: templates/base.html:229
+msgid "Upload Layers"
+msgstr ""
+
+#: templates/base.html:231
+msgid "Profile"
+msgstr ""
+
+#: templates/base.html:232
+msgid "Recent Activity"
+msgstr ""
+
+#: templates/base.html:233
+msgid "Inbox"
+msgstr ""
+
+#: templates/base.html:235
+msgid "Notifications"
+msgstr ""
+
+#: templates/base.html:238
+msgid "Announcements"
+msgstr ""
+
+#: templates/base.html:241
+msgid "Remote Services"
+msgstr ""
+
+#: templates/base.html:242
+msgid "Invite User"
+msgstr ""
+
+#: templates/base.html:244
+msgid "GeoServer"
+msgstr ""
+
+#: templates/base.html:247
+msgid "Admin"
+msgstr ""
+
+#: templates/base.html:252
+msgid "Help"
+msgstr ""
+
+#: templates/base.html:258
+msgid "Log out"
+msgstr ""
+
+#: templates/base.html:295
+msgid "Type your search here ..."
+msgstr ""
+
+#: templates/index.html:6
+msgid "Welcome!"
+msgstr ""
+
+#: templates/index.html:20
 msgid ""
-" Welcome to the Sri Lanka Disaster Risk Information Platform (RiskInfo). The "
+"Welcome to the Sri Lanka Disaster Risk Information Platform (RiskInfo). The "
 "purpose of RiskInfo is to make disaster risk information available to all "
 "the stakeholders and the public in order to facilitate disaster risk "
 "management. The initiative is led by the Disaster Management Center (DMC) in "
 "partnership with UNDP, GDFRR and the World Bank. The data is provided by the "
 "technical agencies. The data sharing platform is built using the open source "
 "software GeoNode that is designed to enable collaborative use of geospatial "
-"data and maps. To enquire about the website and further details: <strong> "
-"riskinfo@dmc.gov.lk </strong >"
+"data and maps."
 msgstr ""
-"இலங்கை அனர்த்த அபாய தகவல் தளத்திற்கு (ரிஸ்க்இன்போ) உங்களை வரவேற்கின்Nறhம். "
-"அனர்த்த அபாய முகாமைத்துவத்தை வசதியளிப்புச் செய்வதற்கான அனர்த்த அபாய தகவல்களை "
-"பங்களிப்பாளர்களுக்கும் பொதுமக்களுக்கும் வழங்குவதே ‘ரிஸ்க்இன்போ’ இன் "
-"நோக்கமாகும். இவ் ஆரம்பிப்பு யூ.என்.டி.பி. ஜி.டி.எப்.ஆர்.ஆர் மற்றும் உலக "
-"வங்கி என்பவற்றின் ஒத்துழைப்புடன் அனர்த்த முகாமைத்துவ நிலையத்தினால் "
-"செயற்படுத்தப்படுகின்றது. இதற்கான தகவல்கள் தொழிநுட்ப நிறுவனங்களால் "
-"வழங்கப்படுகின்றன. புவியியல் தரTகள் மற்றும் வரைபடங்களை ஒன்றிணைத்துப் "
-"பயன்படுத்துவதற்காக வடிவமைக்கப்பட்ட ‘ஜியோனோட்’ திறந்த மென்பொருளை "
-"பயன்படுத்தியே தகவல் பரிமாற்றத் தளம் அமைக்கப்பட்டுள்ளது. இணையத்தளம் பற்றி "
-"அறிந்துகொள்வதற்கும் மேலதிக தகவல்களுக்கும் <strong> riskinfo@dmc.gov.lk "
-"</strong >இனை தொடர்புகொள்ளுங்கள். "
 
-#: templates/site_index.html:31
-msgid "Search RiskInfo:"
-msgstr "தேடல் RiskInfo:"
-
-#: templates/site_index.html:40
-msgid "MAPS"
-msgstr "வரைபடங்கள்"
-
-#: templates/site_index.html:43
-msgid ""
-"RiskInfo lets you compose and share maps.  <strong>Create</strong> a map "
-"with our cartography tool, or <strong>explore</strong> maps shared by others."
-msgstr ""
-"வரைபடங்களை உருவாக்கி அவற்றை பகிந்துகொள்வதற்கு 'ரிஸ்க்இன்போ' உங்களுக்கு "
-"உதவியளிக்கும். எமது வரைபட கருவிகளை பயன்படுத்தி வரைபடங்களை உருவாக்குங்கள் "
-"அல்லது ஏனையவர் பகிந்துகொண்ட வரைவடங்களை ஆராAங்கள்."
-
-#: templates/site_index.html:60
-msgid "Hazard Maps"
-msgstr "இடர் வரைபடங்கள்"
-
-#: templates/site_index.html:61
-msgid "Administrative Boundaries"
-msgstr "நிர்வாக எல்லை"
-
-#: templates/site_index.html:64
-msgid "Explore All Maps"
-msgstr "சகல வரைபடங்களை ஆராய்தல்"
-
-#: templates/site_index.html:65
-msgid "Create a new map"
-msgstr "புதிய வரைபடங்களை உருவாக்குதல்"
-
-#: templates/site_index.html:72
-msgid "DATA"
-msgstr "தரTகள் "
-
-#: templates/site_index.html:74
-msgid ""
-" RiskInfo lets you upload, manage, and browse data. <strong>Search</strong> "
-"for data that is valuable to you, or <a "
-"href=\"upload\"><strong>upload</strong></a> your own data.</p>"
-msgstr ""
-"தரTகளை உட்செலுத்துவதற்கும் முகாமை செய்வதற்கும் தேடுவதற்கும் 'ரிஸ்க்இன்போ' "
-"வாயப்பளிக்கும். உங்களுக்குப் பெருமதியான தரTகளை தேடுங்கள் அல்லது உங்கள் "
-"தரTகளை உட்செலுத்துங்கள்."
-
-#: templates/site_index.html:87
+#: templates/index.html:30
 msgid "Hazard Data"
-msgstr "இடர் தரTகள் "
-
-#: templates/site_index.html:88
-msgid "Exposure Data"
-msgstr "வெளிப்படும் தரTகள்"
-
-#: templates/site_index.html:91
-msgid "Base data"
-msgstr "அடிப்படை தரTகள்"
-
-#: templates/site_index.html:92
-msgid "Explore Data"
-msgstr "தரTகளை ஆராய்தல்"
-
-#: templates/site_index.html:105
-msgid "Latest Layers"
 msgstr ""
 
-#: templates/site_index.html:116
-msgid "Contribute"
-msgstr ""
-
-#: templates/site_index.html:118
+#: templates/index.html:31
 msgid ""
-"\n"
-"              GeoNode enables you to upload, manage, and browse data layers. "
-"Search for data that is valuable to you, or upload your own data. \n"
-"            "
+"RiskInfo lets you upload, manage, and browse data. Search for data that is "
+"valuable to you, or upload your own data."
 msgstr ""
 
-#: templates/site_index.html:121
-msgid "Upload Layers"
+#: templates/index.html:38
+msgid "Earthquake"
 msgstr ""
 
-#: templates/site_index.html:122
+#: templates/index.html:39 templates/index.html.py:45 templates/index.html:51
+#: templates/index.html.py:57 templates/index.html:64
+#: templates/index.html.py:71 templates/index.html:78
+msgid "datasets"
+msgstr ""
+
+#: templates/index.html:44
+msgid "Drought"
+msgstr ""
+
+#: templates/index.html:50
+msgid "Flood"
+msgstr ""
+
+#: templates/index.html:56
+msgid "Tsunami"
+msgstr ""
+
+#: templates/index.html:63
+msgid "Storm Surge"
+msgstr ""
+
+#: templates/index.html:70
+msgid "Strong Wind"
+msgstr ""
+
+#: templates/index.html:77
+msgid "Volcanic Ashes"
+msgstr ""
+
+#: templates/index.html:91
 msgid ""
-"\n"
-"              GeoNode enables you to compose and share maps. Create a map "
-"with our cartography tool, or explore maps shared by others. \n"
-"            "
+"RiskInfo lets you compose and share maps. Create a map with our cartography "
+"tool, or explore maps shared by others."
 msgstr ""
 
-#: templates/site_index.html:125
-msgid "Create a Map"
+#: templates/index.html:94
+msgid "Hazard Maps"
 msgstr ""
 
-#: templates/site_index.html:131
-msgid "Latest Maps"
+#: templates/index.html:99
+msgid "Administrative Boundaries"
 msgstr ""
 
-#: templates/maps/map_view.html:5
+#: templates/index.html:104
+msgid "Explore All Maps"
+msgstr ""
+
+#: templates/index.html:116
+msgid "Base Data"
+msgstr ""
+
+#: templates/index.html:120
+msgid "Population Map"
+msgstr ""
+
+#: templates/index.html:125
+msgid "Buildings Map"
+msgstr ""
+
+#: templates/index.html:130
+msgid "Administrative Boundries"
+msgstr ""
+
+#: templates/maps.bk/map_view.html:5
 msgid "GeoExplorer"
 msgstr ""

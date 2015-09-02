@@ -3,264 +3,236 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-09 12:14+0530\n"
-"PO-Revision-Date: 2013-12-05 15:28+0530\n"
+"POT-Creation-Date: 2015-09-02 14:43-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Language: si_LK\n"
-"X-Source-Language: en\n"
 
-#: templates/site_base.html:43
+#: templates/base.html:62
+msgid "Layers"
+msgstr "ස්ථර"
+
+#: templates/base.html:65
+msgid "Maps"
+msgstr "සිතියම්"
+
+#: templates/base.html:68
+msgid "Documents"
+msgstr "ලිපි ලේඛන"
+
+#: templates/base.html:73
+msgid "People"
+msgstr "අය"
+
+#: templates/base.html:76
+msgid "Groups"
+msgstr "කණ්ඩායම්"
+
+#: templates/base.html:96
+msgid "Register"
+msgstr "රෙජිස්ටර්"
+
+#: templates/base.html:107 templates/base.html.py:195 templates/base.html:213
+msgid "Sign in"
+msgstr "ඇතුල් වන්න"
+
+#: templates/base.html:149
+msgid "Feedback? Contact us at"
+msgstr "ඔබෙන් ලැබෙන ප්රයෝජනාත්මක ප්රතිචාරය? අපව අමතන්න"
+
+#: templates/base.html:160
+msgid "Partners"
+msgstr "හවුල්කරුවන්"
+
+#: templates/base.html:168
+msgid "Language"
+msgstr "භාෂා"
+
+#: templates/base.html:201 templates/base.html.py:202
+msgid "Username"
+msgstr "පරිශීලක නාමය"
+
+#: templates/base.html:205
+msgid "Password"
+msgstr "මුරපදය"
+
+#: templates/base.html:209
+msgid "Remember Me"
+msgstr "මාව මතක තබා ගන්න"
+
+#: templates/base.html:225
+msgid "Menu"
+msgstr "මෙනුව"
+
+#: templates/base.html:229
+msgid "Upload Layers"
+msgstr "උඩුගත ස්ථරය"
+
+#: templates/base.html:231
 msgid "Profile"
-msgstr ""
+msgstr "පැතිකඩ"
 
-#: templates/site_base.html:45
-msgid "Admin"
-msgstr ""
+#: templates/base.html:232
+msgid "Recent Activity"
+msgstr "මෑත ක්රියාකාරකම්"
 
-#: templates/site_base.html:48
+#: templates/base.html:233
+msgid "Inbox"
+msgstr "එන ලිපි"
+
+#: templates/base.html:235
+msgid "Notifications"
+msgstr "නිවේදන"
+
+#: templates/base.html:238
 msgid "Announcements"
-msgstr ""
+msgstr "නිවේදන"
 
-#: templates/site_base.html:51
+#: templates/base.html:241
+msgid "Remote Services"
+msgstr "දුරස්ථ සේවා"
+
+#: templates/base.html:242
+msgid "Invite User"
+msgstr "පරිශීලක ආරාධනා"
+
+#: templates/base.html:244
 msgid "GeoServer"
 msgstr ""
 
-#: templates/site_base.html:53
-msgid "Recent Activity"
-msgstr ""
+#: templates/base.html:247
+msgid "Admin"
+msgstr "පරිපාලන"
 
-#: templates/site_base.html:55
-msgid "Log out"
-msgstr ""
-
-#: templates/site_base.html:60
-msgid "Upload"
-msgstr ""
-
-#: templates/site_base.html:61
+#: templates/base.html:252
 msgid "Help"
+msgstr "උදව් කරන්න"
+
+#: templates/base.html:258
+msgid "Log out"
+msgstr "ඉවත් වන්න"
+
+#: templates/base.html:295
+msgid "Type your search here ..."
+msgstr "ඔබගේ සෙවුම් ටයිප් ..."
+
+#: templates/index.html:6
+msgid "Welcome!"
 msgstr ""
 
-#: templates/site_base.html:65 templates/site_base.html.py:78
-msgid "Sign in"
-msgstr ""
-
-#: templates/site_base.html:70
-msgid "Username"
-msgstr ""
-
-#: templates/site_base.html:72
-msgid "Password"
-msgstr ""
-
-#: templates/site_base.html:76
-msgid "Remember Me"
-msgstr ""
-
-#: templates/site_base.html:84
-msgid "or"
-msgstr ""
-
-#: templates/site_base.html:85
-msgid "Register"
-msgstr ""
-
-#: templates/site_base.html:131
-msgid "Home"
-msgstr ""
-
-#: templates/site_base.html:134
-msgid "Layers"
-msgstr ""
-
-#: templates/site_base.html:137
-msgid "Maps"
-msgstr ""
-
-#: templates/site_base.html:142
-msgid "Documents"
-msgstr ""
-
-#: templates/site_base.html:146
-msgid "People"
-msgstr ""
-
-#: templates/site_base.html:149 templates/site_index.html:53
-#: templates/site_index.html.py:81
-msgid "Search"
-msgstr ""
-
-#: templates/site_base.html:174
-msgid "Powered by"
-msgstr ""
-
-#: templates/site_base.html:174
-msgid "GeoNode"
-msgstr ""
-
-#: templates/site_base.html:175
-msgid "Need help"
-msgstr ""
-
-#: templates/site_base.html:175
-msgid "getting started?"
-msgstr ""
-
-#: templates/site_base.html:176
-msgid "For"
-msgstr ""
-
-#: templates/site_base.html:176
-msgid "Developers"
-msgstr ""
-
-#: templates/site_base.html:199
-msgid "Language"
-msgstr ""
-
-#: templates/site_index.html:17
-msgid "Welcome"
-msgstr ""
-
-#: templates/site_index.html:20
-msgid "2004 Tsunami Time Travel Map - Source NOAA"
-msgstr ""
-
-#: templates/site_index.html:23
+#: templates/index.html:20
 msgid ""
-" Welcome to the Sri Lanka Disaster Risk Information Platform (RiskInfo). The "
+"Welcome to the Sri Lanka Disaster Risk Information Platform (RiskInfo). The "
 "purpose of RiskInfo is to make disaster risk information available to all "
 "the stakeholders and the public in order to facilitate disaster risk "
 "management. The initiative is led by the Disaster Management Center (DMC) in "
 "partnership with UNDP, GDFRR and the World Bank. The data is provided by the "
 "technical agencies. The data sharing platform is built using the open source "
 "software GeoNode that is designed to enable collaborative use of geospatial "
-"data and maps. To enquire about the website and further details: <strong> "
-"riskinfo@dmc.gov.lk </strong >"
+"data and maps."
 msgstr ""
-"ශ්‍රී ලංකා ආපදා අවදානම් තොරතුරු පද්ධතිය (RiskInfo) වෙත සාදරයෙන් පිළිගනිමු. "
-"රාජ්‍ය, රාජ්‍ය නොවන ආයතන සහ සාමාන්‍ය පුරවැසියන් වෙත ආපදා අවදානම් තොරතුරු "
-"ලබාදීම මෙම පද්ධතිය ස්ථාපනය කිරීමේ අරමුණ වෙයි.මෙම කාර්යය ආපදා කළමනාකරණ "
-"මධ්‍යස්ථානයේ මූලිකත්වයෙන්, ලෝක බැංකුවට අනුබද්ධිත GFDRR, හා UNDP ආයතන වල "
-"සහයෝගිතාවය මත සකස් කරන ලදි.සිතියම් සකස් කිරීම, තාක්ෂණික ආයතන සහ ආපදා "
-"කළමනාකරණ මධ්‍යස්ථානය මඟින් සිදුකර ඇත. මෙම දත්ත පද්ධතිය විවෘත හා නිදහස් "
-"මෘදුකාංගයක් (FOSS) වන ජියෝනෝඩ් (GeoNode) මඟින් නිර්මාණය කර ඇති අතර එමඟින් "
-"අවකාශීය දත්ත හා තොරතුරු හුවමාරු කිරීමේ හැකියාව වර්ධනය කර ඇත.RiskInfo මඟින් "
-"ඔබට සිතියම් සකස් කිරීම හා අන්තර්ජාලය හරහා බෙදාහැරීම කලහැක. වැඩිදුර තොරතුරු "
-"<strong> riskinfo@dmc.gov.lk </strong> මඟින් විමසන්න."
+"ශ්<200d>රී ලංකා ආපදා අවදානම් තොරතුරු පද්ධතිය (RiskInfo) වෙත සාදරයෙන් පිළිගනිමු. රාජ්<200d>ය, රාජ්<200d>ය "
+"නොවන ආයතන සහ සාමාන්<200d>ය පුරවැසියන් වෙත ආපදා අවදානම් තොරතුරු ලබාදීම මෙම පද්ධතිය ස්ථාපනය "
+"කිරීමේ අරමුණ වෙයි.මෙම කාර්යය ආපදා කළමනාකරණ මධ්<200d>යස්ථානයේ මූලිකත්වයෙන්, ලෝක බැංකුවට "
+"අනුබද්ධිත GFDRR, හා UNDP ආයතන වල සහයෝගිතාවය මත සකස් කරන ලදි.සිතියම් සකස් කිරීම, "
+"තාක්ෂණික ආයතන සහ ආපදා කළමනාකරණ මධ්<200d>යස්ථානය මඟින් සිදුකර ඇත. මෙම දත්ත පද්ධතිය විවෘත හා "
+"නිදහස් මෘදුකාංගයක් (FOSS) වන ජියෝනෝඩ් (GeoNode) මඟින් නිර්මාණය කර ඇති අතර එමඟින් "
+"අවකාශීය දත්ත හා තොරතුරු හුවමාරු කිරීමේ හැකියාව වර්ධනය කර ඇත.RiskInfo මඟින් ඔබට සිතියම් "
+"සකස් කිරීම හා අන්තර්ජාලය හරහා බෙදාහැරීම කලහැක. වැඩිදුර තොරතුරු <strong> "
+"riskinfo@dmc.gov.lk මඟින් විමසන්න."
 
-#: templates/site_index.html:31
-msgid "Search RiskInfo:"
-msgstr "RiskInfo සොයන්න:"
-
-#: templates/site_index.html:40
-msgid "MAPS"
-msgstr "සිතියම්"
-
-#: templates/site_index.html:43
-msgid ""
-"RiskInfo lets you compose and share maps.  <strong>Create</strong> a map "
-"with our cartography tool, or <strong>explore</strong> maps shared by others."
-msgstr ""
-"RiskInfo වලින් ඔබට සිතියම් නිර්මාණය කිරිමටත්  බෙදා හැරිමටත් පහසුකම් සලසයි.  "
-"සිතියම් <strong>නිර්මාණය</strong> කිරිමට හෝ අන්අය විසින් බෙදාහරින ලද සිතියම් "
-"<strong>සෙවීම</strong>  සඳහා."
-
-#: templates/site_index.html:60
-msgid "Hazard Maps"
-msgstr "උවදුරු සිතියම්"
-
-#: templates/site_index.html:61
-msgid "Administrative Boundaries"
-msgstr "පාලන මායිම්"
-
-#: templates/site_index.html:64
-msgid "Explore All Maps"
-msgstr "සියලුම සිතියම් සොයන්න"
-
-#: templates/site_index.html:65
-msgid "Create a new map"
-msgstr "අලුත් සිතියමක් නිර්මාණය"
-
-#: templates/site_index.html:72
-msgid "DATA"
-msgstr "දත්ත"
-
-#: templates/site_index.html:74
-msgid ""
-" RiskInfo lets you upload, manage, and browse data. <strong>Search</strong> "
-"for data that is valuable to you, or <a "
-"href=\"upload\"><strong>upload</strong></a> your own data.</p>"
-msgstr ""
-"RiskInfo මගින් සිතියම් <strong>උඩුගත</strong> කිරිමට, කළමනාකරණය කිරිමට සහ "
-"දත්ත <strong>සෙවිමට</strong> පහසුකම් සලසයි"
-
-#: templates/site_index.html:87
+#: templates/index.html:30
 msgid "Hazard Data"
 msgstr "උවදුරු දත්ත"
 
-#: templates/site_index.html:88
-msgid "Exposure Data"
-msgstr "නිරාවරණ දත්ත"
-
-#: templates/site_index.html:91
-msgid "Base data"
-msgstr "මූල දත්ත"
-
-#: templates/site_index.html:92
-msgid "Explore Data"
-msgstr " දත්ත.සොයන්න"
-
-#: templates/site_index.html:105
-msgid "Latest Layers"
-msgstr ""
-
-#: templates/site_index.html:116
-msgid "Contribute"
-msgstr ""
-
-#: templates/site_index.html:118
+#: templates/index.html:31
 msgid ""
-"\n"
-"              GeoNode enables you to upload, manage, and browse data layers. "
-"Search for data that is valuable to you, or upload your own data. \n"
-"            "
-msgstr ""
+"RiskInfo lets you upload, manage, and browse data. Search for data that is "
+"valuable to you, or upload your own data."
+msgstr "RiskInfo මගින් සිතියම් උඩුගත කිරිමට, කළමනාකරණය කිරිමට සහ දත්ත "
+"සෙවිමට පහසුකම් සලසයි"
 
-#: templates/site_index.html:121
-msgid "Upload Layers"
-msgstr ""
+#: templates/index.html:38
+msgid "Earthquake"
+msgstr "භූමිකම්පා"
 
-#: templates/site_index.html:122
+#: templates/index.html:39 templates/index.html.py:45 templates/index.html:51
+#: templates/index.html.py:57 templates/index.html:64
+#: templates/index.html.py:71 templates/index.html:78
+msgid "datasets"
+msgstr "දත්ත කාණ්ඩය"
+
+#: templates/index.html:44
+msgid "Drought"
+msgstr "නියඟය"
+
+#: templates/index.html:50
+msgid "Flood"
+msgstr "ගංවතුර"
+
+#: templates/index.html:56
+msgid "Tsunami"
+msgstr "සුනාමි"
+
+#: templates/index.html:63
+msgid "Storm Surge"
+msgstr "චණ්ඩ මාරුතය"
+
+#: templates/index.html:70
+msgid "Strong Wind"
+msgstr "ශක්තිමත් සුළං"
+
+#: templates/index.html:77
+msgid "Volcanic Ashes"
+msgstr "ගිනි කඳු අලු"
+
+#: templates/index.html:91
 msgid ""
-"\n"
-"              GeoNode enables you to compose and share maps. Create a map "
-"with our cartography tool, or explore maps shared by others. \n"
-"            "
+"RiskInfo lets you compose and share maps. Create a map with our cartography "
+"tool, or explore maps shared by others."
 msgstr ""
+"RiskInfo වලින් ඔබට සිතියම් නිර්මාණය කිරිමටත්  බෙදා හැරිමටත් පහසුකම් සලසයි.  සිතියම් "
+"නිර්මාණය</කිරිමට හෝ අන්අය විසින් බෙදාහරින ලද සිතියම් <stro"
+"සඳහා."
 
-#: templates/site_index.html:125
-msgid "Create a Map"
-msgstr ""
 
-#: templates/site_index.html:131
-msgid "Latest Maps"
-msgstr ""
+#: templates/index.html:94
+msgid "Hazard Maps"
+msgstr "උවදුරු සිතියම්"
 
-#: templates/maps/map_view.html:5
+#: templates/index.html:99
+msgid "Administrative Boundaries"
+msgstr "පරිපාලන මායිම්"
+
+#: templates/index.html:104
+msgid "Explore All Maps"
+msgstr "සියලු සිතියම් ගවේෂණය"
+
+#: templates/index.html:116
+msgid "Base Data"
+msgstr "මූලික දත්ත"
+
+#: templates/index.html:120
+msgid "Population Map"
+msgstr "ජනගහන සිතියම"
+
+#: templates/index.html:125
+msgid "Buildings Map"
+msgstr "ගොඩනැගිලි සිතියම"
+
+#: templates/index.html:130
+msgid "Administrative Boundries"
+msgstr "පරිපාලන මායිම්"
+
+#: templates/maps.bk/map_view.html:5
 msgid "GeoExplorer"
 msgstr ""
-
-#~ msgid "Create map"
-#~ msgstr "සිතියම් නිර්මාණය"
