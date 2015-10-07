@@ -20,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  font-weight: 400;
 }
 select {
   background: white;
@@ -90,28 +90,28 @@ article.tab-pane {
   height: 34px;
 }
 .navbar-inverse {
-  background-color: #ffffff;
+  background-color: #17375E;
   border-radius: 0;
   border-bottom: transparent;
 }
 .navbar-inverse .navbar-nav > li > a {
-  color: #373535;
+  color: #FFF;
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: #373535;
+  color: #F9F909;
   border-bottom: 3px solid #ffc63b;
-}
+}/*url(../img/Gov_Logo.png) 15px 0 no-repeat,url(../img/DMC_Logo.png) 60px 0 no-repeat*/
 .navbar-brand {
-  background: url(../img/Gov_Logo.png) 15px 0 no-repeat,url(../img/DMC_Logo.png) 60px 0 no-repeat;
+  background: url(../img/minibox1/RiskInfo_Logo_2.png) 0px 0 no-repeat,url(../img/minibox1/DMC_Logo.png) 300px 0 no-repeat,url(../img/minibox1/Gov_Logo.png) 365px 0 no-repeat;
   height: 65px;
   margin-right: 15px;
   margin-top: 5px;
   text-indent: -9999em;
-  width: 150px;
+  width: 405px;
 }
 .navbar-right > li > a {
-  padding: 8px 15px;
+  padding: 2px 0px;
 }
 .nav-pills a {
   cursor: pointer;
@@ -152,23 +152,23 @@ form#search .fa {
   border-bottom: 3px solid #ffc63b;
 }
 body.layers li#nav_layers a {
-  color: #373535;
+  color: #F3EA2E;
   border-bottom: 3px solid #ffc63b;
 }
 body.maps li#nav_maps a {
-  color: #373535;
+  color: #F3EA2E;
   border-bottom: 3px solid #ffc63b;
 }
 body.documents li#nav_documents a {
-  color: #373535;
+  color: #F3EA2E;
   border-bottom: 3px solid #ffc63b;
 }
 body.people li#nav_people a {
-  color: #373535;
+  color: #F3EA2E;
   border-bottom: 3px solid #ffc63b;
 }
 body.groups li#nav_groups a {
-  color: #373535;
+  color: #F3EA2E;
   border-bottom: 3px solid #ffc63b;
 }
 /* autocomplete
@@ -185,11 +185,12 @@ body.groups li#nav_groups a {
 /* Home
 ----------------------- */
 .jumbotron {
-  background-image: url(../lab/lights1.jpg);
-  background-color: #333333;
-  background-size: 100%;
-  background-position: center;
-  color: white;
+  /*background-image: url(../lab/lights2.jpg);*/
+  background-color: #17375E;
+  background-size: 35%;
+  background-position: right;
+  background-repeat: no-repeat;
+  color:#333333;
   padding: 80px 0 60px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
   margin-top: 30px;
@@ -204,7 +205,7 @@ body.groups li#nav_groups a {
 }
 .post-disaster-box,
 .hazard-box {
-  padding-top: 5px;
+  padding-top: 0px;
 }
 .post-disaster-box a,
 .hazard-box a {
@@ -216,7 +217,7 @@ body.groups li#nav_groups a {
 }
 .post-disaster-box img,
 .hazard-box img {
-  border: 4px solid white;
+  border: 2px solid white;
   border-radius: 100%;
   margin-top: 20px;
 }
@@ -232,16 +233,16 @@ body.groups li#nav_groups a {
 }
 .home-facets {
   text-align: center;
-  padding-top: 2em;
-  padding-bottom: 4em;
+  padding-top: 0em;
+  padding-bottom: 2em;
 }
 .home-facets h3 {
-  color: #287ab0;
+  color: #42505A;
 }
 .home-facets p {
   font-size: 1.3em;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-top: 35px;
+  margin-bottom: -7px;
 }
 .home-facets h1 {
   color: #373535;
@@ -271,8 +272,8 @@ body.groups li#nav_groups a {
   color: #373535;
   text-decoration: none;
 }
-.post-disaster-box {
-  background-color: #373535;
+/*.post-disaster-box {
+  background-color: #373535;*/
 }
 .post-disaster-box i {
   margin-top: 20px;
@@ -841,8 +842,8 @@ footer {
     float: none;
   }
   .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 2px;
+    padding-bottom: 1px;
   }
   /* since 3.1.0 */
   .navbar-collapse.collapse.in {
@@ -907,6 +908,19 @@ footer {
     -o-transition: all ease 0.3s;
     -ms-transition: all ease 0.3s;
 }
+.social .fa-facebook:hover {
+    background: #4060A5;
+}
+.social .fa-google-plus:hover { /* round google plus icon*/
+    background: #e64522;
+}
+.social .fa-github:hover { /* round github icon*/
+    background: #343434;
+}
+.social .fa-twitter:hover { /* round twitter icon*/
+    background: #00ABE3;
+}
+
 /*Login Button */
 
 .myButton {
@@ -931,4 +945,38 @@ footer {
      color: #66A6CB;
      background-color: #FFF;
      border: 2px solid #66A6CB;
+}
+
+
+/*New font */
+h2{
+    font-size       : 15px;
+    font-family     : 'Open Sans', sans-serif;
+    text-transform  : uppercase;
+    font-weight     : 700;
+    color           : #444444;
+    letter-spacing  : 2px;
+}
+
+/*New font for headings */
+.section-title{
+    position    : relative;
+}
+
+.section-title:before{
+   position         : absolute;
+    content         : " ";
+    width           : 16%;
+    height          : 40px;
+    background      : url(../img/minibox1/red-box.png) center center no-repeat;
+    bottom          : 0;
+    margin-bottom   : -52px;
+    margin-bottom   : -52px;
+    left            : 42%;
+}
+h1{
+    font-size       : 25px;
+    font-weight     : 400;
+    text-transform  : uppercase;
+    color           : #5c5c5c;
 }

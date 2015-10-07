@@ -3,10 +3,11 @@
 {% load staticfiles %}
 {% load base_tags %}
 
-{% block title %} {% trans "Welcome!" %} - {{ block.super }} {% endblock %}
+{% block title %} {% trans "Riskinfo.lk" %}  {% endblock %}
 
 {% block extra_head %}
 <link href="{% static "lab/mapglyphs/mapglyphs.css" %}" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 {% endblock %}
 
 {% block body_class %}home{% endblock %}
@@ -14,94 +15,109 @@
 {% block middle %}
    {{ block.super }}
   {% block hero %}
-  <div class="jumbotron">
-    <div class="container">
-      <img src ="{% static "img/RiskInfo_Logo.png" %}">
-      <h4 > <font color= "White">{% trans "Welcome to the Sri Lanka Disaster Risk Information Platform (RiskInfo). The purpose of RiskInfo is to make disaster risk information available to all the stakeholders and the public in order to facilitate disaster risk management. The initiative is led by the Disaster Management Center (DMC) in partnership with UNDP, GDFRR and the World Bank. The data is provided by the technical agencies. The data sharing platform is built using the open source software GeoNode that is designed to enable collaborative use of geospatial data and maps." %}</font></h4>
-    </div>
-  </div>
+      
   {% endblock %}
 
   {% block mainbody %}
-  <div class="hazard-box">
-  <div class="container">
-    <div class="row home-facets">
-      <div>
-        <h1>{% trans "Hazard Data" %}</h1>
-        <p>{% trans "RiskInfo lets you upload, manage, and browse data. Search for data that is valuable to you, or upload your own data." %}</p>
+  <div class="row" >
+  <div class="hazard-box" >
+    <div class="row home-facets" >
+        
+       
     {# with facet_type='home' #}
      {# facets as facets #}
 
-        <div class="col-md-3">
-          <div><a href="/search/" class="btn btn-default" role="button">
-            <img src="{% static "img/minibox1/earthquake.png" %}"></img>
-            <h3>{% trans "Earthquake" %}</h3>
-            <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a></div>
-        </div>
-        <div class="col-md-3">
-          <div><a href="/search/" class="btn btn-default" role="button">
-            <img src="{% static "img/minibox1/drought.png" %}"></img>
-            <h3>{% trans "Drought" %}</h3>
-            <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a></div>
-        </div>
-        <div class="col-md-3">
-          <div><a href="/search/" class="btn btn-default" role="button">
-            <img src="{% static "img/minibox1/flood.png" %}"></img>
-            <h3>{% trans "Flood" %}</h3>
-            <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a></div>
-        </div>
-        <div class="col-md-3">
-          <div><a href="/search/" class="btn btn-default" role="button">
-            <img src="{% static "img/minibox1/tsunami.png" %}"></img>
-            <h3>{% trans "Tsunami" %}</h3>
-            <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
+        <div class="col-md-3" style="background-color: #17375E; color:white;">
+          <div class="row" style="background-color:#F05A24; padding-bottom:10px; padding-top:10px;">
+            <h1 >Welcome</h1>
           </div>
-        </div>
-        <div class="col-md-2 col-md-offset-2">
-          <div><a href="/search/" class="btn btn-default" role="button">
-            <img src="{% static "img/minibox1/strom2.png" %}"></img>
-            <h3>{% trans "Storm Surge" %}</h3>
-            <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
+          <div class="row" style ="padding-left:43px; padding-bottom:10px;padding-right:20px;">
+          <img src ="{% static "img/minibox1/tsunami.PNG" %}" style="border-radius:1%;">
+              <p style="font-family:Lato, sans-serif;font-size:100%; text-align:justify;">
+                Welcome to the Sri Lanka Disaster Risk Information Platform (RiskInfo). The purpose of RiskInfo is to make disaster risk information available to all the stakeholders and the public in order to facilitate disaster risk management. The initiative is led by the Disaster Management Center (DMC) in partnership with UNDP, GDFRR and the World Bank. The data is provided by the technical agencies.The data sharing platform is built using the open source software GeoNode that is designed to enable collaborative use of geospatial data and maps.
+            </p>
           </div>
-        </div>
-        <div class="col-md-2 col-md-offset-1">
-          <div><a href="/search/" class="btn btn-default" role="button">
-            <img src="{% static "img/minibox1/strom1.png" %}"></img>
-            <h3>{% trans "Strong Wind" %}</h3>
-            <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
           </div>
-        </div>
-        <div class="col-md-2 col-md-offset-1">
-          <div><a href="/search/" class="btn btn-default" role="button">
-            <img src="{% static "img/minibox1/volcano.png" %}"></img>
-            <h3>{% trans "Volcanic Ashes" %}</h3>
-            <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
-          </div>
-      </div>
-      {# endwith #}
-    </div>
-  </div>
-</div>
+        
+        <div class="col-md-9">'
+          <h1 class="section-title">Hazard Data</h1>
+          <br>
+          <p>RiskInfo lets you upload, manage, and browse data. Search for data that is valuable to you, or upload your own data.</p>
+          <div class="col-md-3">
+            <div><a href="/search/" class="btn btn-default" role="button">
+              <img src="{% static "img/minibox1/earthquake.png" %}"></img>
 
-    <div class="post-disaster-box">
+              <h3>LandSlide</h3>
+              <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a></div>
+          </div>
+          <div class="col-md-3">
+            <div><a href="/search/" class="btn btn-default" role="button">
+              <img src="{% static "img/minibox1/drought.png" %}"></img>
+              <h3>Drought</h3>
+
+              <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a></div>
+          </div>
+          <div class="col-md-3">
+            <div><a href="/search/" class="btn btn-default" role="button">
+              <img src="{% static "img/minibox1/flood.png" %}"></img>
+              <h3>Flood</h3>
+              <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a></div>
+          </div>
+          <div class="col-md-3">
+            <div><a href="/search/" class="btn btn-default" role="button">
+              <img src="{% static "img/minibox1/tsunami.png" %}"></img>
+              <h3>Tsunami</h3>
+              <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
+            </div>
+          </div>
+          <div class="col-md-2 col-md-offset-2">
+            <div><a href="/search/" class="btn btn-default" role="button">
+              <img src="{% static "img/minibox1/strom2.png" %}"></img>
+              <h3>Storm Surge</h3>
+              <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
+            </div>
+          </div>
+          <div class="col-md-2 col-md-offset-1">
+            <div><a href="/search/" class="btn btn-default" role="button">
+              <img src="{% static "img/minibox1/strom1.png" %}"></img>
+              <h3>Strong Wind</h3>
+              <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
+            </div>
+          </div>
+          <div class="col-md-2 col-md-offset-1">
+            <div><a href="/search/" class="btn btn-default" role="button">
+              <img src="{% static "img/minibox1/volcano.png" %}"></img>
+              <h3>RainFall</h3>
+              <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
+            </div>
+        </div>
+        </div>
+      {# endwith #}
+  </div>
+
+    <div class="post-disaster-box" style="background-color:#373535">
       <div class="container">
         <div class="row home-facets">
           <div class="col-md-12">
-          <h1>Maps</h1>
-          <p>{% trans "RiskInfo lets you compose and share maps. Create a map with our cartography tool, or explore maps shared by others." %} </p> 
+          <h1 class="section-title">Maps</h1>
+          <br>
+          <p> RiskInfo lets you compose and share maps. Create a map with our cartography tool, or explore maps shared by others. </p> 
           <div class="col-md-4">
             <div><a href="/search/?title__icontains=nepal" class="btn btn-default" role="button">
-            <h3>{% trans "Hazard Maps" %}</h3>
+            <img src="{% static "img/minibox1/hazard.png" %}"></img>
+            <h3>Hazard Maps</h3>
            </a></div>
           </div>
           <div class="col-md-4">
             <div><a href="/search/?title__icontains=haiyan" class="btn btn-default" role="button">
-            <h3>{% trans "Administrative Boundaries" %}</h3>
+            <img src="{% static "img/minibox1/boundries.png" %}"></img>
+            <h3>Administrative Boundaries</h3>
            </a></div>
           </div>
           <div class="col-md-4">
             <div><a href="/search/?title__icontains=malawi" class="btn btn-default" role="button">
-            <h3>{% trans "Explore All Maps" %}</h3>
+              <img src="{% static "img/minibox1/explore.png" %}"></img>
+            <h3>Explore All Maps</h3>
             </a></div>
           </div>
         </div>
@@ -109,25 +125,30 @@
     </div>
   </div>
 
-  <div class="post-disaster-box">
+  <div class="post-disaster-box" style="background-color:#114833">
       <div class="container">
         <div class="row home-facets">
           <div class="col-md-12">
-          <h1>{% trans "Base Data" %}</h1>
+          <h1 class="section-title">Base Data</h1>
+                    <br>
+          <p> You can simply create, search and explore a base data and map shared by others. </p> 
           <p>  </p> 
           <div class="col-md-4">
             <div><a href="/search/?title__icontains=nepal" class="btn btn-default" role="button">
-            <h3>{% trans "Population Map" %}</h3>
+              <img src="{% static "img/minibox1/population.png" %}"></img>
+            <h3>Population Map</h3>
            </a></div>
           </div>
           <div class="col-md-4">
             <div><a href="/search/?title__icontains=haiyan" class="btn btn-default" role="button">
-            <h3>{% trans "Buildings Map" %}</h3>
+              <img src="{% static "img/minibox1/building.png" %}"></img>
+            <h3>Buildings Map</h3>
            </a></div>
           </div>
           <div class="col-md-4">
             <div><a href="/search/?title__icontains=malawi" class="btn btn-default" role="button">
-            <h3>{% trans "Administrative Boundries" %}</h3>
+             <img src="{% static "img/minibox1/boundries.png" %}"></img> 
+            <h3>Administrative Boundaries</h3>
             </a></div>
           </div>
         </div>
@@ -135,6 +156,9 @@
     </div>
   </div>
 
+
+
+</div>
 </div>
 
   {% verbatim %}
@@ -164,5 +188,15 @@
       });
     })();
   </script>
+
+  <script type="text/javascript" src="{% static "js/jquery.flexslider-min.js"%}"></script>
+<script>
+    $(document).ready(function () {
+      $('.flexslider').flexslider({
+        animation: 'fade',
+        controlsContainer: '.flexslider'
+      });
+      });
+    </script>
 
 {% endblock extra_script %}

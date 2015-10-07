@@ -10,6 +10,8 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!--load font awesome-->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    
     <title>{% block title %}{{ SITE_NAME }}{% endblock %}</title>
     {% block head %}
       {% if DEBUG_STATIC %}
@@ -23,6 +25,7 @@
       {% endif %}
       <link href="{{ STATIC_URL }}geonode/css/ext-compatibility.css" rel="stylesheet" />
       <link href="{{ STATIC_URL }}css/base.css" rel="stylesheet" />
+      
       <style type="text/css">[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}</style>
       {% block extra_head %}
       {% endblock %}
@@ -51,9 +54,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{% url "home" %}"></a>
-
-          
+          <a class="navbar-brand" href="{% url "home" %}"></a>  
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -146,7 +147,7 @@
       <div class="container">
         <div class="row home-facets">
           <div class="col-md-12">
-            <h3>{% trans "Feedback? Contact us at" %} <a href="mailto:riskinfo@dmc.gov.lk">riskinfo@dmc.gov.lk</a></h3>
+            <h3>Feedback? Contact us at <a href="mailto:riskinfo@dmc.gov.lk">riskinfo@dmc.gov.lk</a></h3>
             <div class="social">
               <ul>
                 <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
@@ -157,29 +158,13 @@
             </div>
 
             <hr>
-            <h4>{% trans "Partners" %}</h4>
+            <h4>Partners</h4>
+            <img src="{% static "img/DMC_Logo.png" %}">
             <img src="{% static "img/gfdrr_logo_large.png" %}">
-            <img src="{% static "img/Gov_Logo.png" %}">
             <img src="{% static "img/UNDP_logo.png" %}">
             <img src="{% static "img/WB_logo.png" %}">
         </div>
       </div>
-          <div class="col-md-4">
-            <label class="hidden">{% trans "Language" %}</label>
-            {% if csrf_token != "NOTPROVIDED" %}
-            {% get_current_language as LANGUAGE %}
-            <form class="form-inline" action="/i18n/setlang/" method="post">
-            {% csrf_token %}
-              <select class="col-md-6 pull-right" name="language" onchange="javascript:form.submit()">
-                {% for lang in LANGUAGES %}
-                <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
-                  {{ lang.1 }}
-                </option>
-                {% endfor %}
-              </select>
-            </form>
-            {% endif %}
-          </div>
 
   </footer>
     {% endblock footer %}
