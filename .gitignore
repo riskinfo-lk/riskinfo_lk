@@ -8,3 +8,5 @@ debug.log
 .DS_Store
 settings_secret.py
 *.pyc
+downloaded/
+geoserver/
