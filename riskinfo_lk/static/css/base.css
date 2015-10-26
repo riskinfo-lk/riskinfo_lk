@@ -59,7 +59,7 @@ form input {
 #wrap {
   background: #ffffff;
   padding-bottom: 0px;
-  padding-top: 10px;
+  padding-top: 0px;
   width: 100%;
 }
 article.tab-pane {
@@ -234,7 +234,7 @@ body.groups li#nav_groups a {
 .home-facets {
   text-align: center;
   padding-top: 0em;
-  padding-bottom: 2em;
+  padding-bottom: 0.5em;
 }
 .home-facets h3 {
   color: #42505A;
