@@ -968,11 +968,10 @@ h2{
    position         : absolute;
     content         : " ";
     width           : 16%;
-    height          : 73px;
+    height          : 40px;
     background      : url(../img/minibox1/red-box.png) center center no-repeat;
     bottom          : 17px;
-    margin-bottom   : -35px;
-    margin-bottom   : -35px;
+    margin-bottom   : -30px;
     left            : 42%;
 }
 h1{
