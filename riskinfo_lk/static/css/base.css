@@ -41,7 +41,7 @@ code {
   /* Opera 4-6 */
 
   white-space: -o-pre-wrap;
-  /* Opera 7 */nav
+  /* Opera 7 */
 
   word-wrap: break-word;
   /* Internet Explorer 5.5+ */
@@ -241,8 +241,8 @@ body.groups li#nav_groups a {
 }
 .home-facets p {
   font-size: 1.3em;
-  margin-top: 35px;
-  margin-bottom: -7px;
+  margin-top: 36px;
+  margin-bottom: 10px;
 }
 .home-facets h1 {
   color: #373535;
@@ -970,8 +970,8 @@ h2{
     height          : 40px;
     background      : url(../img/minibox1/red-box.png) center center no-repeat;
     bottom          : 0;
-    margin-bottom   : -52px;
-    margin-bottom   : -52px;
+    margin-bottom   : -40px;
+    margin-bottom   : -40px;
     left            : 42%;
 }
 h1{
