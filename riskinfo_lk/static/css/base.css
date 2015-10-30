@@ -969,7 +969,7 @@ h2{
     content         : " ";
     width           : 16%;
     height          : 40px;
-    background      : url(../img/minibox1/red-box.png) center center no-repeat;
+    /*background      : url(../img/minibox1/red-box.png) center center no-repeat;*/
     bottom          : 20px;
     margin-bottom   : -55px;
     left            : 42%;
