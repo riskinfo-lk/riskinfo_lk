@@ -965,7 +965,7 @@ h2{
 }
 
 .section-title:before{
-   position         : absolute;
+   position         :static;
     content         : " ";
     width           : 16%;
     height          : 40px;
