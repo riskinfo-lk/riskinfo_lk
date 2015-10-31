@@ -964,16 +964,17 @@ h2{
     position    : relative;
 }
 
-.section-title:before{
+/*.section-title:before{
    position         :static;
     content         : " ";
     width           : 16%;
     height          : 40px;
-    /*background      : url(../img/minibox1/red-box.png) center center no-repeat;*/
+    background      : url(../img/minibox1/red-box.png) center center no-repeat;
     bottom          : 20px;
     margin-bottom   : -55px;
     left            : 42%;
 }
+*/
 h1{
     font-size       : 25px;
     font-weight     : 400;
