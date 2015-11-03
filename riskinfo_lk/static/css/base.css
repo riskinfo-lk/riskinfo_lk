@@ -9,7 +9,7 @@ body {
   background: #ffffff;
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  padding-top: 40px;
+  padding-top: 30px;
 }
 a {
   color: #287ab0;
@@ -964,8 +964,8 @@ h2{
     position    : relative;
 }
 
-/*.section-title:before{
-   position         :static;
+.section-title:before{
+   position         :absolute;
     content         : " ";
     width           : 16%;
     height          : 40px;
@@ -974,7 +974,7 @@ h2{
     margin-bottom   : -55px;
     left            : 42%;
 }
-*/
+
 h1{
     font-size       : 25px;
     font-weight     : 400;
