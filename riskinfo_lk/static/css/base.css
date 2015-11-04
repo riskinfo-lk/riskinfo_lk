@@ -970,8 +970,8 @@ h2{
     width           : 16%;
     height          : 40px;
     background      : url(../img/minibox1/red-box.png) center center no-repeat;
-    bottom          : 20px;
-    margin-bottom   : -55px;
+    bottom          : 0px;
+    margin-bottom   : -32px;
     left            : 42%;
 }
 
