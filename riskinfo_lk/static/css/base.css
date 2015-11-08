@@ -79,6 +79,7 @@ article.tab-pane {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  padding-top: 15px;
 }
 /* Header
 ----------------------- */
