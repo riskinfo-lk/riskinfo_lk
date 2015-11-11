@@ -84,7 +84,7 @@ article.tab-pane {
 /* Header
 ----------------------- */
 .navbar {
-  padding-top: 22px;
+  padding-top: 3px;
   margin-bottom: 0px;
 }
 .navbar .btn-primary {
@@ -104,15 +104,31 @@ article.tab-pane {
   border-bottom: 3px solid #ffc63b;
 }/*url(../img/Gov_Logo.png) 15px 0 no-repeat,url(../img/DMC_Logo.png) 60px 0 no-repeat*/
 .navbar-brand {
-  background: url(../img/minibox1/RiskInfo_Logo_2.png) 0px 0 no-repeat,url(../img/minibox1/DMC_Logo.png) 300px 0 no-repeat,url(../img/minibox1/Gov_Logo.png) 365px 0 no-repeat;
+  background: url(../img/minibox1/RiskInfo_Logo.png) 0px 11px no-repeat;
+  height: 66px;
+  margin-right: 8px;
+  margin-top: 1px;
+  text-indent: -9999em;
+  background-size: contain;
+  width: 375px;
+  display: inline-block;
+  overflow: hidden;
+}
+/* Previous 
+.navbar-brand {
+  background: url(../img/minibox1/RiskInfo_Logo.png) 0px 0 no-repeat,url(../img/minibox1/DMC_Logo.png) 300px 0 no-repeat,url(../img/minibox1/Gov_Logo.png) 365px 0 no-repeat;
   height: 65px;
   margin-right: 15px;
   margin-top: 5px;
   text-indent: -9999em;
+  background-size: contain;
   width: 405px;
+  display: inline-block;
+  overflow: hidden;
 }
+*/
 .navbar-right > li > a {
-  padding: 2px 0px;
+  padding: 0px 0px;
 }
 .nav-pills a {
   cursor: pointer;
@@ -235,7 +251,7 @@ body.groups li#nav_groups a {
 .home-facets {
   text-align: center;
   padding-top: 0em;
-  padding-bottom: 0.5em;
+  padding-bottom: -0.5em;
 }
 .home-facets h3 {
   color: #42505A;
@@ -982,3 +998,13 @@ h1{
     text-transform  : uppercase;
     color           : #5c5c5c;
 }
+.image-source{
+  font-size: 9px;
+  font-weight: bold;
+  color: white;
+  text-decoration: underline;
+  position: absolute;
+  bottom: 360px;
+  right: 20px;
+}
+
