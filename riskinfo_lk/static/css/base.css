@@ -254,7 +254,7 @@ body.groups li#nav_groups a {
   padding-bottom: -0.5em;
 }
 .home-facets h3 {
-  color: #42505A;
+  color: #2F3235;
 }
 .home-facets p {
   font-size: 1.3em;
@@ -272,7 +272,7 @@ body.groups li#nav_groups a {
 .home-facets .btn {
   margin-top: 10px;
   margin-bottom: 10px;
-  min-width: 200px;
+  min-width: 180px;
   background-color: transparent;
   border-color: transparent;
 }
@@ -1003,8 +1003,8 @@ h1{
   font-weight: bold;
   color: white;
   text-decoration: underline;
-  position: absolute;
-  bottom: 360px;
-  right: 20px;
+  position: relative;
+  /*bottom: 360px;*/
+  right: -31px;
 }
 
