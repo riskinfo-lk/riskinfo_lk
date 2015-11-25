@@ -22,11 +22,8 @@
   <div class="row">
   <div class="hazard-box" >
     <div class="row home-facets" >
-        
-       
     {# with facet_type='home' #}
      {# facets as facets #}
-
         <div class="col-md-3" style="background-color: #17375E; color:white;">
           <div class="row" style="background-color:#F05A24; padding-bottom:10px; padding-top:1px;">
             <h1 >Welcome</h1>
@@ -42,13 +39,12 @@
             </p>
           </div>
           </div>
-        
         <div class="col-md-9">'
           <h1 class="section-title">Hazard Data</h1>
           <br>
           <p>RiskInfo lets you upload, manage, and browse data. Search for data that is valuable to you, or upload your own data.</p>
           <div class="col-md-3">
-            <div><a href="/search/?title__icontains=Earthquake" class="btn btn-default" role="button">
+            <div><a href="/search/?title__icontains=Landslide" class="btn btn-default" role="button">
               <img src="{% static "img/minibox1/earthquake.png" %}"></img>
 
               <h3>LandSlide</h3>
@@ -83,14 +79,14 @@
           </div>
           <div class="col-md-2 col-md-offset-1">
             <div><a href="/search/?title__icontains=Strong Wind" class="btn btn-default" role="button">
-              <img src="{% static "img/minibox1/strom1.png" %}"></img>
+              <img src="{% static "geonode/img/hazard-icon-strong-wind.png" %}"></img>
               <h3>Strong Wind</h3>
               <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
             </div>
           </div>
           <div class="col-md-2 col-md-offset-1">
             <div><a href="/search/?title__icontains=Rainfall" class="btn btn-default" role="button">
-              <img src="{% static "img/minibox1/volcano.png" %}"></img>
+              <img src="{% static "img/minibox1/strom1.png" %}"></img>
               <h3>RainFall</h3>
               <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
             </div>
@@ -107,20 +103,20 @@
           <br>
           <p> RiskInfo lets you compose and share maps. Create a map with our cartography tool, or explore maps shared by others. </p> 
           <div class="col-md-4">
-            <div><a href="/search/?title__icontains=Hazard Maps" class="btn btn-default" role="button">
-            <img src="{% static "img/minibox1/hazard.png" %}"></img>
+            <div><a href="/search/?title__icontains=Hazard Maps" class="btn btn-default"  role="button">
+           <img src= {% static "img/minibox/HazardData.png" %} style="border-radius:0%;padding-left:19px;border:0px"class="img-responsive" />
             <h3>Hazard Maps</h3>
            </a></div>
           </div>
           <div class="col-md-4">
             <div><a href="/search/?title__icontains=Administrative Boundries" class="btn btn-default" role="button">
-            <img src="{% static "img/minibox1/boundries.png" %}"></img>
+            <img src= {% static "img/minibox/AdminMap.png" %} style="border-radius:0%;padding-left:42px;border:0px"class="img-responsive" />
             <h3>Administrative Boundaries</h3>
            </a></div>
           </div>
           <div class="col-md-4">
             <div><a href="/search/?title__icontains=All Maps" class="btn btn-default" role="button">
-              <img src="{% static "img/minibox1/explore.png" %}"></img>
+             <img src= {% static "img/minibox/AllData.png" %} style="border-radius:0%;padding-left:19px;border:0px"class="img-responsive" />
             <h3>Explore All Maps</h3>
             </a></div>
           </div>
@@ -151,8 +147,8 @@
           </div>
           <div class="col-md-4">
             <div><a href="/search/?title__icontains=Administrative Boundries" class="btn btn-default" role="button">
-             <img src="{% static "img/minibox1/boundries.png" %}"></img> 
-            <h3>Administrative Boundaries</h3>
+             <img src="{% static "img/minibox1/ExposureData.png" %}"></img> 
+            <h3>Exposure Data</h3>
             </a></div>
           </div>
         </div>
