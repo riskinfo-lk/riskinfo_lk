@@ -91,7 +91,7 @@ article.tab-pane {
   height: 34px;
 }
 .navbar-inverse {
-  background-color: #17375E;
+  background-color: #222;
   border-radius: 0;
   border-bottom: transparent;
 }
@@ -273,6 +273,7 @@ body.groups li#nav_groups a {
   margin-top: 10px;
   margin-bottom: 10px;
   min-width: 180px;
+  margin-right:25px;
   background-color: transparent;
   border-color: transparent;
 }
@@ -993,7 +994,7 @@ h2{
 }
 
 h1{
-    font-size       : 25px;
+    font-size       : 45px;
     font-weight     : 400;
     text-transform  : uppercase;
     color           : #5c5c5c;
