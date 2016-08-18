@@ -1,8 +1,28 @@
-import os
+﻿import os
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 SITEURL = "http://riskinfo.lk/"
+
+#Email configurations
+REGISTRATION_OPEN = True
+
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_HOST = 'smtp.gmail.com'
+#EMAIL_HOST_USER = 'riskinfo2016@gmail.com'
+#EMAIL_HOST_PASSWORD = 'riskinfo123'
+#EMAIL_PORT = 587
+#EMAIL_USE_TLS = True
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'mail.dmc.gov.lk'
+EMAIL_HOST_USER = 'riskinfo@dmc.gov.lk'
+EMAIL_HOST_PASSWORD = 'riskinfo@dmc'
+DEFAULT_FROM_EMAIL = 'riskinfo@dmc.gov.lk'
+SERVER_EMAIL = 'riskinfo@dmc.gov.lk'
+EMAIL_PORT = 25
+EMAIL_USE_TLS = True
+
 
 DATABASES = {
     'default': {
@@ -27,7 +47,7 @@ OGC_SERVER = {
     'default' : {
         'BACKEND' : 'geonode.geoserver',
         'LOCATION' : 'http://localhost:8080/geoserver/',
-        'PUBLIC_LOCATION' : '%sgeoserver/' % SITEURL,
+        'PUBLIC_LOCATION' : 'http://riskinfo.lk/geoserver/',
         'USER' : 'admin',
         'PASSWORD' : 'geoserver',
         'MAPFISH_PRINT_ENABLED' : True,
@@ -54,20 +74,10 @@ MAP_BASELAYERS = [{
     "source": {"ptype": "gxp_osmsource"},
     "type": "OpenLayers.Layer.OSM",
     "name": "mapnik",
-    "visibility": False,
+    "visibility": True,
     "fixed": True,
     "group": "background"
-}, {
-    "source": {"ptype": "gxp_mapquestsource"},
-    "name": "osm",
-    "group": "background",
-    "visibility": True
-}, {
-    "source": {"ptype": "gxp_mapquestsource"},
-    "name": "naip",
-    "group": "background",
-    "visibility": False
-}, 
+},
 # {    
 #     "source": {"ptype": "gxp_bingsource"},
 #     "name": "AerialWithLabels",
@@ -77,7 +87,30 @@ MAP_BASELAYERS = [{
 # }, 
 {
     "source": {"ptype": "gxp_mapboxsource"},
-}]
+},
+{
+    "source": {"ptype": "gxp_bingsource", "apiKey": "AhHYhMQ6QunWv4ipvSyjabKI9FJC6rs9B0JfwDsyXU4c2tahe1gkzZVIdUazdrmP"},
+    "name": "Aerial",
+    "fixed": True,
+    "group": "background",
+    "visibility": False
+},
+ {
+    "source": {"ptype": "gxp_olsource"},
+    "type":"OpenLayers.Layer.XYZ",
+    "args":["OSM Grayscale", ["http://a.www.toolserver.org/tiles/bw-mapnik/${z}/${x}/${y}.png", "http://b.www.toolserver.org/tiles/bw-mapnik/${z}/${x}/${y}.png", "http://c.www.toolserver.org/tiles/bw-mapnik/${z}/${x}/${y}.png"], {"transitionEffect": "resize","attribution": "osm_attribution"}],
+    "visibility": False,
+    "fixed": True,
+    "group":"background"
+}, {
+    "source": {"ptype": "gxp_olsource"},
+    "type":"OpenLayers.Layer.XYZ",
+    "args":["Humanitarian", ["http://a.tile.openstreetmap.fr/hot/${z}/${x}/${y}.png", "http://b.tile.openstreetmap.fr/hot/${z}/${x}/${y}.png", "http://c.tile.openstreetmap.fr/hot/${z}/${x}/${y}.png"], {"transitionEffect": "resize","attribution": "osm_attribution"}],
+    "visibility": False,
+    "fixed": True,
+    "group":"background"
+}
+]
 
 LOCAL_GEOSERVER = {
     "source": {
@@ -95,6 +128,26 @@ CATALOGUE = {
         'ENGINE': 'geonode.catalogue.backends.pycsw_local',
         'URL': '%scatalogue/csw' % SITEURL,
     }
+}
+
+LANGUAGES = (
+    ('en', 'English'),
+    ('si', 'සිංහල'),
+    ('ta', 'தமிழ்'),
+)
+EXTRA_LANG_INFO = {
+    'ta': {
+        'bidi': False,
+        'code': 'ta',
+        'name': 'தமிழ்',
+        'name_local':'தமிழ்',
+        },
+    'si': {
+        'bidi': False,
+        'code': 'si',
+        'name': 'සිංහල',
+        'name_local': 'සිංහල',
+        },
 }
 
 MEDIA_ROOT = "/var/www/riskinfo_lk/uploaded"

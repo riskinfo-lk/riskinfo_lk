@@ -1,171 +1,225 @@
--{% extends "site_base.html" %}
+{% extends "site_base.html" %}
 {% load i18n %}
 {% load staticfiles %}
 {% load base_tags %}
 
-{% block title %} {% trans "Riskinfo.lk" %}  {% endblock %}
-
-{% block extra_head %}
-<link href="{% static "lab/mapglyphs/mapglyphs.css" %}" rel="stylesheet">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-{% endblock %}
+{% block title %} {% trans "Welcome!" %} - {{ block.super }} {% endblock %}
 
 {% block body_class %}home{% endblock %}
 
 {% block middle %}
    {{ block.super }}
   {% block hero %}
-      
+
+<script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=AIzaSyBzXGf4Hp02cm5rQxttmrCoGU1TjU7_CSI" async="" defer="defer" type="text/javascript"></script>
+<script type="text/javascript">
+   function initialize()
+{
+    var map = new google.maps.Map(document.getElementById("map"),
+    {
+        center: new google.maps.LatLng(22.7964,73.8456),
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    });
+    var kmlLayer = new google.maps.KmlLayer('http://riskinfo.lk/static/kml/Flood_Area_15_Gampaha1.kmz',
+    {
+        suppressInfoWindows: true,
+        map: map
+    });
+    google.maps.event.addListener(kmlLayer, 'click', function(kmlEvent)
+    {
+        var text = kmlEvent.featureData.description;
+        showInContentWindow(text);
+    });
+    function showInContentWindow(text)
+    {
+        var sidediv = document.getElementById('content_window');
+        sidediv.innerHTML = text;
+    }
+}
+
+</script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<div id="myCarousel" class="carousel slide img-container" data-ride="carousel" style="position:relative;top:-1px;">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img alt="Chania" src="{% static "img/kelaniya32-e1463584800717.jpg"  %}">
+      <div class="carousel-caption">
+        <h3>Flood and Landslide Situation </h3>
+        <p>On 15 May 2016 Sri Lanka was hit by a severe tropical storm that caused widespread flooding and landslides in 22 districts out 25 districts in the country, destroying homes and submerging entire villages. At least 104 people are known to have died following this disaster; 99 people are still missing, the majority due to a landslide in Aranayake, Kegalle District, which devastated three villages. </p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img alt="Chania" src="{% static "img/aranayake-798460.jpg"  %}" >
+      <div class="carousel-caption">
+       <h3>Flood and Landslide Situation </h3>
+        <p>On 15 May 2016 Sri Lanka was hit by a severe tropical storm that caused widespread flooding and landslides in 22 districts out 25 districts in the country, destroying homes and submerging entire villages. At least 104 people are known to have died following this disaster; 99 people are still missing, the majority due to a landslide in Aranayake, Kegalle District, which devastated three villages. </p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img alt="Flower" src="{% static "img/jt-srilanka-floods_38417153-170516.jpg"  %}" >
+      <div class="carousel-caption">
+       <h3>Flood and Landslide Situation </h3>
+        <p>On 15 May 2016 Sri Lanka was hit by a severe tropical storm that caused widespread flooding and landslides in 22 districts out 25 districts in the country, destroying homes and submerging entire villages. At least 104 people are known to have died following this disaster; 99 people are still missing, the majority due to a landslide in Aranayake, Kegalle District, which devastated three villages. </p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img alt="Flower" src="{% static "img/maxresdefault.jpg"  %}" >
+      <div class="carousel-caption">
+       <h3>Flood and Landslide Situation </h3>
+        <p>On 15 May 2016 Sri Lanka was hit by a severe tropical storm that caused widespread flooding and landslides in 22 districts out 25 districts in the country, destroying homes and submerging entire villages. At least 104 people are known to have died following this disaster; 99 people are still missing, the majority due to a landslide in Aranayake, Kegalle District, which devastated three villages. </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="fa fa-arrow-circle-left" style="margin-top:80%;font-size:30px;" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="fa fa-arrow-circle-right" style="margin-top:80%;font-size:30px;" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
   {% endblock %}
 
   {% block mainbody %}
-  <div class="row">
-  <div class="hazard-box" >
-    <div class="row home-facets" >
-    {# with facet_type='home' #}
-     {# facets as facets #}
-        <div class="col-md-3" style="background-color: #17375E; color:white;">
-          <div class="row" style="background-color:#F73F05; padding-bottom:10px; padding-top:1px;">
-            <h1 >Welcome</h1>
-          </div>
-          <div class="row" style ="padding-left:43px; padding-bottom:0px;padding-right:20px;">
-          <figure>
-            <img src ="{% static "img/minibox1/Tsunami.jpg" %}" style="border-radius:0%;border:0px;max-width:100%">
-          <figcaption> <a href="http://www.ngdc.noaa.gov/hazard/tsu_travel_time_events.shtml"class="image-source" style="color:white">2004 Tsunami Time Travel Map - Source NOAA</a></figcaption>
-        </figure>
-        <!--  <a href="http://www.ngdc.noaa.gov/hazard/tsu_travel_time_events.shtml" class="image-source" style="color:white">2004 Tsunami Time Travel Map - Source NOAA</a> -->
-              <p style="font-family:'Open Sans', sans-serif;font-size:96%; text-align:justify; line-height:1.5;margin-top:25px">
-                Welcome to the Sri Lanka Disaster Risk Information Platform (RiskInfo). The purpose of RiskInfo is to make disaster risk information available to all the stakeholders and the public in order to facilitate disaster risk management. The data is provided by the technical agencies.The initiative is led by the Disaster Management Center (DMC) in partnership with UNDP, GDFRR and the World Bank. The data sharing platform is built using the open source software GeoNode that is designed to enable collaborative use of geospatial data and maps.
-            </p>
-          </div>
-          </div>
-        <div class="col-md-9" style="margin-top:-15px;margin-bottom:0px">
-          <h1 class="section-title">Hazard Data</h1>
-          <br>
-          <p>RiskInfo lets you upload, manage, and browse data. Search for data that is valuable to you, or upload your own data.</p>
-          <div class="col-md-3">
-            <div><a href="/search/?title__icontains=Landslide" class="btn btn-default" role="button">
-              <img src="{% static "img/minibox1/earthquake.png" %}"></img>
 
-              <h3>LandSlide</h3>
-              <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a></div>
-          </div>
-          <div class="col-md-3">
-            <div><a href="/search/?title__icontains=Drought" class="btn btn-default" role="button">
-              <img src="{% static "img/minibox1/drought.png" %}"></img>
-              <h3>Drought</h3>
+  <div class="container marketing">
 
-              <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a></div>
-          </div>
-          <div class="col-md-3">
-            <div><a href="/search/?title__icontains=Flood" class="btn btn-default" role="button">
-              <img src="{% static "img/minibox1/flood.png" %}"></img>
-              <h3>Flood</h3>
-              <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a></div>
-          </div>
-          <div class="col-md-3">
-            <div><a href="/search/?title__icontains=Tsunami" class="btn btn-default" role="button">
-              <img src="{% static "img/minibox1/tsunami.png" %}"></img>
-              <h3>Tsunami</h3>
-              <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
-            </div>
-          </div>
-          <div class="col-md-2 col-md-offset-2">
-            <div><a href="/search/?title__icontains=Strom Surge" class="btn btn-default" role="button">
-              <img src="{% static "img/minibox1/strom2.png" %}"></img>
-              <h3>Storm Surge</h3>
-              <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
-            </div>
-          </div>
-          <div class="col-md-2 col-md-offset-1">
-            <div><a href="/search/?title__icontains=Strong Wind" class="btn btn-default" role="button">
-              <img src="{% static "geonode/img/hazard-icon-strong-wind.png" %}"></img>
-              <h3>Strong Wind</h3>
-              <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
-            </div>
-          </div>
-          <div class="col-md-2 col-md-offset-1">
-            <div><a href="/search/?title__icontains=Rainfall" class="btn btn-default" role="button">
-              <img src="{% static "img/minibox1/strom1.png" %}"></img>
-              <h3>RainFall</h3>
-              <h5 class="text-center">{# #} {% trans "datasets" %}</h5></a>
-            </div>
-        </div>
-        </div>
-      {# endwith #}
-  </div>
+      <!-- Three columns of text below the carousel -->
+      <div class="row" style="text-align:center;">
 
-    <div class="post-disaster-box" style="background-color:#373535;margin-top=-14px">
-      <div class="container">
-        <div class="row home-facets">
-          <div class="col-md-12">
-          <h1 class="section-title">Maps</h1>
-          <br>
-          <p> RiskInfo lets you compose and share maps. Create a map with our cartography tool, or explore maps shared by others. </p> 
-          <div class="col-md-4">
-            <div><a href="/search/?title__icontains=Hazard Maps" class="btn btn-default"  role="button">
-           <img src= {% static "img/minibox/HazardData.png" %} style="border-radius:0%;padding-left:19px;border:0px"class="img-responsive" />
-            <h3>Hazard Maps</h3>
-           </a></div>
-          </div>
-          <div class="col-md-4">
-            <div><a href="/search/?title__icontains=Administrative Boundries" class="btn btn-default" role="button">
-            <img src= {% static "img/minibox/AdminMap.png" %} style="border-radius:0%;padding-left:42px;border:0px"class="img-responsive" />
-            <h3>Administrative Boundaries</h3>
-           </a></div>
-          </div>
-          <div class="col-md-4">
-            <div><a href="/search/?title__icontains=All Maps" class="btn btn-default" role="button">
-             <img src= {% static "img/minibox/AllData.png" %} style="border-radius:0%;padding-left:19px;border:0px"class="img-responsive" />
-            <h3>Explore All Maps</h3>
-            </a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="post-disaster-box" style="background-color:#114833">
-      <div class="container">
-        <div class="row home-facets">
-          <div class="col-md-12">
-          <h1 class="section-title">Base Data</h1>
-                    <br>
-          <p> You can simply create, search and explore a base data and map shared by others. </p> 
-          <p>  </p> 
-          <div class="col-md-4">
-            <div><a href="/search/?title__icontains=base data" class="btn btn-default" role="button">
-              <img src="{% static "img/minibox1/population.png" %}"></img>
-            <h3>Population Map</h3>
-           </a></div>
-          </div>
-          <div class="col-md-4">
-            <div><a href="/search/?title__icontains=building Maps" class="btn btn-default" role="button">
-              <img src="{% static "img/minibox1/building.png" %}"></img>
-            <h3>Buildings Map</h3>
-           </a></div>
-          </div>
-          <div class="col-md-4">
-            <div><a href="/search/?title__icontains=Administrative Boundries" class="btn btn-default" role="button">
-             <img src="{% static "img/minibox1/ExposureData.png" %}"></img> 
-            <h3>Exposure Data</h3>
-            </a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<h3 style="color:#33C7FF;">DATA LAYERS</h3>
+<h4 style="color:#525354;">RiskInfo lets you upload, manage, and browse data. Search for data that is valuable to you, or upload your own data. </h4>
+
+<br>
+
+        <div class="col-lg-3" style="">
+<a href="/layers/?title__icontains=Hazard" class="image">
+          <img class="img-circle" src="{% static "img/111.png"  %}" width="100" height="100" alt="1">
+ </a>
+          <h3>Hazard</h3>
+          <p>Hazard Layers </p>
+        
+        </div><!-- /.col-lg-3 -->
+        <div class="col-lg-3">
+<a href="/layers/?title__icontains=Exposure" class="image">
+          <img class="img-circle" src="{% static "img/cluster_CCCM_100px_bluebox.png"  %}" width="100" height="100" alt="1">
+</a>
+          <h3>Exposure</h3>
+          <p>Exposure Data</p>
+         
+        </div><!-- /.col-lg-3 -->
+        <div class="col-lg-3">
+<a href="/layers/?title__icontains=Base" class="image">
+          <img class="img-circle" src="{% static "img/product_type_report_100px_bluebox.png"  %}" height="100" alt="1">
+</a>
+          <h3>Base Data</h3>
+          <p>Base Data</p>
+        
+        </div><!-- /.col-lg-3 -->
+<div class="col-lg-3">
+<a href="/layers/?title__icontains=Risk" class="image">
+          <img class="img-circle" src="{% static "img/disaster_storm_surge_100px_bluebox.png"  %}" width="100" height="100" alt="1">
+</a>
+          <h3>Risk</h3>
+          <p>Risk Data</p>
+         
+        </div><!-- /.col-lg-3 -->
+<br>
+      </div><!-- /.row -->
+
+
+
+
+ <div class="row" style="text-align:center;">
+
+<h3 style="color:#33C7FF;">MAPS</h3>
+<h4 style="color:#525354;">RiskInfo lets you compose and share maps. Create a map with our cartography tool, or explore maps shared by others. </h4>
+<br>
+
+        <div class="col-lg-3">
+<a href="/maps/?title__icontains=risk" class="image">
+          <img class="img-circle" src="{% static "img/disaster_storm_surge_100px_bluebox.png"  %}" width="100" height="100" alt="1">
+</a>
+          <h3>Risk</h3>
+          <p>Risk Maps</p>
+         
+        </div><!-- /.col-lg-3 -->
+        <div class="col-lg-3">
+<a href="/maps/?title__icontains=disaster" class="image">
+          <img class="img-circle" src="{% static "img/activity_humanitarian_programme_cycle_100px_bluebox.png"  %}" width="100" height="100" alt="1">
+</a>
+          <h3>Disaster Management</h3>
+          <p>Disaster Management Mpas</p>
+         
+        </div><!-- /.col-lg-3 -->
+        <div class="col-lg-3">
+<a href="/maps/?title__icontains=administrative" class="image">
+          <img class="img-circle" src="{% static "img/product_type_map_100px_bluebox.png"  %}" width="100" height="100" alt="1">
+</a>
+          <h3>Administrative</h3>
+          <p>Administrative Maps</p> 
+         
+        </div><!-- /.col-lg-3 -->
+<div class="col-lg-3">
+<a href="/maps/?title__icontains=Hazard" class="image">
+          <img class="img-circle" src="{% static "img/111.png"  %}" width="100" height="100" alt="1">
+</a>
+          <h3>Hazard</h3>
+          <p>Hazard Maps</p>
+          
+        </div><!-- /.col-lg-4 -->
+<br>
+      </div><!-- /.row -->
 </div>
-</div>
-
-  {% verbatim %}
-  <div ng-app="featured">
-    <div ng-repeat="item in featured">
-      <!--{{ item.title }}-->
-    </div>
-  </div>
-  {% endverbatim %}
   {% endblock %}
+
+  	<div class="callout-light text-center fade-in-b">
+<div class="container" id="cont">
+<div class="col-md-5" id="cont1">
+<br>
+
+<div id="map" class="thumbnail" style="width:100%; height:400px; float:left;">
+</div>					
+</div>
+<div class="col-md-7" id="cont3" style="text-align:center;">
+<h3>Flood Situation on 2016-05-20 at Gampaha </h3>
+<!--div id="content_window" style="width:100%; height:auto;text-align:left;">
+</div-->
+
+<br>
+<h4 style="font-style:italic;">The purpose of RiskInfo is to
+make disaster risk information
+availabale to all the stakeholders
+and the public in order to facilitate
+disaster risk management.</h4>
+<br>
+<h4>New to RiskInfo?</h4>
+<br>
+<div id="btr">
+<a href="#" class="btn btn-lg btn-success">Get started here</a>
+</div>
+</div>
+</div>
+				</div>
+			</div>
 
 {% endblock %}
 
@@ -176,14 +230,14 @@
   <script type="text/javascript">
     FEATURED_URL = '{% url 'api_dispatch_list' api_name='api' resource_name='featured' %}'
     'use strict';
-    (function(){
+    (function(){  
       var module = angular.module('featured', []);
       module.run(function($http, $rootScope){
         $http.get(FEATURED_URL).success(function(data){
           $rootScope.featured = data.objects;
         });
       });
-    })();
+    })(); 
   </script>
 
 {% endblock extra_script %}

@@ -1,0 +1,138 @@
+-{% extends "site_base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% load base_tags %}
+
+{% block title %} {% trans "Riskinfo.lk" %}  {% endblock %}
+
+{% block extra_head %}
+<link href="{% static "lab/mapglyphs/mapglyphs.css" %}" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block middle %}
+{{ block.super}}
+{% block hero %}
+
+{% endblock %}
+
+{% block mainbody %}
+
+<div class="hazard-box">
+    <div class="home-facets">
+        {# with facet_type='home' #}
+        {# facets as facets #}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row" style="height:100%">
+                        <div class="col-md-3" style="height:inherit; background-color:#06559a; color:white;">
+                            <div style ="padding-left:43px; padding-bottom:0px;">
+                                <figure>
+                                    <img src ="{% static "img/minibox1/Tsunami.jpg" %}" style="border-radius:0%;border:0px;max-width:100%;">
+                                         <!--<figcaption> <a href="http://www.ngdc.noaa.gov/hazard/tsu_travel_time_events.shtml"class="image-source" style="color:white">2004 Tsunami Time Travel Map - Source NOAA</a></figcaption>-->
+                                </figure>
+                                <!--  <a href="http://www.ngdc.noaa.gov/hazard/tsu_travel_time_events.shtml" class="image-source" style="color:white">2004 Tsunami Time Travel Map - Source NOAA</a> -->
+                                <p style="font-family:'Open Sans', sans-serif;font-size:100%; text-align:center;font-style:italic; line-height:1.5;">
+                                    The purpose of RiskInfo is to<br> make disaster risk information<br> available to all the stake holders<br> and the public in order to facilitate<br> disaster risk management.
+                                </p>
+                                <h5 style="color:white;"><b>New to RiskInfo?</b></h5> 
+                                <button type="button" class="btn btn-primary" style="background-color:#02345f;font-size:20px"><b>Get Started here</b></button>
+                                <p style="color:white">Feedback? Contact us at<br><b>riskinfo@dmc.gov.lk</b></p>
+                            </div>
+                        </div>
+                        <div class="col-md-9" style="height:inherit">
+                            <div class="row" style="height:50%">
+                                <div class="col-md-12" style="background-color:#bfdbed;">
+                                    <h1 class="section-title" style="font-size:30px">Data Layers</h1>
+
+                                    <p style="text-align:center">RiskInfo lets you upload, manage, and browse data. Search for data that is valuable to you, or upload your own data.</p>
+                                    <a class="btn btn-default" role="button" href="/search/?title__icontains=Hazard">
+                                        <img src="/static/img/minibox1/flood.png">
+                                        <h4>Hazard</h4>
+                                        <h6 class="text-center"> Hazard Layers</h6>
+                                    </a>
+                                    <a class="btn btn-default"  role="button" href="/search/?title__icontains=Hazard">
+                                        <img src="/static/img/minibox1/ExposureData.png">
+                                        <h4>Exposure</h4>
+                                        <h6 class="text-center"> Exposure Data</h6>
+                                    </a>
+                                    <a class="btn btn-default"  role="button" href="/search/?title__icontains=Hazard">
+                                        <img src="/static/img/minibox1/explore.png">
+                                        <h4>Base Data</h4>
+                                        <h6 class="text-center"> Base Data</h6>
+                                    </a>
+                                    <a class="btn btn-default" role="button" href="/search/?title__icontains=Hazard">
+                                        <img src="/static/img/minibox1/strom2.png">
+                                        <h4>Risk</h4>
+                                        <h6 class="text-center"> Risk Data</h6>
+                                    </a>          
+
+                                </div>
+                            </div>
+                            <div class="row" style="height:50%">
+                                <div class="col-md-12" style="background-color: #658cb0;">
+                                    <h1 class="section-title" style="color:white;font-size:30px">Maps</h1>
+                                    <p style="text-align:center;color:black">RiskInfo lets you compose and share maps. Create a map with our cartography tool, or explore maps shared by others.</p>
+                                    <a class="btn btn-default"  role="button" href="/search/?title__icontains=Hazard">
+                                        <img src="/static/img/minibox1/strom2.png">
+                                        <h4 style="color:black">Risk</h4>
+                                        <h6 class="text-center" style="color:#222"> Risk Maps</h6>
+                                    </a>
+                                    <a class="btn btn-default"  role="button" href="/search/?title__icontains=Hazard">
+                                        <img src="/static/img/minibox1/earthquake.png">
+                                        <h4 style="color:black">Disaster Management</h4>
+                                        <h6 class="text-center" style="color:#222"> Disaster Management Maps</h6>
+                                    </a>
+                                    <a class="btn btn-default"  role="button" href="/search/?title__icontains=Hazard">
+                                        <img src="/static/img/minibox1/boundries.png">
+                                        <h4 style="color:black">Administrative</h4>
+                                        <h6 class="text-center" style="color:#222"> Administrative Maps</h6>
+                                    </a>
+                                    <a class="btn btn-default"  role="button" href="/search/?title__icontains=Hazard">
+                                        <img src="/static/img/minibox1/flood.png">
+                                        <h4 style="color:black">Hazard</h4>
+                                        <h6 class="text-center" style="color:#222"> Hazard Maps</h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{# endwith #}
+{% verbatim %}
+<div ng-app="featured">
+    <div ng-repeat="item in featured">
+        <!--{{ item.title }}-->
+    </div>
+</div>
+{% endverbatim %}
+{% endblock %}
+
+{% endblock %}
+
+{% block extra_script %}
+{% if DEBUG_STATIC %}
+<script src="{{ STATIC_URL}}lib/js/angular.js"></script>
+{% endif %}
+<script type="text/javascript">
+    FEATURED_URL = '{% url 'api_dispatch_list' api_name='api' resource_name='featured' %}'
+    'use strict';
+    (function() {
+        var module = angular.module('featured', []);
+        module.run(function($http, $rootScope) {
+            $http.get(FEATURED_URL).success(function(data) {
+                $rootScope.featured = data.objects;
+            });
+        });
+    })();
+</script>
+
+{% endblock extra_script %}
+

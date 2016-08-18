@@ -1,0 +1,231 @@
+-{% extends "site_base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% load base_tags %}
+
+{% block title %} {% trans "Riskinfo.lk" %}  {% endblock %}
+
+{% block extra_head %}
+<link href="{% static "lab/mapglyphs/mapglyphs.css" %}" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block middle %}
+   {{ block.super }}
+  {% block hero %}
+      
+  {% endblock %}
+
+  {% block mainbody %}
+  
+  <div class="hazard-box" >
+    
+    <style>
+  
+   
+.search {
+                padding:8px 5px;
+                background:rgba(50, 50, 50, 0.2);
+                border:0px solid #dbdbdb;
+width:100%;
+
+}
+.button {
+                position:relative;
+                padding:7px 5px;
+                left:-8px;
+                border:2px solid #207cca;
+                background-color:#207cca;
+                color:#fafafa;
+
+}
+.button:hover  {
+                background-color:#fafafa;
+                color:#207cca;
+}
+
+.input-group-btn {font-size:14px;}    
+      
+    </style>
+    
+    
+    <div class="home-facets" style="background:#06559a;">
+    {# with facet_type='home' #}
+     {# facets as facets #}
+<div class="row">
+        <div class="col-md-3" style="background-color:#06559a; height:inherit;color:white;">  
+          
+          <div class="col-sm-12">
+<br>
+<form class="" id="search" action="{% url "search" %}" style="padding-left:30px;">
+           
+              <div class="input-group" style="">
+                {% if HAYSTACK_SEARCH %}
+               <input type="text" class="search" placeholder="Search..." required>
+                {% else %}
+               <input id="search_input" type="text" placeholder="Search" class="search" name="title__icontains">
+                {% endif %}
+                <span class="input-group-btn">
+                 <input type="submit" class="button" value="Search"> 
+                </span>
+              </div>
+          
+        </form></div>
+          
+          
+                  
+          <div style ="padding-left:43px;padding-right:20px;">
+          <figure>
+            <img src ="{% static "img/minibox1/Tsunami.jpg" %}" style="border-radius:0%;border:0px;max-width:100%;margin-bottom:30px">
+          <!--<figcaption> <a href="http://www.ngdc.noaa.gov/hazard/tsu_travel_time_events.shtml"class="image-source" style="color:white">2004 Tsunami Time Travel Map - Source NOAA</a></figcaption>-->
+        </figure>
+        <!--  <a href="http://www.ngdc.noaa.gov/hazard/tsu_travel_time_events.shtml" class="image-source" style="color:white">2004 Tsunami Time Travel Map - Source NOAA</a> -->
+              <p style="font-family:'Open Sans', sans-serif;font-size:100%; text-align:center;font-style:italic; line-height:1.5;margin-top:25px;margin-bottom:20px">
+  The purpose of RiskInfo is to<br> make disaster risk information<br> availabale to all the stakeholders<br> and the public in order to facilitate<br> disaster risk management.
+            </p>
+<h5 style="color:white;"><b>New to RiskInfo?</b></h5>
+<button type="button" class="btn btn-primary" style="background-color:#02345f;font-size:20px"><b>Get Started here<b></button>
+<p style="color=white">Feedback? Contact us at<br><b>riskinfo@dmc.gov.lk</b></p>
+          </div>
+<br><br><br><br><br><br>
+          </div>
+        <div class="col-md-9" style="padding:0;">
+<div style="background-color:#bfdbed;">
+<div style="padding:15px;">
+	<!--div style="float:right;margin-right:5px;margin-top:5px">
+		<a href="#" style="color:#044279;text-decoration:underline;margin-right:4px"><b>English</b></a>	
+		<a href="#" style="color:#044279;text-decoration:underline;margin-right:4px"><b>Sinhala</b></a>
+		<a href="#" style="color:#044279;text-decoration:underline;margin-right:4px"><b>Tamil</b></a>
+	</div-->
+	<br>
+	<br>
+	<br>
+
+          <h1 class="section-title" style="font-size:35px">Data Layers</h1>
+          
+          <p style="text-align:center">RiskInfo lets you upload, manage, and browse data. Search for data that is valuable to you, or upload your own data.</p>
+<div class="col-md-3">
+<a class="btn btn-default" style="margin-right:25px" role="button" href="/search/?title__icontains=Hazard">
+	<img src="/static/img/minibox1/flood.png">
+<h4>Hazard</h4>
+<h5 class="text-center"> Hazard Layers</h5>
+</a>
+</div>
+<div class="col-md-3">
+<a class="btn btn-default" style="margin-right:25px" role="button" href="/search/?title__icontains=Exposure">
+	<img src="/static/img/minibox1/ExposureData.png">
+<h4>Exposure</h4>
+<h5 class="text-center"> Exposure Data</h5>
+</a>
+</div>
+<div class="col-md-3">
+<a class="btn btn-default" style="margin-right:25px" role="button" href="/search/?title__icontains=Base">
+	<img src="/static/img/minibox1/explore.png">
+<h4>Base Data</h4>
+<h5 class="text-center"> Base Data</h5>
+</a>
+</div>
+<div class="col-md-3">
+<a class="btn btn-default" style="margin-right:25px" role="button" href="/search/?title__icontains=Risk">
+	<img src="/static/img/minibox1/strom2.png">
+<h4>Risk</h4>
+<h5 class="text-center"> Risk Data</h5>
+</a>
+</div>
+</div>
+<br>
+  
+<div class="clearfix"></div>
+<div class="col-md-12" style="background-color: #658cb0;">
+<div class="" style="background-color: #658cb0;height:auto;margin-top:20px;position:relative;" >
+		<br>
+
+		<br>
+<center>
+			<h1 class="section-title" style="color:white;font-size:35px">Maps</h1>
+<br>
+<p style="text-align:center;color:black">RiskInfo lets you compose and share maps. Create a map with our cartography tool, or explore maps shared by others.</p>
+<br>
+
+
+<div class="col-md-3">
+<a class="btn btn-default"  role="button" href="/search/?title__icontains=Hazard">
+	<img src="/static/img/minibox1/strom2.png">
+<h4 style="color:black">Risk</h4>
+<h5 class="text-center" style="color:#222"> Risk Maps</h5>
+</a>
+</div>
+<div class="col-md-3">
+<a class="btn btn-default" style="margin-right:25px" role="button" href="/search/?title__icontains=Hazard">
+	<img src="/static/img/minibox1/earthquake.png">
+<h4 style="color:black">Disaster Management</h4>
+<h5 class="text-center" style="color:#222"> Disaster Management Maps</h5>
+</a>
+</div>
+<div class="col-md-3">
+<a class="btn btn-default" style="margin-right:25px" role="button" href="/search/?title__icontains=Hazard">
+	<img src="/static/img/minibox1/boundries.png">
+<h4 style="color:black">Administrative</h4>
+<h5 class="text-center" style="color:#222"> Administrative Maps</h5>
+</a>
+</div>
+<div class="col-md-3">
+<a class="btn btn-default" style="margin-right:25px" role="button" href="/search/?title__icontains=Hazard">
+	<img src="/static/img/minibox1/flood.png">
+<h4 style="color:black">Hazard</h4>
+<h5 class="text-center" style="color:#222"> Hazard Maps</h5>
+</a>
+</div>
+</center>
+</div>
+
+
+          </div>
+      </div>
+  </div>  
+  </div>
+</div>
+</div>
+
+
+
+	
+
+
+
+
+
+
+{# endwith #}
+  {% verbatim %}
+  <div ng-app="featured">
+    <div ng-repeat="item in featured">
+      <!--{{ item.title }}-->
+    </div>
+  </div>
+  {% endverbatim %}
+  {% endblock %}
+
+{% endblock %}
+
+{% block extra_script %}
+{% if DEBUG_STATIC %}
+<script src="{{ STATIC_URL }}lib/js/angular.js"></script>
+{% endif %}
+  <script type="text/javascript">
+    FEATURED_URL = '{% url 'api_dispatch_list' api_name='api' resource_name='featured' %}'
+    'use strict';
+    (function(){
+      var module = angular.module('featured', []);
+      module.run(function($http, $rootScope){
+        $http.get(FEATURED_URL).success(function(data){
+          $rootScope.featured = data.objects;
+        });
+      });
+    })();
+  </script>
+
+{% endblock extra_script %}
+
