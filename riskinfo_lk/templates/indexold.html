@@ -1,213 +1,211 @@
--{% extends "site_base.html" %}
+{% extends "site_base.html" %}
 {% load i18n %}
 {% load staticfiles %}
 {% load base_tags %}
 
-{% block title %} {% trans "Riskinfo.lk" %}  {% endblock %}
-
-{% block extra_head %}
-<link href="{% static "lab/mapglyphs/mapglyphs.css" %}" rel="stylesheet">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-{% endblock %}
+{% block title %} {% trans "Welcome!" %} - {{ block.super }} {% endblock %}
 
 {% block body_class %}home{% endblock %}
 
 {% block middle %}
    {{ block.super }}
   {% block hero %}
-      
+ <div class="jumbotron">
+	<div class="container">
+		<h2 style="font-size:55px;">Sri Lanka<br />Disaster Risk <br> Information Platform</h2>
+		<p></p>
+		<h3>{% blocktrans %}A public platform for GIS Data <br/>to support development in Sri Lanka{% endblocktrans %}</h3>
+		<a class="btn btn-default btn-lg" href="/developer/" role="button">{% blocktrans %}Get Started &raquo;{% endblocktrans %}</a>
+	</div>
+</div>
   {% endblock %}
 
   {% block mainbody %}
-  
-  <div class="hazard-box" >
-    
-    <style>
-  
-   
-.search {
-                padding:8px 5px;
-                background:rgba(50, 50, 50, 0.2);
-                border:0px solid #dbdbdb;
-width:100%;
-
-}
-.button {
-                position:relative;
-                padding:7px 5px;
-                left:-8px;
-                border:2px solid #207cca;
-                background-color:#207cca;
-                color:#fafafa;
-
-}
-.button:hover  {
-                background-color:#fafafa;
-                color:#207cca;
-}
-
-.input-group-btn {font-size:14px;}    
-      
-    </style>
-    
-    
-    <div class="home-facets" style="background:#06559a;">
-    {# with facet_type='home' #}
-     {# facets as facets #}
-<div class="row">
-        <div class="col-md-3" style="background-color:#06559a; height:inherit;color:white;">  
-          
-          <div class="col-sm-12">
-<br>
-<form class="" id="search" action="{% url "search" %}" style="padding-left:30px;">
-           
-              <div class="input-group" style="">
-                {% if HAYSTACK_SEARCH %}
-               <input type="text" class="search" placeholder="Search..." required>
-                {% else %}
-               <input id="search_input" type="text" placeholder="Search" class="search" name="title__icontains">
-                {% endif %}
-                <span class="input-group-btn">
-                 <input type="submit" class="button" value="Search"> 
-                </span>
-              </div>
-          
-        </form></div>
-          
-          
-                  
-          <div style ="padding-left:43px;padding-right:20px;">
-          <figure>
-            <img src ="{% static "img/minibox1/Tsunami.jpg" %}" style="border-radius:0%;border:0px;max-width:100%;margin-bottom:30px">
-          <!--<figcaption> <a href="http://www.ngdc.noaa.gov/hazard/tsu_travel_time_events.shtml"class="image-source" style="color:white">2004 Tsunami Time Travel Map - Source NOAA</a></figcaption>-->
-        </figure>
-        <!--  <a href="http://www.ngdc.noaa.gov/hazard/tsu_travel_time_events.shtml" class="image-source" style="color:white">2004 Tsunami Time Travel Map - Source NOAA</a> -->
-              <p style="font-family:'Open Sans', sans-serif;font-size:100%; text-align:center;font-style:italic; line-height:1.5;margin-top:25px;margin-bottom:20px">
-  The purpose of RiskInfo is to<br> make disaster risk information<br> availabale to all the stakeholders<br> and the public in order to facilitate<br> disaster risk management.
-            </p>
-<h5 style="color:white;"><b>New to RiskInfo?</b></h5>
-<button type="button" class="btn btn-primary" style="background-color:#02345f;font-size:20px"><b>Get Started here<b></button>
-<p style="color=white">Feedback? Contact us at<br><b>riskinfo@dmc.gov.lk</b></p>
-          </div>
-<br><br><br><br><br><br>
-          </div>
-        <div class="col-md-9" style="padding:0;">
-<div style="background-color:#bfdbed;">
-<div style="padding:15px;">
-	<!--div style="float:right;margin-right:5px;margin-top:5px">
-		<a href="#" style="color:#044279;text-decoration:underline;margin-right:4px"><b>English</b></a>	
-		<a href="#" style="color:#044279;text-decoration:underline;margin-right:4px"><b>Sinhala</b></a>
-		<a href="#" style="color:#044279;text-decoration:underline;margin-right:4px"><b>Tamil</b></a>
-	</div-->
-	<br>
-	<br>
-	<br>
-
-          <h1 class="section-title" style="font-size:35px">Data Layers</h1>
-          
-          <p style="text-align:center">RiskInfo lets you upload, manage, and browse data. Search for data that is valuable to you, or upload your own data.</p>
-<div class="col-md-3">
-<a class="btn btn-default" style="margin-right:25px" role="button" href="/search/?title__icontains=Hazard">
-	<img src="/static/img/minibox1/flood.png">
-<h4>Hazard</h4>
-<h5 class="text-center"> Hazard Layers</h5>
-</a>
-</div>
-<div class="col-md-3">
-<a class="btn btn-default" style="margin-right:25px" role="button" href="/search/?title__icontains=Exposure">
-	<img src="/static/img/minibox1/ExposureData.png">
-<h4>Exposure</h4>
-<h5 class="text-center"> Exposure Data</h5>
-</a>
-</div>
-<div class="col-md-3">
-<a class="btn btn-default" style="margin-right:25px" role="button" href="/search/?title__icontains=Base">
-	<img src="/static/img/minibox1/explore.png">
-<h4>Base Data</h4>
-<h5 class="text-center"> Base Data</h5>
-</a>
-</div>
-<div class="col-md-3">
-<a class="btn btn-default" style="margin-right:25px" role="button" href="/search/?title__icontains=Risk">
-	<img src="/static/img/minibox1/strom2.png">
-<h4>Risk</h4>
-<h5 class="text-center"> Risk Data</h5>
-</a>
-</div>
-</div>
-<br>
-  
-<div class="clearfix"></div>
-<div class="col-md-12" style="background-color: #658cb0;">
-<div class="" style="background-color: #658cb0;height:auto;margin-top:20px;position:relative;" >
-		<br>
-
-		<br>
-<center>
-			<h1 class="section-title" style="color:white;font-size:35px">Maps</h1>
-<br>
-<p style="text-align:center;color:black">RiskInfo lets you compose and share maps. Create a map with our cartography tool, or explore maps shared by others.</p>
-<br>
-
-
-<div class="col-md-3">
-<a class="btn btn-default"  role="button" href="/search/?title__icontains=Hazard">
-	<img src="/static/img/minibox1/strom2.png">
-<h4 style="color:black">Risk</h4>
-<h5 class="text-center" style="color:#222"> Risk Maps</h5>
-</a>
-</div>
-<div class="col-md-3">
-<a class="btn btn-default" style="margin-right:25px" role="button" href="/search/?title__icontains=Hazard">
-	<img src="/static/img/minibox1/earthquake.png">
-<h4 style="color:black">Disaster Management</h4>
-<h5 class="text-center" style="color:#222"> Disaster Management Maps</h5>
-</a>
-</div>
-<div class="col-md-3">
-<a class="btn btn-default" style="margin-right:25px" role="button" href="/search/?title__icontains=Hazard">
-	<img src="/static/img/minibox1/boundries.png">
-<h4 style="color:black">Administrative</h4>
-<h5 class="text-center" style="color:#222"> Administrative Maps</h5>
-</a>
-</div>
-<div class="col-md-3">
-<a class="btn btn-default" style="margin-right:25px" role="button" href="/search/?title__icontains=Hazard">
-	<img src="/static/img/minibox1/flood.png">
-<h4 style="color:black">Hazard</h4>
-<h5 class="text-center" style="color:#222"> Hazard Maps</h5>
-</a>
-</div>
-</center>
+ <div class="big-search">
+	<div class="container">
+		<h1>Search for Sri Lanka Data.</h1>
+		<div class="search">
+			<form id="search" action="{% url "search" %}" >
+				<span class="fa fa-search fa-2x"></span>
+				{% if HAYSTACK_SEARCH %}
+				<input id="search_input" type="text" placeholder="Search" class="form-control" name="q">
+				{% else %}
+				<input id="search_input" type="text" placeholder="Search" class="form-control" name="title__icontains">
+				{% endif %}
+			</form>
+		</div>
+		<p><a class="btn btn-default btn-lg" href="/search/">Advanced Search</a></p>
+	</div>
 </div>
 
+<section id="datasets">
+	<div class="container">
+		<div class="row">
+			<div class="container text-center">
+				<h1>Discover the available datasets.</h1>
+				<div class="col-xs-4 col-sm-2">
+					<a href="/search/?limit=100&offset=0&category__identifier__in=boundaries&category__identifier__in=planningCadastre" data-toggle="tooltip" data-placement="auto" 
+						title="Political and administrative boundaries, land use maps, zoning maps, cadastral surveys, land ownership.">
+						<div class="category">
+							<i class="fa fa-flag fa-4x"></i>
+							<h4>Boundaries</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-4 col-sm-2">
+					<a href="/search/?limit=100&offset=0&category__identifier__in=society&category__identifier__in=structure" data-toggle="tooltip" data-placement="auto" 
+						title="Buildings, museums, churches, factories, housing, monuments, shops, towers. Energy, water and waste systems and communications infrastructure and services. Military bases, structures, activities." >
+						<div class="category">
+							<i class="fa fa-home fa-4x"></i>
+							<h4>Buildings</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-4 col-sm-2">
+					<a href="/search/?limit=100&offset=0&category__identifier__in=climatologyMeteorologyAtmosphere" data-toggle="tooltip" data-placement="auto" 
+						title="Cloud cover, weather, climate, atmospheric conditions, climate change, precipitation" >
+						<div class="category">
+							<i class="fa fa-umbrella fa-4x"></i>
+							<h4>Climate</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-4 col-sm-2">
+					<a href="/search/?limit=100&offset=0&category__identifier__in=elevation" data-toggle="tooltip" data-placement="auto" 
+						title="Altitude, bathymetry, digital elevation models, slope, derived products" >
+						<div class="category">
+							<i class="fa fa-level-up fa-4x"></i>
+							<h4>Elevation</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-4 col-sm-2">
+					<a href="/search/?limit=100&offset=0&category__identifier__in=geoscientificInformation" data-toggle="tooltip" data-placement="auto" 
+						title="Geophysical features and processes, geology, minerals, sciences dealing with the composition, structure and origin of the earth s rocks, risks of earthquakes, volcanic activity, landslides, gravity information, soils, permafrost, hydrogeology, erosion." >
+						<div class="category">
+							<i class="fa fa-globe fa-4x"></i>
+							<h4>Geology</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-4 col-sm-2">
+					<a href="/search/?limit=100&offset=0&category__identifier__in=health" data-toggle="tooltip" data-placement="auto" 
+						title="Health, health services, human ecology, and safety." >
+						<div class="category">
+							<i class="fa fa-medkit fa-4x"></i>
+							<h4>Health</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-4 col-sm-2">
+					<a href="/search/?limit=100&offset=0&category__identifier__in=imageryBaseMapsEarthCover" data-toggle="tooltip" data-placement="auto" 
+						title="Land cover, topographic maps, imagery, unclassified images, annotations." >
+						<div class="category">
+							<i class="fa fa-tree fa-4x"></i>
+							<h4>Land Cover</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-4 col-sm-2">
+					<a href="/search/?limit=100&offset=0&category__identifier__in=farming&category__identifier__in=environment" data-toggle="tooltip" data-placement="auto" 
+						title="Wildlife, vegetation, biological sciences, ecology, wilderness, sealife, wetlands, habitat. Environmental resources, protection and conservation. Agriculture, irrigation, aquaculture, plantations, herding, pests and diseases affecting crops and livestock" >
+						<div class="category">
+							<i class="fa fa-leaf fa-4x"></i>
+							<h4>Nature</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-4 col-sm-2">
+					<a href="/search/?limit=100&offset=0&category__identifier__in=location" data-toggle="tooltip" data-placement="auto" 
+						title="Addresses, geodetic networks, control points, postal zones and services, place names" >
+						<div class="category">
+							<i class="fa fa-map-marker fa-4x"></i>
+							<h4>Places</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-4 col-sm-2">
+					<a href="#" data-toggle="tooltip" data-placement="auto" 
+						title="Settlements, anthropology, archaeology, education, traditional beliefs, manners and customs, demographic data, recreational areas and activities, social impact assessments, crime and justice, census information. Economic activities, conditions and employment." >
+						<div class="category">
+							<i class="fa fa-male fa-4x"></i>
+							<h4>Population</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-4 col-sm-2">
+					<a href="/search/?limit=100&offset=0&category__identifier__in=transportation" data-toggle="tooltip" data-placement="auto" 
+						title="Roads, airports/airstrips, shipping routes, tunnels, nautical charts, vehicle or vessel location, aeronautical charts, railways." >
+						<div class="category">
+							<i class="fa fa-road fa-4x"></i>
+							<h4>Transportation</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-4 col-sm-2">
+					<a href="/search/?limit=100&offset=0&category__identifier__in=inlandWaters" data-toggle="tooltip" data-placement="auto" 
+						title="Rivers and glaciers, salt lakes, water utilization plans, dams, currents, floods, water quality, hydrographic charts, tides, tidal waves, coastal information, reefs." >
+						<div class="category">
+							<i class="fa fa-tint fa-4x"></i>
+							<h4>Water</h4>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>		
+	</div>
+</section>
 
-          </div>
-      </div>
-  </div>  
-  </div>
-</div>
-</div>
+<section id="resiliance">
+	<div class="container">
+		<div class="row">
+			<h2>Sri Lanka Risk and Hazards</h2> 
+			<div class="col-xs-6 col-sm-3 col-sm-offset-2">
+				<a href="/search/?limit=100&offset=0&keywords__slug__in=tsunami"><img src="/static/img/tsunami_icon.png" class="img-responsive" alt="Tsunami"></a>
+				<h4>Tsunami</h4>
+			</div>
+			<div class="col-xs-6 col-sm-3 col-sm-offset-2">
+				<a href="/search/?limit=100&offset=0&keywords__slug__in=flood"><img src="/static/img/flood.png" class="img-responsive" alt="Flood"></a>
+				<h4>Flood and heavy rain</h4>
+			</div>	
+		</div>
+	</div>	
+</section>
 
+<section id="showcase">
+	<div class="container">
+		<div class="row">
+			<h2>Sri Lanka Featured Datasets</h2>
+		    {% verbatim %}
+		    <div ng-app="featured">
+		      <div ng-repeat="item in featured | limitTo:4">
+	  			<div class="col-md-3">
+	  				<a href="{{ item.detail_url }}"><img ng-src="{{ item.thumbnail_url }}" /></a>
+	  				<h4 style="word-break: break-all;">{{ item.title }}</h4>
+	  			</div>
+		      </div>
+		    </div>
+		    {% endverbatim %}
+		</div>
+		<p><a href="#">Explore all datasets</a></p>
+	</div>	
+</section>
 
-
-	
-
-
-
-
-
-
-{# endwith #}
-  {% verbatim %}
-  <div ng-app="featured">
-    <div ng-repeat="item in featured">
-      <!--{{ item.title }}-->
-    </div>
-  </div>
-  {% endverbatim %}
+<section id="osm">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-8">
+				<h2>Daily OpenStreetMap Extracts</h2>
+				<p>The DMC provides daily OpenStreetMap extracts that can be used online and downloaded to your desktop. Explore what features are available.</p>
+				<a class="btn btn-primary btn-lg" href="/search/?limit=100&offset=0&keywords__slug__in=osm" role="button">Explore</a>
+			</div>
+		</div>
+	</div>
+</section>
   {% endblock %}
-
+  
 {% endblock %}
 
 {% block extra_script %}
@@ -217,15 +215,14 @@ width:100%;
   <script type="text/javascript">
     FEATURED_URL = '{% url 'api_dispatch_list' api_name='api' resource_name='featured' %}'
     'use strict';
-    (function(){
+    (function(){  
       var module = angular.module('featured', []);
       module.run(function($http, $rootScope){
         $http.get(FEATURED_URL).success(function(data){
           $rootScope.featured = data.objects;
         });
       });
-    })();
+    })(); 
   </script>
 
 {% endblock extra_script %}
-

@@ -150,8 +150,8 @@ EXTRA_LANG_INFO = {
         },
 }
 
-MEDIA_ROOT = "/opt/webapps/www/riskinfo_lk/uploaded"
-STATIC_ROOT = "/opt/webapps/www/riskinfo_lk/static"
+MEDIA_ROOT = "/var/www/riskinfo_lk/uploaded"
+STATIC_ROOT = "/var/www/riskinfo_lk/static"
 
 LOGGING = {
     'version': 1,

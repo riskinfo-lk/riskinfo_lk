@@ -1,4 +1,5 @@
 {% load i18n avatar_tags %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,7 +20,7 @@
       {% endif %}
 	<!--link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet"/ -->
       <link href="{{ STATIC_URL }}geonode/css/ext-compatibility.css?v={{ VERSION }}" rel="stylesheet" />
-      <link href="{{ STATIC_URL }}geonode/css/base.css?v={{ VERSION }}" rel="stylesheet" />
+      <link href="{{ STATIC_URL }}css/base.css" rel="stylesheet" />
       <style type="text/css">[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}</style>
       {% block extra_head %}
       {% endblock %}
@@ -32,306 +33,85 @@
             height: 150px;
             text-align: center;
         }
-
+  
       </style>
     <![endif]-->
 
 <style>
-.footer-distributed{
-	background-color: #ffffff;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-	box-sizing: border-box;
-	width: 100%;
-	text-align: left;
-	font: bold 16px sans-serif;
-
-	padding: 35px 50px;
-	margin-top: 0px;
-}
+.page-header {margin-top:100px;}
+#wrap {padding-bottom:40px;}
 a {cursor:pointer;}
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right{
-	display: inline-block;
-	vertical-align: top;
-}
-
-/* Footer left */
-
-.footer-distributed .footer-left{
-	width: 40%;
-}
-
-/* The company logo */
-
-.footer-distributed h3{
-	color:  #ffffff;
-	font: normal 36px 'Cookie', cursive;
-	margin: 0;
-}
-
-.footer-distributed h3 span{
-	color:  #5383d3;
-}
-
-/* Footer links */
-
-.footer-distributed .footer-links{
-	color:  #ffffff;
-	margin: 10px 0 12px;
-	padding: 0;
-}
-
-.footer-distributed .footer-links a{
-	display:inline-block;
-	line-height: 1.8;
-	text-decoration: none;
-	color:  inherit;
-}
-
-.footer-distributed .footer-company-name{
-	color:  #8f9296;
-	font-size: 14px;
-	font-weight: normal;
-	margin: 0;
-}
-
-/* Footer Center */
-
-.footer-distributed .footer-center{
-	width: 35%;
-}
-
-.footer-distributed .footer-center i{
-	background-color:  #33383b;
-	color: #ffffff;
-	font-size: 25px;
-	width: 38px;
-	height: 38px;
-	border-radius: 50%;
-	text-align: center;
-	line-height: 42px;
-	margin: 10px 15px;
-	vertical-align: middle;
-}
-
-.footer-distributed .footer-center i.fa-envelope{
-	font-size: 17px;
-	line-height: 38px;
-}
-
-.footer-distributed .footer-center p{
-	display: inline-block;
-	color: #ffffff;
-	vertical-align: middle;
-	margin:0;
-}
-
-.footer-distributed .footer-center p span{
-	display:block;
-	font-weight: normal;
-	font-size:14px;
-	line-height:2;
-}
-
-.footer-distributed .footer-center p a{
-	color:  #5383d3;
-	text-decoration: none;;
-}
-
-
-/* Footer Right */
-
-.footer-distributed .footer-right{
-	width: 20%;
-}
-
-.footer-distributed .footer-company-about{
-	line-height: 20px;
-	color:  #92999f;
-	font-size: 13px;
-	font-weight: normal;
-	margin: 0;
-}
-
-.footer-distributed .footer-company-about span{
-	display: block;
-	color:  #ffffff;
-	font-size: 14px;
-	font-weight: bold;
-	margin-bottom: 20px;
-}
-
-.footer-distributed .footer-icons{
-	margin-top: 25px;
-}
-
-.footer-distributed .footer-icons a{
-	display: inline-block;
-	width: 35px;
-	height: 35px;
-	cursor: pointer;
-	background-color:  #33383b;
-	border-radius: 2px;
-
-	font-size: 20px;
-	color: #ffffff;
-	text-align: center;
-	line-height: 35px;
-
-	margin-right: 3px;
-	margin-bottom: 5px;
-}
-
-/* If you don't want the footer to be responsive, remove these media queries */
-
-@media (max-width: 880px) {
-
-	.footer-distributed{
-		font: bold 14px sans-serif;
-	}
-
-	.footer-distributed .footer-left,
-	.footer-distributed .footer-center,
-	.footer-distributed .footer-right{
-		display: block;
-		width: 100%;
-		margin-bottom: 40px;
-		text-align: center;
-	}
-
-	.footer-distributed .footer-center i{
-		margin-left: 0;
-	}
-
-}
-}
-.select-style {
-    padding: 0;
-    margin: 0;
-    border: 1px solid #ccc;
-    width: 120px;
-    border-radius: 3px;
-   
-    background-color: #fff;
-
-    background: #fff url("../static/img/arrowdown.png") no-repeat 90% 50%;
-}
-
-.select-style select {
-    
-    width: 50%;
-    border: 1px solid #333333;
-    box-shadow: none;
-    background-color: transparent;
-    background-image: none;
-background-color: #242424;
-color:#fff;
-cursor:pointer;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-}
-
-.select-style select:focus {
-    outline: none;
-}
-.img-container { background-color: #000000; }
-            .img-container img { opacity: 0.7; }
-@media (max-width: 458px) {
-  #btr {
-   text-align:center;
-   }
-   .select-style {text-align:center;width:100%;}
-  }
+.x-panel  {margin-top:10px !important;}
 
 </style>
-
-<style>
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-3 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: normal;
-}
-.marketing .col-lg-3 p {
-  margin-right: 10px;
-  margin-left: 10px;
-}
-.callout-light {
-    padding: 30px;
-
-	color: #000;
-	background-color: #ccc;
-}
-
-.callout-light h1,
-h2
- {
-	font-weight: 300;
-	line-height: 1.4;
-}
-
-.image {
-    position:relative;
-    width:100px;
-    height:100px;
-}
-.image img {
-    width:100px;
-    vertical-align:top;
-}
-.image:after {
-    content:'\A';
-    position:absolute;
-    width:100px; height:100px;
-    top:0; left:0;
-    background:rgba(0,0,0,0.6);
-    opacity:0;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-border-radius:50%;
-}
-.image:hover:after {
-    opacity:1;
-border-radius:50%;
-}
-
-@media (max-width: 458px) {
-  
-   .callout-light {
-    padding: 0px;
-
-}
-  }
-</style>
-
 
     <link rel="search" type="application/opensearchdescription+xml" href="/catalogue/opensearch" title="GeoNode Search"/>
   </head>
   
   <body class="{% block body_class %}{% endblock %}" style="padding-top:0;background:#ffffff;" onload="initialize()">
-<div style="background:#242424;height:auto;overflow:hidden;">
-<div class="row">
-<div class="container">
-<div class="col-md-8">
- <img alt="" src="../../static/img/RiskInfo_Logo.png" style="width:80%;padding-top:20px;padding-bottom:20px;">
-</div>
-<div class="col-md-4">
- 
-          <div class="col-md-12">
+
+    {% block header %}
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <i class="fa fa-navicon fa-lg"></i>
+            </button>
+            <a class="navbar-brand" href="{% url "home" %}"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav toolbar">
+            {% block tabs %}
+                <li id="nav_layers">
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Data" %}<i class="fa fa-angle-down fa-lg"></i></a>
+			        <ul class="dropdown-menu">
+				        <li><a href="{% url "layer_browse" %}">{% trans "Layers" %}</a></li>
+				        <li><a href="/layers/?limit=100&offset=0&keywords__slug__in=osm">OpenStreetMap</a></li>
+				        <li><a href="{% url "document_browse" %}">{% trans "Documents" %}</a></li>
+                        {% if user.is_authenticated %}
+                        <li><a href="{% url "services" %}">{% trans "Remote Services" %}</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="/layers/upload">Upload Layer</a></li>
+                        <li><a href="/documents/upload/">Upload Document</a></li>
+                        <li><a href="/services/register/">{% trans "Add Remote Services" %}</a></li>
+                        {% endif %}
+                    </ul>
+                </li>
+                <li id="nav_maps">
+                    <a href="{% url "maps_browse" %}">{% trans "Maps" %}</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "About" %}<i class="fa fa-angle-down fa-lg"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url "profile_browse" %}">{% trans "People" %}</a></li>
+                        <li><a href="{% url "group_list" %}">{% trans "Groups" %}</a></li>
+						<!--li><a href="/contact/">{% trans "Contact" %}</a></li-->
+                        {% if perms.announcements.can_manage %}
+                        <li><a href="{% url "announcements_list" %}">{% trans "Announcements" %}</a></li>
+                        {% endif %}
+                        {% if user.is_superuser %}
+                        <li role="separator" class="divider"></li>
+                        <li><a href="/admin/people/profile/add/">{% trans "Add User" %}</a></li>
+                        <li><a href="{% url "account_invite_user" %}">{% trans "Invite User" %}</a></li>
+                        <li><a href="/groups/create/">{% trans "Create Group" %}</a></li>
+                        {% endif %}
+                    </ul>
+                </li>
+                {% block extra_tab %}
+                {% endblock %}
+            {% endblock %}
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+
+<li>
 <div class="select-style">
             <label class="hidden">{% trans "Language" %}</label>
             {% if csrf_token != "NOTPROVIDED" %}
             {% get_current_language as LANGUAGE %}
-            <form class="form-inline" action="/i18n/setlang/" method="post" style="padding-top:25px;padding-bottom:20px;">
+            <form class="form-inline" action="/i18n/setlang/" method="post" style="padding-top:21px;padding-bottom:20px;">
             {% csrf_token %}
-              <select class="col-md-6 pull-right" name="language" onchange="javascript:form.submit()" >
+              <select class="col-md-6 pull-right form-control" style="height:30px;padding:2px;width:120px;" name="language" onchange="javascript:form.submit()" >
                 {% for lang in LANGUAGES %}
                 <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
                   {{ lang.1 }}
@@ -341,92 +121,57 @@ border-radius:50%;
             </form>
             {% endif %}
 </div>
-</div>
-</div>
-</div>
-</div>
-    {% block header %}
-    <nav class="navbar navbar-inverse" >
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!--a class="navbar-brand" href="{% url "home" %}">GeoNode</a-->
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            {% block tabs %}
- 		<li id="Home">
-              <a href="{% url "home" %}">{% trans "Home" %}</a>
-            </li>
-            <li id="nav_layers">
-              <a href="{% url "layer_browse" %}">{% trans "Layers" %}</a>
-            </li>
-            <li id="nav_maps">
-              <a href="{% url "maps_browse" %}">{% trans "Maps" %}</a>
-            </li>
-            <li id="nav_documents">
-              <a href="{% url "document_browse" %}">{% trans "Documents" %}</a>
-            </li>
-           {% block extra_tab %}
-           {% endblock %}
-            <li id="nav_people">
-              <a href="{% url "profile_browse" %}">{% trans "People" %}</a>
-            </li>
-            <li id="nav_groups">
-              <a href="{% url "group_list" %}">{% trans "Groups" %}</a>
-            </li>
-            {% endblock %}
-          </ul>
-          {% trans "Search" as search_text %}
-          <form class="navbar-form" id="search" action="{% url "search" %}" >
-            <div class="col-md-3">
-              <div class="input-group">
-                {% if HAYSTACK_SEARCH %}
-                <input id="search_input" type="text" placeholder="{{ search_text }}" class="form-control" name="q">
-                {% else %}
-                <input id="search_input" type="text" placeholder="{{ search_text }}" class="form-control" name="title__icontains">
-                {% endif %}
-                <span class="input-group-btn">
-                  <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
-                </span>
-              </div>
-            </div>
-          </form>
-          <ul class="nav navbar-nav navbar-right">
-            {% if not user.is_authenticated and REGISTRATION_OPEN %}
-            <li><a href="{% url "account_signup" %}">{% trans "Register" %}</a></li>
-            {% endif %}
-            {% if user.is_authenticated %}
-            <li>
-              <a href="#" data-toggle="modal" data-target="#UserModal" role="button" aria-expanded="false">
-                {% avatar user 30 %} {{ user.username }}
-              </a>
-            </li>
-            {% else %}
-            <li>
-              <a href="#" data-toggle="modal" data-target="#SigninModal" role="button" >
-                {% trans "Sign in" %} 
-              </a>
-            </li>
-            {% endif %}
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+</li>
+
+
+
+                <li>
+                    <div class="search">
+						<form id="search" action="{% url "search" %}" >
+                            <span class="fa fa-search"></span>
+                            <!-- <input placeholder="Search..."> -->
+		                    {% if HAYSTACK_SEARCH %}
+		                    <input id="search_input" type="text" placeholder="Search" name="q">
+		                    {% else %}
+		                    <input id="search_input" type="text" placeholder="Search" name="title__icontains">
+		                    {% endif %}
+						</form>
+                    </div>
+                </li>
+				{% if not user.is_authenticated and REGISTRATION_OPEN %}
+	            <li><a href="{% url "account_signup" %}">{% trans "Register" %}</a></li>
+	            {% endif %}
+				{% if user.is_authenticated %}
+	            <li><a href="#" class="dropdown-toggle avatar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% avatar user 42 %} {{ user.username }}<i class="fa fa-angle-down fa-lg"></i></a>
+					<ul class="dropdown-menu">
+					    <li><a href="{{ user.get_absolute_url }}">{% trans "Profile" %}</a></li>
+					    <li><a href="{% url "recent-activity" %}">{% trans "Recent Activity" %}</a></li>
+						<li><a href="{% url "messages_inbox" %}">{% trans "Inbox" %}</a></li>
+					    <li role="separator" class="divider"></li>
+						<li><a href="/admin/">Admin</a></li>
+					    <li><a href="/geoserver/">GeoServer</a></li>
+					    <li role="separator" class="divider"></li>
+						<li><a href="#">Help</a></li>
+					    <li role="separator" class="divider"></li>
+						<li><a href="/account/logout/">Logout</a></li>
+					</ul>
+				</li>
+	            {% else %}
+	            <li><a href="#" data-toggle="modal" data-target="#SigninModal" role="button" >{% trans "Sign in" %} </a></li>
+				{% endif %}
+	        </ul>
+        </div> <!--/.nav-collapse -->
+    </div>
+</nav>
     {% endblock header %}
 
     <div class="alert alert-danger alert-dismissible" role="alert" id="ieflag" style="display:none">
       <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       <h1>You are using an outdated browser that is not supported by GeoNode.</h1>
-      <p>Please use a modern browser like Mozilla Firefox, Google Chrome or Safari.</p>
+      <p>Please use a <strong>modern browser</strong> like Mozilla Firefox, Google Chrome or Safari.</p>
     </div>
 
-  <div id="wrap" style="padding-bottom:0;padding-top:0;">
+  <div id="wrap" style="">
     {% block middle %}
     <div class="container">
       {% include "_status_message.html" %}
@@ -447,48 +192,93 @@ border-radius:50%;
   </div>
     
    {% block footer %}
+  <section id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h3>For more information please contact the DMC</h3>
+				<a href="mailto:riskinfo@dmc.gov.lk">riskinfo@dmc.gov.lk</a>
 
-   <footer class="footer-distributed" style="color:#242424;">
+<br>
 
-			<div class="footer-left">
-
-				<h4>Implementation partners</h4>
-				
-
-
-
-	<br> <a href="http://www.dmc.gov.lk/"><img style="height:40px;margin-right:5px;" src="../static/img/DMC_Logo.png" alt="f"></a>
-            <a href="http://www.worldbank.org/"><img style="height:40px;" src="../static/img/WBG_Vertical-CMYK.jpg" alt="f"></a>
-          
-        
-
-				
-			</div>
-
-			<div class="footer-center">
-				<h4>Data sponsors</h4>
-			<br> <a href="http://www.lk.undp.org/"><img style="height:40px;margin-right:5px;" src="../static/img/UNDPFINAL1-01.jpg" alt="f" ></a>
-            <a href="https://www.gfdrr.org/"><img style="height:40px;" src="../static/img/GFDRR_PrimaryLogo_BW-Shade.jpg" alt="f"></a>
- <a href="http://www.survey.gov.lk/"><img style="height:40px;" src="../static/img/Logo_Color_E.jpg" alt="f"></a>
-           
-
-			</div>
-
-			<div class="footer-right">
-			<h4>Contact us</h4>
-				
-			 <h5>Feedback?  Contact us at <a href="mailto:riskinfo@dmc.gov.lk">riskinfo@dmc.gov.lk</a></h5>
-            <div class="social">
+ <div class="social">
               
-               <a href="#"><i class="fa fa-lg fa-facebook"></i></a>
-               <a href="#"><i class="fa fa-lg fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-lg fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-lg fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-lg fa-twitter"></i></a>
+               <a href="#"><i class="fa fa-lg fa-google-plus"></i></a>
                 <a href="#"><i class="fa fa-lg fa-github"></i></a>
-             	</div>
-
+            	
 			</div>
+<br>
+			</div>
+ 
+			<!--div class="col-sm-4 col-sm-offset-4">
+				<a href="/contact/" class="btn btn-primary btn-block">Contact Us</a>
+			</div-->
+		</div>
+	</div>
+</section>
+	
+<footer style="background:#fff;color:#000;">
+	<div class="container">
+		<div class="row" >
+			<div class="col-md-6">
+			
+			
+			<h4>Implementation partners</h4>
+			
+			<div class="col-md-5" style="padding:0;">
+			 <a href="https://www.gov.lk/"  
+						title="Government of Sri Lanka"><img style="margin-right:5px;height:40px;" src="{% static "img/Gov_Logo.png"  %}"></a>	
 
-		</footer>
+
+
+	 <a href="http://www.dmc.gov.lk/" ><img style="margin-right:8px;height:40px;" src="{% static "img/DMC_Logo.png"  %}"></a>
+						<h5 style="font-size:12px;">Disaster Management Centre of Sri Lanka</h5>
+						<h5 style="font-size:12px;">Ministry of Disaster Management</h5>
+			</div>
+			<div class="col-md-7">
+			<a href="https://www.gfdrr.org/" ><img style="height:40px;margin-right:5px;" src="{% static "img/GFDRR_Primary Logo_BW-Shade.jpg" %}"></a>
+						
+            <a href="http://www.worldbank.org/" ><img style="height:40px;margin-right:5px;" src="{% static "img/WBG_Vertical-RGB.png" %}"></a> 
+			</div>
+			
+			
+			
+						<br><br> 
+						
+          
+			</div>
+			<div class="col-md-3">
+			<h4>Data sponsors</h4>
+			 <!--a href="http://www.survey.gov.lk/" data-toggle="tooltip" data-placement="top" 
+						title="
+Survey Department Sri Lanka"><img style="height:50px;" src="{% static "img/Logo_Color_E.jpg" %}"></a>
+
+<a href="http://www.nbro.gov.lk/" data-toggle="tooltip" data-placement="top" 
+						title="
+National Building Research Organization"><img style="height:50px;margin-left:28px;" src="{% static "img/NBRO Logo.jpg" %}"></a-->
+
+<a href="http://www.lk.undp.org/" ><img style="height:50px;" src="{% static "img/UNDP FINAL 1-01.jpg" %}"></a> 
+<a href="http://www.survey.gov.lk/" ><img style="height:50px;margin-left:15px;" src="{% static "img/Logo_Color_E.jpg" %}"></a> 
+           
+	
+			</div>
+			
+			
+			<div class="col-md-3"> 
+				<h4>Technology Partners</h4>
+			 <a href="https://www.icta.lk/" ><img style="height:40px;" src="{% static "img/ICTA-logo.jpg" %}"></a>
+
+ <!--a href="http://www.geoedge.lk/" data-toggle="tooltip" data-placement="top" 
+						title="
+GeoEDGE (pvt) Ltd"><img style="height:40px;" src="{% static "img/geologo.png" %}"></a-->	
+			
+          
+		</div>
+	</div>
+
+</footer>
 <div style="background:#000;">
 <div class="container">
 <div class="col-md-8">
@@ -497,11 +287,10 @@ border-radius:50%;
             <a href="/about/">About</a> </p>
 </div>
 <div class="col-md-4">
-<p style="color:#fff;margin-top:10px;float:right;">Developed by <a href="http://geoedge.lk/" target="_blank">GeoEDGE </a>
+<p style="color:#fff;margin-top:10px;float:right;">Developed by <a href="http://geoedge.lk/" target="_blank">GeoEDGE </a> | Template by  <a href="http://www.ithacaweb.org/" target="_blank">ITHACA Web </a> 
+</p></div>
 </div>
 </div>
-</div>
-
     {% endblock footer %}
 
     <!-- Modal must stay outside the navbar -->
@@ -513,7 +302,7 @@ border-radius:50%;
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             <h4 class="modal-title" id="myModalLabel">{% trans "Sign in" %}</h4>
           </div>
-          <form class="form-signin"  action="{% url "account_login" %}?next={{ request.path }}" method="post">
+          <form class="form-signin" role="form" action="{% url "account_login" %}?next={{ request.path }}" method="post">
             <div class="modal-body">
               {% csrf_token %}
               <div class="form-group">
@@ -585,13 +374,14 @@ border-radius:50%;
     
     {% if DEBUG_STATIC %}
     <script src="{{ STATIC_URL }}lib/js/jquery.min.js?v={{ VERSION }}"></script>
+<script src="{{ STATIC_URL }}lib/js/bootstrap.min.js?v={{ VERSION }}"></script>
     <script src="{{ STATIC_URL }}lib/js/jquery.dataTables.js?v={{ VERSION }}"></script>
     <script src="{{ STATIC_URL }}lib/js/jquery.timeago.js?v={{ VERSION }}"></script>
     <script src="{{ STATIC_URL }}lib/js/jquery.ajaxprogress.js?v={{ VERSION }}"></script>
     <script src="{{ STATIC_URL }}lib/js/jquery.ajaxQueue.js?v={{ VERSION }}"></script>
     <script src="{{ STATIC_URL }}lib/js/jquery-ui.custom.js?v={{ VERSION }}"></script>
     <script src="{{ STATIC_URL }}lib/js/jquery.raty.js?v={{ VERSION }}"></script>
-    <script src="{{ STATIC_URL }}lib/js/bootstrap.min.js?v={{ VERSION }}"></script>
+    
     <script src="{{ STATIC_URL }}lib/js/moment-with-locales.min.js?v={{ VERSION }}"></script>
     <script src="{{ STATIC_URL }}lib/js/bootstrap-datetimepicker.min.js?v={{ VERSION }}"></script>
     <script src="{{ STATIC_URL }}lib/js/json2.js?v={{ VERSION }}"></script>
@@ -637,6 +427,11 @@ border-radius:50%;
               this.box.insertAfter(this.input).css({top: pos.top + pos.height, left: pos.left});
             }
         };
+    </script>
+<script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
     </script>
     <script type="text/javascript" src="{% url "lang" %}"></script>
 
